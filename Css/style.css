@@ -1,0 +1,460 @@
+/*	STILI	*/
+
+
+
+body
+{
+	
+	margin: 20px;
+
+	background-image: url('../Immagini/back.png');
+
+	font: 15px Trebuchet MS;	
+}
+
+
+
+#page
+{
+	width: 1000px;
+	padding: 8px;
+
+	margin: auto;
+
+	background-color: #101D30;
+
+	border-radius: 12px;
+	border-top: 4px groove #FFFFFF;
+	border-left: 4px groove #FFFFFF;
+	border-right: 4px ridge #FFFFFF;
+	border-bottom: 4px ridge #FFFFFF;
+
+	box-shadow: 8px 8px 20px black;
+}
+
+div#page a:link, div#page a:visited
+{
+	color: #BBBBBB;
+	text-decoration: none;
+}
+
+div#page a:hover
+{
+	color: #FFFFFF;
+}
+
+
+
+#logo
+{
+	height: 150px;	
+
+	background-color: #101D30;
+	background-image: url('../Immagini/A4R.png');
+	background-repeat: no-repeat;
+	background-position: 180px 5px;
+
+	border-radius: 5px 5px 0px 0px;
+}
+
+div#logo img
+{
+	margin-top: 10px;
+	margin-left: 10px;
+	margin-bottom: 0px;
+}
+
+div#logo area
+{
+	outline : none;
+}
+
+
+
+div#header p
+{
+	margin-top: -35px;
+	margin-left: 200px;
+	margin-bottom: 0px;
+
+	color: #BBBBBB;
+	text-shadow: 5px 5px 5px black;
+}
+
+
+
+#benvenuto
+{
+	margin-top: -145px;
+	margin-right: 15px;;
+
+	color: #BBBBBB;
+	text-shadow: 5px 5px 5px black;
+	text-align: right;
+}
+
+
+
+#login
+{
+	padding-top: 10px;
+	padding-left: 24px;
+
+	background-image: url('../Immagini/login.png');
+	background-repeat: no-repeat;
+	background-position: left bottom;
+}
+
+
+
+#menu
+{
+	background-color: #101D30;
+
+	text-align: right;
+}
+
+div#menu ul
+{
+	margin: 0px;
+
+	padding: 0px 0px;
+
+    	border-bottom: 10px solid #B50F23;
+}
+
+div#menu li
+{
+	width: 125px;
+
+	margin: 0px 0px;
+
+	padding: 5px;
+
+	background-color: #B50F23;
+
+	border-radius: 20px 20px 0px 0px;
+
+	display: inline-block;
+
+	text-shadow: 5px 5px 10px black;
+	text-align: center;
+}
+
+
+
+#home
+{
+	margin-left: -8px;
+
+	padding-left: 24px;
+
+	background-image: url('../Immagini/home.png');
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+
+
+
+#chi_siamo
+{
+	margin-left: -8px;
+	padding-left: 24px;
+	
+	background-image: url('../Immagini/chi_siamo.png');
+	background-repeat: no-repeat;
+	background-position: left center;	
+}
+
+
+
+#istruzioni
+{
+	margin-left: -8px;
+
+	padding-left: 24px;
+	
+	background-image: url('../Immagini/istruzioni.png');
+	background-repeat: no-repeat;
+	background-position: left center;	
+}
+
+
+
+#ricerca
+{
+	margin-left: -8px;
+
+	padding-left: 24px;
+	
+	background-image: url('../Immagini/ricerca.png');
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+
+#utenti
+{
+	margin-left: -8px;
+
+	padding-left: 24px;
+	
+	background-image: url('../Immagini/account.png');
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+
+#gestisci
+{
+	margin-left: -8px;
+
+	padding-left: 24px;
+	
+	background-image: url('../Immagini/setting.png');
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+
+#carrello
+{
+	margin-left: -8px;
+
+	padding-left: 24px;
+	
+	background-image: url('../Immagini/compra.png');
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+
+#vendi
+{
+	margin-left: -8px;
+
+	padding-left: 24px;
+	
+	background-image: url('../Immagini/offri.png');
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+
+
+
+#content
+{
+	background-image: url('../Immagini/back_c.png');
+	
+	border-left: 5px solid #B50F23;
+	border-right: 5px solid #B50F23;
+	border-bottom: 5px solid #B50F23;
+	border-radius: 0px 0px 5px 5px;
+
+}
+
+#table-content
+{
+	width: 100%;
+	min-height: 500px;
+
+	table-layout: fixed;
+	border-collapse: collapse;
+}
+
+div#content h1
+{
+	margin-left: 15px;
+	padding-left: 40px;
+
+
+	background-position: left center;
+
+	color: #101D30;
+	text-shadow: 5px 5px 20px black;
+}
+
+div#content p, div#content ol
+{
+	color: #444444;
+}
+
+div#content ol
+{
+	padding-top: 20px;
+	padding-left: 80px;
+	padding-bottom: 25px;
+
+	list-style-type: upper-alpha;
+}
+
+div#content ul
+{
+	padding-top: 5px;
+	padding-bottom: 25px;
+
+	list-style-type: square;
+}
+
+
+
+#left
+{
+	width: 150px;
+
+	padding: 0px;
+
+	background-image: url('../Immagini/sidebar.png');
+	background-repeat: repeat-y;
+
+	opacity: 0.1;
+}
+
+#center
+{
+	padding-top: 60px;
+	padding-left: 100px;
+	padding-bottom: 40px;
+
+	border-left: 3px double #B50F23;
+	border-right: 3px double #B50F23;
+
+	vertical-align: top;
+}
+
+#right
+{
+	width: 150px;
+
+	padding: 0px;
+
+	background-image: url('../Immagini/sidebar.png');
+	background-repeat: repeat-y;
+
+	opacity: 0.1;
+}
+
+
+
+#h1-home
+{
+	background-image: url('../Immagini/negozio.png');
+	background-repeat: no-repeat;
+}
+
+#h1-chi_siamo
+{
+	background-image: url('../Immagini/noi.png');
+	background-repeat: no-repeat;
+}
+
+#h1-istruzioni
+{
+	background-image: url('../Immagini/book.png');
+	background-repeat: no-repeat;
+}
+
+#h1-cerca
+{
+	background-image: url('../Immagini/cerca.png');
+	background-repeat: no-repeat;
+}
+
+#h1-login
+{
+	background-image: url('../Immagini/key.png');
+	background-repeat: no-repeat;
+}
+
+#h1-utenti
+{
+	background-image: url('../Immagini/profilo.png');
+	background-repeat: no-repeat;
+}
+
+#h1-gestisci
+{
+	background-image: url('../Immagini/gestisci.png');
+	background-repeat: no-repeat;
+}
+
+#h1-carrello
+{
+	background-image: url('../Immagini/carrello.png');
+	background-repeat: no-repeat;
+}
+
+#h1-vendi
+{
+	background-image: url('../Immagini/vendi.png');
+	background-repeat: no-repeat;
+}
+
+
+#form-login, #form-registrati
+{
+	margin-top: 30px;
+	margin-left: 50px;
+
+	color: #444444;
+}
+
+#table-form td
+{
+	width: 120px;
+
+	padding-top: 20px;
+}
+
+
+input
+{
+    	padding: 5px 10px;
+
+	border: 1px solid #BBBBBB;
+	border-radius: 5px;
+}
+
+input:hover, input:focus
+{
+	border: 1px solid #101D30;
+}
+
+
+#tasto-login
+{
+	margin-top: 20px;
+
+	background-color: #101D30;
+
+	color: #BBBBBB;
+}
+
+
+
+#footer
+{
+	padding: 10px 0px 10px 0px;
+
+	background: #101D30;
+
+	border-radius: 5px 5px 5px 5px;
+}
+
+div#footer p
+{
+	color: #BBBBBB;
+
+	text-align: center;
+	text-shadow: 5px 5px 10px #000000;
+}
+
+
+
+.current_page
+{
+	text-decoration: underline;
+}
+
+
+
+
+
+
+    
