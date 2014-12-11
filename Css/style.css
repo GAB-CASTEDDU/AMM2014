@@ -5,8 +5,10 @@
 body
 {
 	
-	margin: 20px;
-
+	margin: 0px;
+        margin-top: 15px;
+        margin-bottom: 15px;
+        
 	background-image: url('../Immagini/back.png');
 
 	font: 15px Trebuchet MS;	
