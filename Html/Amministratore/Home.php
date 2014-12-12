@@ -1,6 +1,10 @@
 <!DOCTYPE html>
 
+<?php
 
+if($_SESSION["logged"]==1)
+{
+echo '
 
 <html>
     <head>
@@ -14,11 +18,7 @@
         <link rel="Stylesheet" type="text/css" href="../../Css/style.css" media="screen"/>
     </head>
 
-<?php
 
-if($_SESSION["logged"]==1)
-{
-echo '
 
     <body>
         <div id="page">
@@ -80,6 +80,20 @@ echo '
 
             </div>
         </div>
-    </body>';
+    </body>
 
 </html>
+
+';
+
+}
+
+else
+{
+	$pagina_login="../Login.html";
+
+
+	header("Location:".$pagina_login);
+}
+
+?>
