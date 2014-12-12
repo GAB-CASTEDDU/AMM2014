@@ -29,11 +29,11 @@ $_SESSION["password"]=$_POST["password"];
 
 
 
-$queryadm = mysql_query("SELECT * FROM utenti WHERE email='".$_POST["email"]."' AND password ='".$_POST["password"]."' AND ruolo='amministratore'") or DIE('query non riuscita'.mysql_error());
+$queryadm = mysql_query("SELECT * FROM utenti WHERE email='".$_POST["email"]."' AND password ='".$_POST["password"]."' AND tipo='amministratore'") or DIE('query non riuscita'.mysql_error());
 
-$queryven = mysql_query("SELECT * FROM utenti WHERE email='".$_POST["email"]."' AND password ='".$_POST["password"]."' AND ruolo='venditore'") or DIE('query non riuscita'.mysql_error());
+$queryven = mysql_query("SELECT * FROM utenti WHERE email='".$_POST["email"]."' AND password ='".$_POST["password"]."' AND tipo='venditore'") or DIE('query non riuscita'.mysql_error());
 
-$querycom = mysql_query("SELECT * FROM utenti WHERE email='".$_POST["email"]."' AND password ='".$_POST["password"]."' AND ruolo='compratore'") or DIE('query non riuscita'.mysql_error());
+$querycom = mysql_query("SELECT * FROM utenti WHERE email='".$_POST["email"]."' AND password ='".$_POST["password"]."' AND tipo='compratore'") or DIE('query non riuscita'.mysql_error());
 
 
 
