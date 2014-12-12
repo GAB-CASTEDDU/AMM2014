@@ -22,21 +22,62 @@ if(!$db_selected)
 
 
 
+$_SESSION["email"]=$_POST["email"]; 
+
+$_SESSION["password"]=$_POST["password"]; 
+
+
+
+
+$queryadm = mysql_query("SELECT * FROM users WHERE email='".$_POST["email"]."' AND password ='".$_POST["password"]."' AND ruolo='amministratore'") or DIE('query non riuscita'.mysql_error());
+
+$queryven = mysql_query("SELECT * FROM users WHERE email='".$_POST["email"]."' AND password ='".$_POST["password"]."' AND ruolo='venditore'") or DIE('query non riuscita'.mysql_error());
+
+$querycom = mysql_query("SELECT * FROM users WHERE email='".$_POST["email"]."' AND password ='".$_POST["password"]."' AND ruolo='compratore'") or DIE('query non riuscita'.mysql_error());
+
+
+
+if(mysql_num_rows($queryadm))
+{   
+	$row = mysql_fetch_assoc($queryadm); 
+
+	$_SESSION["logged"]=true;  
+
+	header("location:Amministratore/Home.html"); 
+}
+
+else 
+
+if(mysql_num_rows($queryven))
+{   
+	$row = mysql_fetch_assoc($queryven); 
+
+	$_SESSION["logged"]=true;  
+
+	header("location:Venditore/Home.html"); 
+}
+
+else 
+
+if(mysql_num_rows($querycom))
+{   
+	$row = mysql_fetch_assoc($querycom); 
+
+	$_SESSION["logged"]=true;  
+
+	header("location:Compratore/Home.html"); 
+}
+
+else
+
+header("location:login.html"); 
 
 
 
 
 
 
-
-
-
-
-
-
-
-
-$utenti[0]["email"]="compratore@gmail.com";
+/*$utenti[0]["email"]="compratore@gmail.com";
 $utenti[0]["password"]="compratore";
 $utenti[1]["email"]="venditore@gmail.com";
 $utenti[1]["password"]="venditore";
@@ -86,6 +127,6 @@ if(isset($_POST['email']) && isset($_POST['password']))
 				{
 					header("Location:Login.html");
 				}
-}
+}*/
 
 ?>
