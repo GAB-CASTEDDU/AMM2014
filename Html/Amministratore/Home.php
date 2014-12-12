@@ -2,7 +2,7 @@
 
 <?php
 
-if($_SESSION["logged"]==1)
+if(isset($_SESSION["logged"]=1))
 {
 echo '
 
