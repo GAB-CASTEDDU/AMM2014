@@ -27,7 +27,7 @@ $_SESSION["email"]=$_POST["email"];
 $_SESSION["password"]=$_POST["password"]; 
 
 
-$pagina_adm="Amministratore/Home.html";
+$pagina_adm="Amministratore/Home.php";
 $pagina_ven="Venditore/Home.html";
 $pagina_com="Compratore/Home.html";
 
