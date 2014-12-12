@@ -18,7 +18,7 @@
 
 if($_SESSION["logged"]==1)
 {
-echo "
+echo '
 
     <body>
         <div id="page">
@@ -80,6 +80,6 @@ echo "
 
             </div>
         </div>
-    </body>";
+    </body>';
 
 </html>
