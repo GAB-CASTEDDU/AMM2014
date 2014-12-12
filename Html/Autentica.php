@@ -27,9 +27,9 @@ $_SESSION["email"]=$_POST["email"];
 $_SESSION["password"]=$_POST["password"]; 
 
 
-$pagina_admi="Amministratore/Home.html";
-$pagina_vend="Venditore/Home.html";
-$pagina_comp="Compratore/Home.html";
+$pagina_adm="Amministratore/Home.html";
+$pagina_ven="Venditore/Home.html";
+$pagina_com="Compratore/Home.html";
 
 
 
@@ -47,7 +47,7 @@ if(mysql_num_rows($queryadm))
 
 	$_SESSION["logged"]=1;  
 
-	header("Location:".$pagina_admi); 
+	header("Location:".$pagina_adm); 
 }
 
 else 
