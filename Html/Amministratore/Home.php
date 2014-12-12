@@ -1,10 +1,7 @@
 <!DOCTYPE html>
 
-<?php
 
-if($_SESSION["logged"]==1)
-{
-echo "
+
 <html>
     <head>
         <meta http-equiv="content-type" content="text/html; charset=utf-8" />
@@ -81,16 +78,4 @@ echo "
         </div>
     </body>
 
-</html>";
-
-}
-
-else
-{
-	$pagina_login="../Login.html";
-
-
-	header("Location:".$pagina_login);
-}
-
-?>
+</html>
