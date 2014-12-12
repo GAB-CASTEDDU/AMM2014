@@ -85,6 +85,7 @@ if($_SESSION["logged"]==1)
 
 }
 
+<?php
 else
 {
 	$pagina_login="../Login.html";
