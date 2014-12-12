@@ -4,16 +4,15 @@ session_start();
 
 
 
-
 $connessione_al_server=mysql_connect("localhost","truduGabriele","beluga874");
 
-if(!$connect)
+if(!$connessione_al_server)
 {
 	die ('Errore: connessione non riuscita'.mysql_error());
 }
 
 
-$db_selected=mysql_select_db("amm14_truduGabriele",$connect);
+$db_selected=mysql_select_db("amm14_truduGabriele",$connessione_al_server);
 
 if(!$db_selected)
 {
