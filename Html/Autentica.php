@@ -2,6 +2,41 @@
 
 session_start();
 
+
+
+
+$connessione_al_server=mysql_connect("localhost","truduGabriele","beluga874");
+
+if(!$connect)
+{
+	die ('Errore: connessione non riuscita'.mysql_error());
+}
+
+
+$db_selected=mysql_select_db("amm14_truduGabriele",$connect);
+
+if(!$db_selected)
+{
+	die ('Errore: selezione del database errata '.mysql_error()); 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 $utenti[0]["email"]="compratore@gmail.com";
 $utenti[0]["password"]="compratore";
 $utenti[1]["email"]="venditore@gmail.com";
