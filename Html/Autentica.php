@@ -27,6 +27,10 @@ $_SESSION["email"]=$_POST["email"];
 $_SESSION["password"]=$_POST["password"]; 
 
 
+$pagina_admi="Amministratore/Home.html";
+$pagina_vend="Venditore/Home.html";
+$pagina_comp="Compratore/Home.html";
+
 
 
 $queryadm = mysql_query("SELECT * FROM utenti WHERE email='".$_POST["email"]."' AND password ='".$_POST["password"]."' AND tipo='amministratore'") or DIE('query non riuscita'.mysql_error());
@@ -41,9 +45,9 @@ if(mysql_num_rows($queryadm))
 {   
 	$row = mysql_fetch_assoc($queryadm); 
 
-	$_SESSION["logged"]=true;  
+	$_SESSION["logged"]=1;  
 
-	header("location:Amministratore/Home.html"); 
+	header("Location:".$pagina_admi); 
 }
 
 else 
@@ -52,9 +56,9 @@ if(mysql_num_rows($queryven))
 {   
 	$row = mysql_fetch_assoc($queryven); 
 
-	$_SESSION["logged"]=true;  
+	$_SESSION["logged"]=2;  
 
-	header("location:Venditore/Home.html"); 
+	header("Location:".$pagina_ven); 
 }
 
 else 
@@ -63,72 +67,13 @@ if(mysql_num_rows($querycom))
 {   
 	$row = mysql_fetch_assoc($querycom); 
 
-	$_SESSION["logged"]=true;  
+	$_SESSION["logged"]=3;  
 
-	header("location:Compratore/Home.html"); 
+	header("Location:".$pagina_com); 
 }
 
 else
 
-header("location:login.html"); 
-
-
-
-
-
-
-/*
-$utenti[0]["email"]="compratore@gmail.com";
-$utenti[0]["password"]="compratore";
-$utenti[1]["email"]="venditore@gmail.com";
-$utenti[1]["password"]="venditore";
-$utenti[2]["email"]="amministratore@gmail.com";
-$utenti[2]["password"]="amministratore";
-
-$pagina_comp="Compratore/Home.html";
-$pagina_vend="Venditore/Home.html";
-$pagina_admi="Amministratore/Home.html";
-
-$isLogged=false;
-$whoUsers=0;
-
-
-if(isset($_POST['email']) && isset($_POST['password']))
-{
-	for($i=0;$i<count($utenti);$i++)
-	{
-		if( $_POST['email']==$utenti[$i]["email"] && $_POST['password']==$utenti[$i]["password"] )
-		 {
- 			$isLogged=true;	
-			$whoUsers=$i+1;
-		 }
-	}
-
-	if($whoUsers==1)
-	{
- 		$_SESSION['isLogged']="true";
- 		header("Location:".$pagina_comp);
-	}
-
-	else
-		if($whoUsers==2)
-		{
- 			$_SESSION['isLogged']="true";
- 			header("Location:".$pagina_vend);
-		}
-		
-			else
-				if($whoUsers==3)
-				{
- 					$_SESSION['isLogged']="true";
- 					header("Location:".$pagina_admi);
-				}
-
-				else
-				{
-					header("Location:Login.html");
-				}
-}
-*/
+	header("location:Login.html"); 
 
 ?>
