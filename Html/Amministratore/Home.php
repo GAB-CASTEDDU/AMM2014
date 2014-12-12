@@ -14,7 +14,11 @@
         <link rel="Stylesheet" type="text/css" href="../../Css/style.css" media="screen"/>
     </head>
 
+<?php
 
+if($_SESSION["logged"]==1)
+{
+echo "
 
     <body>
         <div id="page">
@@ -76,6 +80,6 @@
 
             </div>
         </div>
-    </body>
+    </body>";
 
 </html>
