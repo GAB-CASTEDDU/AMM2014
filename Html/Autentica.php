@@ -12,6 +12,7 @@ if(!$connessione_al_server)
 }
 
 
+
 $db_selected=mysql_select_db("amm14_truduGabriele",$connessione_al_server);
 
 if(!$db_selected)
@@ -21,10 +22,10 @@ if(!$db_selected)
 
 
 
-
 $_SESSION["email"]=$_POST["email"]; 
 
 $_SESSION["password"]=$_POST["password"]; 
+
 
 
 $pagina_adm="Amministratore/Home.html";
@@ -73,7 +74,6 @@ if(mysql_num_rows($querycom))
 }
 
 else
-
 	header("location:Login.html"); 
 
 ?>
