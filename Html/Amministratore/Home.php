@@ -2,8 +2,8 @@
 
 <?php
 
-if(isset($_SESSION["logged"])
-
+if($_SESSION["logged"]=1)
+{
 echo '
 
 <html>
@@ -86,7 +86,7 @@ echo '
 
 ';
 
-
+}
 
 else
 {
