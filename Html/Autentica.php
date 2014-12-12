@@ -77,7 +77,8 @@ header("location:login.html");
 
 
 
-/*$utenti[0]["email"]="compratore@gmail.com";
+/*
+$utenti[0]["email"]="compratore@gmail.com";
 $utenti[0]["password"]="compratore";
 $utenti[1]["email"]="venditore@gmail.com";
 $utenti[1]["password"]="venditore";
@@ -127,6 +128,7 @@ if(isset($_POST['email']) && isset($_POST['password']))
 				{
 					header("Location:Login.html");
 				}
-}*/
+}
+*/
 
 ?>
