@@ -3,12 +3,11 @@
 
 
 <?php
-if($_SESSION["logged"]!=1)
+
+if($_COOKIE['tipo_utente']==1)
 {
-header("Location: ../Login.html");
+echo"
 }
-else
-{
 ?>
 
 
@@ -93,5 +92,10 @@ else
 
 
 <?
+";
+}
+else
+{
+header("Location: ../Login.html");
 }
 ?>

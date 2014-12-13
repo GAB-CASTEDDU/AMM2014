@@ -28,7 +28,7 @@ $_SESSION["password"]=$_POST["password"];
 
 
 
-$pagina_adm="Amministratore/Home.html";
+$pagina_adm="Amministratore/Home.php";
 $pagina_ven="Venditore/Home.html";
 $pagina_com="Compratore/Home.html";
 
@@ -45,8 +45,8 @@ $querycom = mysql_query("SELECT * FROM utenti WHERE email='".$_POST["email"]."' 
 if(mysql_num_rows($queryadm))
 {   
 	$row = mysql_fetch_assoc($queryadm); 
-
-	$_SESSION["logged"]=1;  
+  
+	setcookie("tipo_utente", 1, time()+3600);
 
 	header("Location:".$pagina_adm); 
 }
