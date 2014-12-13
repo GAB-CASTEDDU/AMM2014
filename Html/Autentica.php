@@ -45,7 +45,7 @@ $querycom = mysql_query("SELECT * FROM utenti WHERE email='".$_POST["email"]."' 
 if(mysql_num_rows($queryadm))
 {   
 	$row = mysql_fetch_assoc($queryadm); 
-
+session_start();
 	$_SESSION["logged"]=1;  
 
 	header("Location:".$pagina_adm); 
