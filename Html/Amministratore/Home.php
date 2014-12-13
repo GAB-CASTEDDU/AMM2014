@@ -3,7 +3,11 @@
 
 
 <?php
-if($_SESSION["logged"]=1)
+if($_SESSION["logged"]!=1)
+{
+header("Location: ../Login.html");
+}
+else
 {
 ?>
 
@@ -89,9 +93,5 @@ if($_SESSION["logged"]=1)
 
 
 <?
-}
-else
-{
-header("Location: ../Login.html");
 }
 ?>
