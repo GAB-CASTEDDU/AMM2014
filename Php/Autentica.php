@@ -12,7 +12,7 @@ if(!$connessione_al_server)
 }
 
 
-html
+
 $db_selected=mysql_select_db("amm14_truduGabriele",$connessione_al_server);
 
 if(!$db_selected)
