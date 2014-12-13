@@ -4,7 +4,7 @@
 
 <?php
 
-if($_COOKIE['tipo_utente']==0)
+if(isset($_COOKIE['tipo_utente']==0))
 {
 ?>
 
