@@ -4,7 +4,7 @@
 
 <?php
 
-if($_COOKIE['tipo_utente']==0)
+if($_COOKIE['tipo_utente']==2)
 {
 ?>
 
@@ -94,7 +94,7 @@ if($_COOKIE['tipo_utente']==0)
 
 else
 {
-    $pagina_login="Login.php";
+    $pagina_login="../Login.php";
 
 	header("Location:".$pagina_login);
 }

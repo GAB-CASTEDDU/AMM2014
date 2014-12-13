@@ -94,7 +94,7 @@ if($_COOKIE['tipo_utente']==1)
 
 else
 {
-    $pagina_login="Login.php";
+    $pagina_login="../Login.php";
 
 	header("Location:".$pagina_login);
 }
