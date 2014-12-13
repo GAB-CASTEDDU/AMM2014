@@ -4,7 +4,7 @@
 
 <?php
 
-if($_COOKIE['tipo_utente']==3)
+if(isset($_COOKIE['tipo_utente']) && $_COOKIE['tipo_utente']==3)
 {
 ?>
 
