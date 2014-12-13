@@ -6,8 +6,7 @@
 
 if($_COOKIE['tipo_utente']==1)
 {
-echo '
-}
+echo "
 ?>
 
 
@@ -92,7 +91,7 @@ echo '
 
 
 <?
-';
+";
 }
 else
 {
