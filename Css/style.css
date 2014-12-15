@@ -80,7 +80,7 @@ div#header p
 	margin-bottom: 0px;
 
 	color: #BBBBBB;
-	text-shadow: 5px 5px 10px black;
+	text-shadow: 3px 3px 5px black;
 }
 
 
@@ -91,7 +91,7 @@ div#header p
 	margin-right: 15px;;
 
 	color: #BBBBBB;
-	text-shadow: 5px 5px 5px black;
+	text-shadow: 3px 3px 3px black;
 	text-align: right;
 }
 
@@ -446,7 +446,7 @@ div#footer p
 	color: #BBBBBB;
 
 	text-align: center;
-	text-shadow: 5px 5px 10px #000000;
+	text-shadow: 3px 3px 5px #000000;
 }
 
 
