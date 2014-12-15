@@ -125,10 +125,6 @@ div#menu ul
     	border-bottom: 10px solid #B50F23;
 }
 
-div#menu .current_page
-{
-	background-color: #B50F23;   	
-}
 
 div#menu li
 {
@@ -138,7 +134,7 @@ div#menu li
 
 	padding: 5px;
 
-	background-color: #7F0B19;
+	background-color: #B50F23;
 
 	border-radius: 20px 20px 0px 0px;
 
