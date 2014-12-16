@@ -80,7 +80,7 @@ div#header p
 	margin-bottom: 0px;
 
 	color: #BBBBBB;
-	text-shadow: 3px 3px 6px black;
+	text-shadow: 2px 2px 6px black;
 }
 
 
@@ -276,7 +276,7 @@ div#content h1
 	background-position: left center;
 
 	color: #101D30;
-	text-shadow: 2px 2px 4px black;
+	text-shadow: 1px 1px 3px black;
 }
 
 div#content p, div#content ol
@@ -451,7 +451,7 @@ div#footer p
 	color: #BBBBBB;
 
 	text-align: center;
-	text-shadow: 3px 3px 6px #000000;
+	text-shadow: 2px 2px 6px #000000;
 }
 
 
