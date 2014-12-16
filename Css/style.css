@@ -126,6 +126,11 @@ div#menu ul
 }
 
 
+div#menu .current_page
+{
+	background-color: #B50F23;   	
+}
+
 div#menu li
 {
 	width: 125px;
@@ -134,15 +139,19 @@ div#menu li
 
 	padding: 5px;
 
-	background-color: #B50F23;
+	background-color: #7F0B19;
 
 	border-radius: 20px 20px 0px 0px;
 
 	display: inline-block;
 
-	text-shadow: 2px 2px 4px #000000;
+	text-shadow: 1px 1px 3px #000000;
 
 	text-align: center;
+}
+div#menu a:hover
+{
+	color: #FFFFFF;
 }
 
 
