@@ -149,7 +149,7 @@ div#menu li
 
 	text-align: center;
 }
-div#menu a:hover
+div#menu li:hover
 {
 	color: #FFFFFF;
 }
