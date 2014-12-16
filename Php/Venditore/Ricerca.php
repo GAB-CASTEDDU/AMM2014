@@ -46,7 +46,7 @@ if(isset($_COOKIE['tipo_utente']) && $_COOKIE['tipo_utente']==2)
                 <div id="menu">
                     <ul>
                         <li><a href="Home.php" id="home">Home</a></li>
-			<li><a href="Profilo.php">Profilo</a></li>
+			<li><a href="Profilo.php" id="utenti">Profilo</a></li>
                         <li><a href="Vendi.php" id="vendi">Vendi</a></li>
                         <li class="current_page"><a href="#" id="ricerca">Ricerca</a></li>
                     </ul>
