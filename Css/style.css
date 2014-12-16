@@ -149,7 +149,7 @@ div#menu li
 
 #home
 {
-	margin-left: -8px;
+	margin-left: -10px;
 
 	padding-left: 20px;
 
@@ -162,7 +162,7 @@ div#menu li
 
 #chi_siamo
 {
-	margin-left: -8px;
+	margin-left: -10px;
 	padding-left: 20px;
 	
 	background-image: url('../Immagini/chi_siamo.png');
@@ -176,7 +176,7 @@ div#menu li
 {
 	margin-left: -10px;
 
-	padding-left: 18px;
+	padding-left: 20px;
 	
 	background-image: url('../Immagini/istruzioni.png');
 	background-repeat: no-repeat;
@@ -189,7 +189,7 @@ div#menu li
 {
 	margin-left: -10px;
 
-	padding-left: 18px;
+	padding-left: 20px;
 	
 	background-image: url('../Immagini/ricerca.png');
 	background-repeat: no-repeat;
@@ -200,7 +200,7 @@ div#menu li
 {
 	margin-left: -10px;
 
-	padding-left: 18px;
+	padding-left: 20px;
 	
 	background-image: url('../Immagini/account.png');
 	background-repeat: no-repeat;
@@ -211,7 +211,7 @@ div#menu li
 {
 	margin-left: -10px;
 
-	padding-left: 18px;
+	padding-left: 20px;
 	
 	background-image: url('../Immagini/setting.png');
 	background-repeat: no-repeat;
@@ -222,7 +222,7 @@ div#menu li
 {
 	margin-left: -10px;
 
-	padding-left: 18px;
+	padding-left: 20px;
 	
 	background-image: url('../Immagini/compra.png');
 	background-repeat: no-repeat;
@@ -233,7 +233,7 @@ div#menu li
 {
 	margin-left: -10px;
 
-	padding-left: 18px;
+	padding-left: 20px;
 	
 	background-image: url('../Immagini/offri.png');
 	background-repeat: no-repeat;
@@ -265,7 +265,7 @@ div#menu li
 div#content h1
 {
 	margin-left: 15px;
-	padding-left: 40px;
+	padding-left: 30px;
 
 
 	background-position: left center;
