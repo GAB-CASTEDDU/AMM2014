@@ -151,7 +151,7 @@ div#menu li
 {
 	margin-left: -10px;
 
-	padding-left: 18px;
+	padding-left: 20px;
 
 	background-image: url('../Immagini/home.png');
 	background-repeat: no-repeat;
@@ -163,7 +163,7 @@ div#menu li
 #chi_siamo
 {
 	margin-left: -10px;
-	padding-left: 18px;
+	padding-left: 20px;
 	
 	background-image: url('../Immagini/chi_siamo.png');
 	background-repeat: no-repeat;
