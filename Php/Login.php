@@ -118,7 +118,7 @@ if(isset($_SESSION["tipo"]) && $_SESSION["tipo"]==0)
 else
 {
     $pagina_login="Login.php";
-
+    session_start();
     $_SESSION["tipo"]=0;
 
 	header("Location:".$pagina_login);
