@@ -119,6 +119,8 @@ else
 {
     $pagina_login="Login.php";
 
+    $_SESSION["tipo"]=0;
+
 	header("Location:".$pagina_login);
 }
 ?>
