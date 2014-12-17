@@ -4,7 +4,7 @@
 
 <?php
 
-if(isset($_SESSION["tipo"]) && $_SESSION["tipo"]==0)
+if(isset($_COOKIE['tipo_utente']) && $_COOKIE['tipo_utente']==0)
 {
 ?>
 
@@ -117,9 +117,7 @@ if(isset($_SESSION["tipo"]) && $_SESSION["tipo"]==0)
 
 else
 {
-    $pagina_login="Login.php";
-    session_start();
-    $_SESSION["tipo"]=0;
+    $pagina_login="Logout.php";
 
 	header("Location:".$pagina_login);
 }

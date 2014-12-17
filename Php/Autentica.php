@@ -26,8 +26,6 @@ $_SESSION["email"]=$_POST["email"];
 
 $_SESSION["password"]=$_POST["password"];
 
-$_SESSION["tipo"]=0;
-
 
 
 $pagina_adm="Amministratore/Home.php";
@@ -48,7 +46,7 @@ if(mysql_num_rows($queryadm))
 {
 	$row = mysql_fetch_assoc($queryadm);
 
-	$_SESSION["tipo"]=1;
+	setcookie("tipo_utente", 1, time()+3600);
 
 	header("Location:".$pagina_adm);
 }
@@ -59,7 +57,7 @@ if(mysql_num_rows($queryven))
 {
 	$row = mysql_fetch_assoc($queryven);
 
-	$_SESSION["tipo"]=2;
+	setcookie("tipo_utente", 2, time()+3600);
 
 	header("Location:".$pagina_ven);
 }
@@ -70,7 +68,7 @@ if(mysql_num_rows($querycom))
 {
 	$row = mysql_fetch_assoc($querycom);
 
-	$_SESSION["tipo"]=3;
+	setcookie("tipo_utente", 3, time()+3600);
 
 	header("Location:".$pagina_com);
 }
