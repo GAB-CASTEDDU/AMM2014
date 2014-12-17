@@ -117,7 +117,7 @@ if(isset($_SESSION["tipo"]) && $_SESSION["tipo"]==0)
 
 else
 {
-    $pagina_login="Logout.php";
+    $pagina_login="Login.php";
 
 	header("Location:".$pagina_login);
 }
