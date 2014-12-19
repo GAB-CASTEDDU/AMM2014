@@ -35,6 +35,7 @@ if(isset($_COOKIE["redirect"]))
     $pagina_com=$_COOKIE["redirect"];
 }
 
+else
 
 {
     $pagina_adm="Amministratore/Home.php";
