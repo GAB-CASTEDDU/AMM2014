@@ -3,9 +3,9 @@
 session_start();
 
 setcookie("redirect", 2);
-echo($_COOKIE["redirect"]);
 
-/*$connessione_al_server=mysql_connect("localhost","truduGabriele","beluga874");
+
+$connessione_al_server=mysql_connect("localhost","truduGabriele","beluga874");
 
 if(!$connessione_al_server)
 {
