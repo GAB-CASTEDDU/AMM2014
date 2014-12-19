@@ -43,7 +43,7 @@ else
     $pagina_com="Compratore/Home.php";
 }
 
-echo($pagina_adm);
+echo($_COOKIE["redirect"]);
 
 /*$queryadm = mysql_query("SELECT * FROM utenti WHERE email='".$_SESSION["email"]."' AND password ='".$_SESSION["password"]."' AND tipo='amministratore'") or DIE('query non riuscita'.mysql_error());
 
