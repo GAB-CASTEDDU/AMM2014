@@ -29,7 +29,7 @@ $_SESSION["password"]=$_POST["password"];
 
 //if(!isset($_COOKIE["redirect"]))
 //{
-    $pagina_adm="Amministratore/Home.php";
+    $pagina_adm="Amministratore/Home111111.php";
     $pagina_ven="Venditore/Home.php";
     $pagina_com="Compratore/Home.php";
 /*}
