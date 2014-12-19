@@ -2,9 +2,6 @@
 
 session_start();
 
-$pagina_redirect="Chi_siamo.php";
-
-    setcookie("redirect", $pagina_redirect, time()+300);
 
 
 $connessione_al_server=mysql_connect("localhost","truduGabriele","beluga874");
@@ -33,7 +30,7 @@ $_SESSION["password"]=$_POST["password"];
 
 if(isset($_COOKIE["redirect"]))
 {
-    $pagina_adm='$_COOKIE["redirect"]';
+    $pagina_adm=$_COOKIE["redirect"];
     $pagina_ven=$_COOKIE["redirect"];
     $pagina_com=$_COOKIE["redirect"];
 }
@@ -46,7 +43,7 @@ else
     $pagina_com="Compratore/Home.php";
 }
 
-echo($_COOKIE["redirect"]);
+
 
 $queryadm = mysql_query("SELECT * FROM utenti WHERE email='".$_SESSION["email"]."' AND password ='".$_SESSION["password"]."' AND tipo='amministratore'") or DIE('query non riuscita'.mysql_error());
 
