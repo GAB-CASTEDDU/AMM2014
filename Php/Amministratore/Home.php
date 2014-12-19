@@ -4,7 +4,7 @@
 
 <?php
 
-include("Autentica.php");
+include("../Autentica.php");
 
 if($_SESSION["tipo"]==1)
 {
@@ -98,7 +98,7 @@ else
 {
     $pagina_login="../Login.php";
 
-    //setcookie("redirect", Php/Amministratore/Home.php, time()+300);
+    setcookie("redirect", Php/Amministratore/Home.php, time()+300);
 
 	header("Location:".$pagina_login);
 }

@@ -2,7 +2,7 @@
 
 session_start();
 
-session_register('tipo');
+session_register("tipo");
 
 $connessione_al_server=mysql_connect("localhost","truduGabriele","beluga874");
 
