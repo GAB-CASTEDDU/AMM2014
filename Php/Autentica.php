@@ -1,6 +1,6 @@
 <?php
 
-session_start();
+
 
 
 
@@ -29,7 +29,7 @@ $_SESSION["password"]=$_POST["password"];
 
 //if(!isset($_COOKIE["redirect"]))
 //{
-    $pagina_adm="Amministratore/Home111111.php";
+    $pagina_adm="Amministratore/Home.php";
     $pagina_ven="Venditore/Home.php";
     $pagina_com="Compratore/Home.php";
 /*}
@@ -54,7 +54,7 @@ $querycom = mysql_query("SELECT * FROM utenti WHERE email='".$_POST["email"]."' 
 if(mysql_num_rows($queryadm))
 {
 	$row = mysql_fetch_assoc($queryadm);
-
+session_start();
 	$_SESSION["tipo"]=1;
 
 	header("Location:".$pagina_adm);
@@ -65,7 +65,7 @@ else
 if(mysql_num_rows($queryven))
 {
 	$row = mysql_fetch_assoc($queryven);
-
+session_start();
 	$_SESSION["tipo"]=2;
 
 	header("Location:".$pagina_ven);
@@ -76,7 +76,7 @@ else
 if(mysql_num_rows($querycom))
 {
 	$row = mysql_fetch_assoc($querycom);
-
+session_start();
 	$_SESSION["tipo"]=3;
 
 	header("Location:".$pagina_com);
