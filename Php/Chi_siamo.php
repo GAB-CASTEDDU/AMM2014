@@ -95,8 +95,9 @@ if(!isset($_COOKIE["tipo_utente"]))
 else
 {
     $pagina_login="Logout.php";
+    $pagina_redirect="Chi_siamo.php";
 
-    setcookie("redirect", Chi_siamo.php, time()+300);
+    setcookie("redirect", $pagina_redirect, time()+300);
 
 	header("Location:".$pagina_login);
 }
