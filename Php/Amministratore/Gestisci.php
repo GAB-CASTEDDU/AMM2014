@@ -76,7 +76,7 @@ if($_COOKIE['tipo_utente']==1)
 
                 <p>
                     <a href="http://validator.w3.org/check/referer">
-                    <img style="border:0;width:88px;height:31px" src="../Immagini/html5.png" alt="HTML Valido!" />
+                    <img style="border:0;width:88px;height:31px" src="../../Immagini/html5.png" alt="HTML Valido!" />
                     </a>
 
                     <a href="http://jigsaw.w3.org/css-validator/check/referer">
@@ -97,7 +97,7 @@ if($_COOKIE['tipo_utente']==1)
 else
 {
     $pagina_login="../Login.php";
-    $pagina_redirect=Amministratore/Gestisci.php;
+    $pagina_redirect="Amministratore/Gestisci.php";
 
     setcookie("redirect", $pagina_redirect, time()+300);
 
