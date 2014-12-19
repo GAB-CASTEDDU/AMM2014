@@ -96,8 +96,8 @@ if($_COOKIE['tipo_utente']==1)
 
 else
 {
-    $pagina_login="../Login.php";
-    $pagina_redirect="Amministratore/Gestisci.php";
+    $pagina_login = "../Login.php";
+    $pagina_redirect = "Amministratore/Gestisci.php";
 
     setcookie("redirect", $pagina_redirect, time()+300);
 

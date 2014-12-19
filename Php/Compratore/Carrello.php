@@ -4,7 +4,9 @@
 
 <?php
 
-if(isset($_COOKIE['tipo_utente']) && $_COOKIE['tipo_utente']==3)
+setcookie("redirect", null);
+
+if($_COOKIE['tipo_utente']==3)
 {
 ?>
 
@@ -74,7 +76,7 @@ if(isset($_COOKIE['tipo_utente']) && $_COOKIE['tipo_utente']==3)
 
                 <p>
                     <a href="http://validator.w3.org/check/referer">
-                    <img style="border:0;width:88px;height:31px" src="http://www.ruvzke.sk/sites/default/files/images/w3c-html5-big.png" alt="HTML Valido!" />
+                    <img style="border:0;width:88px;height:31px" src="../../Immagini/html5.png" alt="HTML Valido!" />
                     </a>
 
                     <a href="http://jigsaw.w3.org/css-validator/check/referer">
@@ -94,7 +96,10 @@ if(isset($_COOKIE['tipo_utente']) && $_COOKIE['tipo_utente']==3)
 
 else
 {
-    $pagina_login="../Login.php";
+    $pagina_login = "../Login.php";
+    $pagina_redirect = "Compratore/Carrello.php";
+
+    setcookie("redirect", $pagina_redirect, time()+300);
 
 	header("Location:".$pagina_login);
 }

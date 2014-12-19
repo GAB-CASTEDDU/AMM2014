@@ -4,43 +4,43 @@ session_start();
 
 
 
-$connessione_al_server=mysql_connect("localhost","truduGabriele","beluga874");
+$connessione_al_server = mysql_connect("localhost","truduGabriele","beluga874");
 
 if(!$connessione_al_server)
 {
-	die ('Errore: connessione non riuscita'.mysql_error());
+	die ("Errore: connessione non riuscita".mysql_error());
 }
 
 
 
-$db_selected=mysql_select_db("amm14_truduGabriele",$connessione_al_server);
+$db_selected = mysql_select_db("amm14_truduGabriele", $connessione_al_server);
 
 if(!$db_selected)
 {
-	die ('Errore: selezione del database errata '.mysql_error());
+	die ("Errore: selezione del database errata ".mysql_error());
 }
 
 
 
-$_SESSION["email"]=$_POST["email"];
+$_SESSION["email"] = $_POST["email"];
 
-$_SESSION["password"]=$_POST["password"];
+$_SESSION["password"] = $_POST["password"];
 
 
 
 if(isset($_COOKIE["redirect"]))
 {
-    $pagina_adm=$_COOKIE["redirect"];
-    $pagina_ven=$_COOKIE["redirect"];
-    $pagina_com=$_COOKIE["redirect"];
+    $pagina_adm = $_COOKIE["redirect"];
+    $pagina_ven = $_COOKIE["redirect"];
+    $pagina_com = $_COOKIE["redirect"];
 }
 
 else
 
 {
-    $pagina_adm="Amministratore/Home.php";
-    $pagina_ven="Venditore/Home.php";
-    $pagina_com="Compratore/Home.php";
+    $pagina_adm = "Amministratore/Home.php";
+    $pagina_ven = "Venditore/Home.php";
+    $pagina_com = "Compratore/Home.php";
 }
 
 
@@ -86,7 +86,7 @@ if(mysql_num_rows($querycom))
 
 else
 {
-    $pagina_login="Login.php";
+    $pagina_login = "Login.php";
 
 	header("Location:".$pagina_login);
 }

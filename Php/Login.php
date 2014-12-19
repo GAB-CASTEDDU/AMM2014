@@ -117,7 +117,7 @@ if(!isset($_COOKIE["tipo_utente"]))
 
 else
 {
-    $pagina_login="Logout.php";
+    $pagina_login = "Logout.php";
 
 	header("Location:".$pagina_login);
 }

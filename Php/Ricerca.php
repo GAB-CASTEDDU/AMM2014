@@ -96,8 +96,8 @@ if(!isset($_COOKIE["tipo_utente"]))
 
 else
 {
-    $pagina_login="Logout.php";
-    $pagina_redirect="Ricerca.php";
+    $pagina_login = "Logout.php";
+    $pagina_redirect = "Ricerca.php";
 
     setcookie("redirect", $pagina_redirect, time()+300);
 
