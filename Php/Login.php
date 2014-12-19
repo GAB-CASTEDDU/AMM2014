@@ -4,7 +4,7 @@
 
 <?php
 
-if(!$_SESSION["tipo"])
+if(!isset($_SESSION["tipo"]))
 {
 ?>
 
