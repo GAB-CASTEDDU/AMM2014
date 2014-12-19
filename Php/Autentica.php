@@ -2,7 +2,9 @@
 
 session_start();
 
-setcookie("redirect", 2);
+$pagina_redirect="Chi_siamo.php";
+
+    setcookie("redirect", $pagina_redirect, time()+300);
 
 
 $connessione_al_server=mysql_connect("localhost","truduGabriele","beluga874");
