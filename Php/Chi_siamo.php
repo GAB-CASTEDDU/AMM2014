@@ -4,7 +4,7 @@
 
 <?php
 
-if(isset($_COOKIE['tipo_utente']) && $_COOKIE['tipo_utente']==0)
+if(!isset($_COOKIE['tipo_utente']))
 {
 ?>
 
@@ -74,7 +74,7 @@ if(isset($_COOKIE['tipo_utente']) && $_COOKIE['tipo_utente']==0)
 
                 <p>
                     <a href="http://validator.w3.org/check/referer">
-                    <img style="border:0;width:88px;height:31px" src="http://www.ruvzke.sk/sites/default/files/images/w3c-html5-big.png" alt="HTML Valido!" />
+                    <img style="border:0;width:88px;height:31px" src="../Immagini/html5.png" alt="HTML Valido!" />
                     </a>
 
                     <a href="http://jigsaw.w3.org/css-validator/check/referer">
