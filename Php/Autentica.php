@@ -2,7 +2,7 @@
 
 session_start();
 
-
+setcookie("redirect", null);
 
 $connessione_al_server=mysql_connect("localhost","truduGabriele","beluga874");
 
