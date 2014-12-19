@@ -4,7 +4,7 @@
 
 <?php
 
-setcookie("redirect", "");
+setcookie("redirect", null);
 
 if(!isset($_COOKIE["tipo_utente"]))
 {

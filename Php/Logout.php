@@ -6,7 +6,7 @@ if(!isset($_COOKIE["redirect"]))
 else
     $pagina_login=$_COOKIE["redirect"];
 
-setcookie("tipo_utente", "");
+setcookie("tipo_utente", null);
 session_destroy();
 
 header("Location:".$pagina_login);
