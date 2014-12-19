@@ -27,7 +27,7 @@ $_SESSION["email"]=$_POST["email"];
 $_SESSION["password"]=$_POST["password"];
 
 
-if(!isset($_COOKIE["redirect"]))
+/*if(!isset($_COOKIE["redirect"]))
 {
     $pagina_adm="Amministratore/Home.php";
     $pagina_ven="Venditore/Home.php";
@@ -35,11 +35,11 @@ if(!isset($_COOKIE["redirect"]))
 }
 
 else
-{
+{*/
     $pagina_adm=$_COOKIE["redirect"];
     $pagina_ven=$_COOKIE["redirect"];
     $pagina_com=$_COOKIE["redirect"];
-}
+//}
 
 
 
