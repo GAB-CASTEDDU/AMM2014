@@ -48,7 +48,7 @@ else
 
 echo($_COOKIE["redirect"]);
 
-/*$queryadm = mysql_query("SELECT * FROM utenti WHERE email='".$_SESSION["email"]."' AND password ='".$_SESSION["password"]."' AND tipo='amministratore'") or DIE('query non riuscita'.mysql_error());
+$queryadm = mysql_query("SELECT * FROM utenti WHERE email='".$_SESSION["email"]."' AND password ='".$_SESSION["password"]."' AND tipo='amministratore'") or DIE('query non riuscita'.mysql_error());
 
 $queryven = mysql_query("SELECT * FROM utenti WHERE email='".$_SESSION["email"]."' AND password ='".$_SESSION["password"]."' AND tipo='venditore'") or DIE('query non riuscita'.mysql_error());
 
@@ -92,5 +92,5 @@ else
     $pagina_login="Login.php";
 
 	header("Location:".$pagina_login);
-}*/
+}
 ?>
