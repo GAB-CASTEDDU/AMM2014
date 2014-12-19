@@ -28,18 +28,18 @@ $_SESSION["password"]=$_POST["password"];
 
 
 /*if(isset($_COOKIE["redirect"]))
-{
+{*/
     $pagina_adm=$_COOKIE["redirect"];
     $pagina_ven=$_COOKIE["redirect"];
     $pagina_com=$_COOKIE["redirect"];
-}
+//}
 
-else
-{*/
+/*else
+{
     $pagina_adm="Amministratore/Home.php";
     $pagina_ven="Venditore/Home.php";
     $pagina_com="Compratore/Home.php";
-//}
+}*/
 
 $queryadm = mysql_query("SELECT * FROM utenti WHERE email='".$_SESSION["email"]."' AND password ='".$_SESSION["password"]."' AND tipo='amministratore'") or DIE('query non riuscita'.mysql_error());
 
