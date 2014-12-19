@@ -4,8 +4,6 @@
 
 <?php
 
-setcookie("redirect", null);
-
 if($_COOKIE['tipo_utente']==1)
 {
 ?>
@@ -97,9 +95,6 @@ if($_COOKIE['tipo_utente']==1)
 else
 {
     $pagina_login="../Login.php";
-    $pagina_redirect="Amministratore/Gestisci.php";
-
-    setcookie("redirect", Amministratore/Gestisci.php, time()+300);
 
 	header("Location:".$pagina_login);
 }
