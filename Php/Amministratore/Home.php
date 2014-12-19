@@ -98,7 +98,7 @@ else
 {
     $pagina_login="../Login.php";
 
-    setcookie("redirect", Php/Amministratore/Home.php, time()+300);
+    //setcookie("redirect", Php/Amministratore/Home.php, time()+300);
 
 	header("Location:".$pagina_login);
 }
