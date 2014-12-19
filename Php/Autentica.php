@@ -1,7 +1,7 @@
 <?php
-  $pagina_adm=$_COOKIE['redirect'];
-    $pagina_ven=$_COOKIE['redirect'];
-    $pagina_com=$_COOKIE['redirect'];
+$pagina_adm=$_COOKIE["redirect"];
+    $pagina_ven=$_COOKIE["redirect"];
+    $pagina_com=$_COOKIE["redirect"];
 session_start();
 
 
