@@ -4,6 +4,8 @@
 
 <?php
 
+include("../Autentica.php");
+
 if($_SESSION["tipo"]==1)
 {
 ?>
