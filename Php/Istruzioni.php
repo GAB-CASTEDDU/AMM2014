@@ -3,7 +3,9 @@
 
 
 <?php
+
 setcookie("redirect", "");
+
 if(!isset($_COOKIE["tipo_utente"]))
 {
 ?>
