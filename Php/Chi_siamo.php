@@ -4,7 +4,7 @@
 
 <?php
 
-if(isset($_COOKIE['tipo_utente']) && $_COOKIE['tipo_utente']==0)
+if(!isset($_SESSION["tipo"]))
 {
 ?>
 
@@ -95,6 +95,8 @@ if(isset($_COOKIE['tipo_utente']) && $_COOKIE['tipo_utente']==0)
 else
 {
     $pagina_login="Logout.php";
+
+    setcookie("redirect", Php/Chi_siamo.php, time()+300);
 
 	header("Location:".$pagina_login);
 }

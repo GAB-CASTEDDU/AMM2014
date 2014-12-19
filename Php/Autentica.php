@@ -27,10 +27,19 @@ $_SESSION["email"]=$_POST["email"];
 $_SESSION["password"]=$_POST["password"];
 
 
+if(!isset($_COOKIE["redirect"])
+{
+    $pagina_adm="Amministratore/Home.php";
+    $pagina_ven="Venditore/Home.php";
+    $pagina_com="Compratore/Home.php";
+}
 
-$pagina_adm="Amministratore/Home.php";
-$pagina_ven="Venditore/Home.php";
-$pagina_com="Compratore/Home.php";
+else
+{
+    $pagina_adm=$_COOKIE["redirect"];
+    $pagina_ven=$_COOKIE["redirect"];
+    $pagina_com=$_COOKIE["redirect"];
+}
 
 
 
