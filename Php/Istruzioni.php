@@ -30,54 +30,61 @@ if(!isset($_COOKIE["tipo_utente"]))
         <div id="page">
             <div id="header">
                 <div id="logo">
-		    <img src="../Immagini/logo.png" alt="Logo" usemap="#logo_home"/>
+                    <img src="../Immagini/logo.png" alt="Logo" usemap="#logo_home"/>
 
-		    <map name="logo_home">
-			<area shape="circle" coords="75,75,75" href="Home.php" alt="Home">
-		    </map>
+                    <map name="logo_home">
+                        <area shape="circle" coords="75,75,75" href="Home.php" alt="Home">
+                    </map>
 
-		    <p>Progetto di AMM 2013-2014</p>
+                    <p>Progetto di AMM 2013-2014</p>
 
-		    <div id="benvenuto">
-			<span id="login">
-			    <a href="Login.php">Login</a>
-			</span>
-		    </div>
+                    <div id="benvenuto">
+                        <span id="login">
+                            <a href="Login.php">Login</a>
+                        </span>
+                    </div>
                 </div>
 
                 <div id="menu">
                     <ul>
                         <li><a href="Home.php" id="home">Home</a></li>
-			<li><a href="Chi_siamo.php" id="chi_siamo">Chi siamo</a></li>
+                        <li><a href="Chi_siamo.php" id="chi_siamo">Chi siamo</a></li>
                         <li class="current_page"><a href="#" id="istruzioni">Istruzioni</a></li>
                         <li><a href="Ricerca.php" id="ricerca">Ricerca</a></li>
                     </ul>
                 </div>
             </div>
 
-	    <div id="content">
-		<table id="table-content">
-		    <tr>
-			<td id="left"></td>
+            <div id="content">
+                <table id="table-content">
+                    <tr>
+                        <td id="left"></td>
 
-			<td id="center">
-				<h1 id="h1-istruzioni">Istruzioni</h1>
+                        <td id="center">
+                            <h1 id="h1-istruzioni">Istruzioni</h1>
 
-                		<p>A4R nasce con lo scopo di simulare la creazione di un sito web per la <br>compravendita di autovetture.</p>
+                            <p>A4R nasce con lo scopo di simulare la creazione di un sito web per la <br>compravendita di autovetture.</p>
 
-                		<p>Tale progetto prevedeva di soddisfare alcuni requisiti:</p>
+                            <p>Tale progetto prevedeva di soddisfare alcuni requisiti:</p>
 
-                		<ol>
-                            <li>Utilizzo di HTML e CSS</li>
+                            <ol>
+                                <li>Utilizzo di HTML e CSS</li>
 
+                                <li><ul>
+                                    <li>&#10003;</li>
+                                </ul></li>
 
+                                <li>Utilizzo di PHP e MySQL</li>
+                                <li>Utilizzo del pattern MVC</li>
 
-                            <li>Utilizzo di PHP e MySQL</li>
-                            <li>Utilizzo del pattern MVC</li>
-                            <li>Almeno due ruoli (Amministratore-Venditore-Compratore)</li>
-                            <li>Transazione ()</li>
-                            <li>Funzionalit&agrave; ajax ()</li>
-                        </ol>
+                                <li><ul>
+                                    <li>&#10007;</li>
+                                </ul></li>
+
+                                <li>Almeno due ruoli (Amministratore-Venditore-Compratore)</li>
+                                <li>Transazione ()</li>
+                                <li>Funzionalit&agrave; ajax ()</li>
+                            </ol>
 
 
                 		<p>Nell'applicazione sono gi&agrave; registrati 3 utenti:</p>
