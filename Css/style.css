@@ -34,11 +34,6 @@ body
 	box-shadow: 8px 8px 20px black;
 }
 
-div#page a:hover
-{
-	color: #FFFFFF;
-}
-
 
 
 #logo
@@ -110,10 +105,15 @@ div#header p
 	text-align: right;
 }
 
-div#menu a:link, div#page a:visited
+div#menu a:link, div#menu a:visited
 {
 	color: #BBBBBB;
 	text-decoration: none;
+}
+
+div#menu a:hover
+{
+	color: #FFFFFF;
 }
 
 div#menu ul
@@ -256,6 +256,17 @@ div#menu li
 	border-bottom: 5px solid #B50F23;
 	border-radius: 0px 0px 5px 5px;
 
+}
+
+div#content a:link, div#content a:visited
+{
+	color: #B50F23;
+	text-decoration: none;
+}
+
+div#content a:hover
+{
+	color: #BBBBBB;
 }
 
 #table-content
