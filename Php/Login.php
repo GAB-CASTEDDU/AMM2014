@@ -84,6 +84,8 @@ if(!isset($_COOKIE["tipo_utente"]))
                                 </table>
                             </form>
 
+                            <br>
+
                             <p>Non hai ancora un'account A4R? Clicca <a href="Registrati.php">QUI</a> per registrarti</p>
                         </td>
 
