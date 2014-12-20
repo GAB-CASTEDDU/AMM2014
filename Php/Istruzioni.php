@@ -71,13 +71,13 @@ if(!isset($_COOKIE["tipo_utente"]))
                                 <li>Utilizzo di HTML e CSS &nbsp; &nbsp; &#10003;</li>
                                 <li>Utilizzo di PHP e MySQL &nbsp; &nbsp; &#10003;</li>
                                 <li>Utilizzo del pattern MVC &nbsp; &nbsp; &#10007;</li>
-                                <li>Almeno due ruoli
+                                <li>Almeno due ruoli &#10003;
                                     <ul>
                                         <li>Amministratore</li>
                                         <li>Venditore</li>
                                         <li>Compratore</li>
                                     </ul></li>
-                                <li>Transazione &nbsp; &nbsp; <i>COOMING SOON</i></li>
+                                <li>Transazione &nbsp; &nbsp; &nbsp;<i>COOMING SOON</i></li>
                                 <li>Funzionalit&agrave; ajax &nbsp; &nbsp; <i>COOMING SOON</i></li>
                             </ol>
 

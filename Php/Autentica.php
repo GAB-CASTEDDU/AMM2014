@@ -36,7 +36,6 @@ if(isset($_COOKIE["redirect"]))
 }
 
 else
-
 {
     $pagina_adm = "Amministratore/Home.php";
     $pagina_ven = "Venditore/Home.php";
@@ -63,31 +62,29 @@ if(mysql_num_rows($queryadm))
 }
 
 else
+    if(mysql_num_rows($queryven))
+    {
+        $row = mysql_fetch_assoc($queryven);
 
-if(mysql_num_rows($queryven))
-{
-	$row = mysql_fetch_assoc($queryven);
+        setcookie("tipo_utente", 2);
 
-	setcookie("tipo_utente", 2);
+        header("Location:".$pagina_ven);
+    }
 
-	header("Location:".$pagina_ven);
-}
+    else
+        if(mysql_num_rows($querycom))
+        {
+            $row = mysql_fetch_assoc($querycom);
 
-else
+            setcookie("tipo_utente", 3);
 
-if(mysql_num_rows($querycom))
-{
-	$row = mysql_fetch_assoc($querycom);
+            header("Location:".$pagina_com);
+        }
 
-	setcookie("tipo_utente", 3);
+        else
+        {
+            $pagina_login = "Login.php";
 
-	header("Location:".$pagina_com);
-}
-
-else
-{
-    $pagina_login = "Login.php";
-
-	header("Location:".$pagina_login);
-}
+            header("Location:".$pagina_login);
+        }
 ?>
