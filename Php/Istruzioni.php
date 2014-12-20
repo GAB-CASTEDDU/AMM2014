@@ -63,7 +63,7 @@ if(!isset($_COOKIE["tipo_utente"]))
                         <td id="center">
                             <h1 id="h1-istruzioni">Istruzioni</h1>
 
-                            <h3>Funzioni:</h3>
+                            <h3>Requisiti:</h3>
                             <p>Il progetto prevedeva di soddisfare alcuni requisiti:</p>
 
                             <ol>
