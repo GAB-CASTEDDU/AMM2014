@@ -85,26 +85,26 @@ if(!isset($_COOKIE["tipo_utente"]))
                             <p>Nell'applicazione sono gi&agrave; registrati 3 utenti:</p>
 
                             <ol>
-                    		    <li>COMPRATORE
+                    		    <li>AMMINISTRATORE
+                                    <ul>
+                                        <li>Username: amministratore@gmail.com</li>
+                                        <li>Password: amministratore</li>
+                                    </ul>
+                                </li>
 
-                                <ul>
-                                    <li>Username: compratore@gmail.com</li>
-                                    <li>Password: compratore</li>
-                                </ul></li>
+                                <li>VENDITORE
+                                    <ul>
+                                        <li>Username: venditore@gmail.com</li>
+                                        <li>Password: venditore</li>
+                                    </ul>
+                                </li>
 
-                    		    <li>VENDITORE</li>
-
-                                <li><ul>
-                                    <li>Username: venditore@gmail.com</li>
-                                    <li>Password: venditore</li>
-                                </ul></li>
-
-                    		    <li>AMMINISTRATORE</li>
-
-                                <li><ul>
-                                    <li>Username: amministratore@gmail.com</li>
-                                    <li>Password: amministratore</li>
-                                </ul></li>
+                                <li>COMPRATORE
+                                    <ul>
+                                        <li>Username: compratore@gmail.com</li>
+                                        <li>Password: compratore</li>
+                                    </ul>
+                                </li>
                             </ol>
                         </td>
 
