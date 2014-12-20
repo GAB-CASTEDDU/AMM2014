@@ -34,12 +34,6 @@ body
 	box-shadow: 8px 8px 20px black;
 }
 
-div#page a:link, div#page a:visited
-{
-	color: #BBBBBB;
-	text-decoration: none;
-}
-
 div#page a:hover
 {
 	color: #FFFFFF;
@@ -114,6 +108,12 @@ div#header p
 	background-color: #101D30;
 
 	text-align: right;
+}
+
+div#menu a:link, div#page a:visited
+{
+	color: #BBBBBB;
+	text-decoration: none;
 }
 
 div#menu ul
