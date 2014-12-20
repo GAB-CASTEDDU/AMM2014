@@ -79,6 +79,9 @@ if(!isset($_COOKIE["tipo_utente"]))
                                 <li>Funzionalit&agrave; ajax: &nbsp; &nbsp; &nbsp;<i>COOMING SOON</i></li>
                             </ol>
 
+                            <br>
+
+                            <p><h3>Accesso:</h3>
 
                             <p>&Egrave; possibile effettuare l'accesso all'applicazione utilizzando uno degli utenti <br>prefefiniti:</p>
 
@@ -104,6 +107,7 @@ if(!isset($_COOKIE["tipo_utente"]))
                                     </ul>
                                 </li>
                             </ol>
+                            </p>
                         </td>
 
                         <td id="right"></td>
