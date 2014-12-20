@@ -79,34 +79,32 @@ if(!isset($_COOKIE["tipo_utente"]))
                                 <li>Funzionalit&agrave; ajax: &nbsp; &nbsp; &nbsp;<i>COOMING SOON</i></li>
                             </ol>
 
-                            <br>
-
                             <p><h3>Accesso:</h3>
 
-                            <p>&Egrave; possibile effettuare l'accesso all'applicazione utilizzando uno degli utenti <br>prefefiniti:</p>
+                                <p>&Egrave; possibile effettuare l'accesso all'applicazione utilizzando uno degli utenti <br>prefefiniti:</p>
 
-                            <ol>
-                    		    <li>AMMINISTRATORE
-                                    <ul>
-                                        <li>Username: amministratore@gmail.com</li>
-                                        <li>Password: amministratore</li>
-                                    </ul>
-                                </li>
+                                <ol>
+                                    <li>AMMINISTRATORE
+                                        <ul>
+                                            <li>Username: amministratore@gmail.com</li>
+                                            <li>Password: amministratore</li>
+                                        </ul>
+                                    </li>
 
-                                <li>VENDITORE
-                                    <ul>
-                                        <li>Username: venditore@gmail.com</li>
-                                        <li>Password: venditore</li>
-                                    </ul>
-                                </li>
+                                    <li>VENDITORE
+                                        <ul>
+                                            <li>Username: venditore@gmail.com</li>
+                                            <li>Password: venditore</li>
+                                        </ul>
+                                    </li>
 
-                                <li>COMPRATORE
-                                    <ul>
-                                        <li>Username: compratore@gmail.com</li>
-                                        <li>Password: compratore</li>
-                                    </ul>
-                                </li>
-                            </ol>
+                                    <li>COMPRATORE
+                                        <ul>
+                                            <li>Username: compratore@gmail.com</li>
+                                            <li>Password: compratore</li>
+                                        </ul>
+                                    </li>
+                                </ol>
                             </p>
                         </td>
 
