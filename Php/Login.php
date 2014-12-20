@@ -68,7 +68,7 @@ if(!isset($_COOKIE["tipo_utente"]))
                                     <tr>
                                         <td>E-mail:</td>
 
-                                        <td><input type="text" name="email" required/></td>
+                                        <td><input type="text" name="email" placeholder="email@a4r.it" required/></td>
                                     </tr>
 
                                     <tr>
