@@ -63,7 +63,7 @@ if(!isset($_COOKIE["tipo_utente"]))
                         <td id="center">
                             <h1 id="h1-istruzioni">Istruzioni</h1>
 
-                            <p><h3>Funzioni:</h3>
+                            <h3>Funzioni:</h3>
                                 <p>Il progetto prevedeva di soddisfare alcuni requisiti:</p>
 
                                 <ol>
@@ -79,9 +79,9 @@ if(!isset($_COOKIE["tipo_utente"]))
                                     <li>Transazione: &nbsp; &nbsp; &nbsp;<i>COOMING SOON</i></li>
                                     <li>Funzionalit&agrave; ajax: &nbsp; &nbsp; &nbsp;<i>COOMING SOON</i></li>
                                 </ol>
-                            </p>
 
-                            <p><h3>Accesso:</h3>
+
+                            <h3>Accesso:</h3>
 
                                 <p>&Egrave; possibile effettuare l'accesso all'applicazione utilizzando uno degli utenti <br>prefefiniti:</p>
 
@@ -107,7 +107,7 @@ if(!isset($_COOKIE["tipo_utente"]))
                                         </ul>
                                     </li>
                                 </ol>
-                            </p>
+
                         </td>
 
                         <td id="right"></td>
