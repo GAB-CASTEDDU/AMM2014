@@ -64,6 +64,11 @@ if(!isset($_COOKIE["tipo_utente"]))
                             <h1 id="h1-chi_siamo">Chi siamo</h1>
 
                             <p>A4R nasce con lo scopo di simulare la creazione di un sito web per la <br>compravendita di autovetture.</p>
+
+                            <iframe src="https://www.google.com/maps/embed?pb=!1m0!3m2!1sit!2sit!4v1419077253007!6m8!1m7!1s_lepTJCo5-rrD-bxaXR3OA!2m2!1d39
+                                    .22216105051128!2d9.113822806425077!3f35.61822204624728!4f5.500631795001894!5f0.7820865974627469"
+                                    width="600" height="450" frameborder="0" style="border:0">
+                            </iframe>
                         </td>
 
                         <td id="right"></td>
