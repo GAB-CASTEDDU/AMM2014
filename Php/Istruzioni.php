@@ -63,7 +63,20 @@ if(!isset($_COOKIE["tipo_utente"]))
 			<td id="center">
 				<h1 id="h1-istruzioni">Istruzioni</h1>
 
-                		<p>Benvenuto in A4R! Nell'applicazione sono gi&agrave; registrati 3 utenti:</p>
+                		<p>A4R nasce con lo scopo di simulare la creazione di un sito web per la compravendita di autovetture.</p>
+
+                		<p>Tale progetto prevedeva di soddisfare alcuni requisiti:</p>
+
+                		<ul>
+                            <li>Utilizzo di HTML e CSS      V</li>
+                            <li>Utilizzo di PHP e MySQL     V</li>
+                            <li>Utilizzo del pattern MVC    X</li>
+                            <li>Almeno due ruoli (Amministratore-Venditore-Compratore)</li>
+                            <li>Almeno una transazione (indicare la classe dove è implementata) Cooming soon</li>
+                            <li>Almeno una funzionalità ajax (indicare in quale script si trovi) Cooming soon</li>
+
+
+                		<p>Nell'applicazione sono gi&agrave; registrati 3 utenti:</p>
 
                			<ol>
                     		    <li>COMPRATORE</li>
@@ -71,21 +84,21 @@ if(!isset($_COOKIE["tipo_utente"]))
                    		    <ul>
                         		<li>Username: compratore@gmail.com</li>
                        			<li>Password: compratore</li>
-                    		    </ul>
+                            </ul>
 
                     		    <li>VENDITORE</li>
 
-                    		    <ul>
+                            <ul>
                         		<li>Username: venditore@gmail.com</li>
                         		<li>Password: venditore</li>
-                    		    </ul>
+                            </ul>
 
                     		    <li>AMMINISTRATORE</li>
 
-                    		    <ul>
+                            <ul>
                         		<li>Username: amministratore@gmail.com</li>
                         		<li>Password: amministratore</li>
-                    		    </ul>
+                            </ul>
                 		</ol>
 			</td>
 
