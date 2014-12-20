@@ -82,35 +82,35 @@ if(!isset($_COOKIE["tipo_utente"]))
                             </ol>
 
 
-                		<p>Nell'applicazione sono gi&agrave; registrati 3 utenti:</p>
+                            <p>Nell'applicazione sono gi&agrave; registrati 3 utenti:</p>
 
-               			<ol>
+                            <ol>
                     		    <li>COMPRATORE</li>
 
-                   		    <li><ul>
-                        		<li>Username: compratore@gmail.com</li>
-                       			<li>Password: compratore</li>
-                            </ul></li>
+                                <li><ul>
+                                    <li>Username: compratore@gmail.com</li>
+                                    <li>Password: compratore</li>
+                                </ul></li>
 
                     		    <li>VENDITORE</li>
 
-                            <li><ul>
-                        		<li>Username: venditore@gmail.com</li>
-                        		<li>Password: venditore</li>
-                            </ul></li>
+                                <li><ul>
+                                    <li>Username: venditore@gmail.com</li>
+                                    <li>Password: venditore</li>
+                                </ul></li>
 
                     		    <li>AMMINISTRATORE</li>
 
-                            <li><ul>
-                        		<li>Username: amministratore@gmail.com</li>
-                        		<li>Password: amministratore</li>
-                            </ul></li>
-                		</ol>
-			</td>
+                                <li><ul>
+                                    <li>Username: amministratore@gmail.com</li>
+                                    <li>Password: amministratore</li>
+                                </ul></li>
+                            </ol>
+                        </td>
 
-			<td id="right"></td>
-		    </tr>
-		</table>
+                        <td id="right"></td>
+                    </tr>
+                </table>
 
             </div>
 
@@ -120,11 +120,11 @@ if(!isset($_COOKIE["tipo_utente"]))
 
                 <p>
                     <a href="http://validator.w3.org/check/referer">
-                    <img style="border:0;width:88px;height:31px" src="../Immagini/html5.png" alt="HTML Valido!" />
+                        <img style="border:0;width:88px;height:31px" src="../Immagini/html5.png" alt="HTML Valido!" />
                     </a>
 
                     <a href="http://jigsaw.w3.org/css-validator/check/referer">
-                    <img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss" alt="CSS Valido!" />
+                        <img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss" alt="CSS Valido!" />
                     </a>
                 </p>
 

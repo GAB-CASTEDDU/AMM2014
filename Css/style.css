@@ -293,7 +293,7 @@ div#content ol
 	list-style-type: upper-alpha;
 }
 
-div#content ul
+div#content li
 {
 	padding-top: 5px;
 	padding-bottom: 25px;
