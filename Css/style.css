@@ -327,6 +327,11 @@ div#content li
 	padding-bottom: 5px;
 }
 
+div#content iframe
+{
+    width: 475px;
+    height: 350px;
+}
 
 #left
 {
