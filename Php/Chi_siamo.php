@@ -63,7 +63,7 @@ if(!isset($_COOKIE["tipo_utente"]))
                         <td id="center">
                             <h1 id="h1-chi_siamo">Chi siamo</h1>
 
-                            <p>A4R nasce con lo scopo di simulare la creazione di un sito web per la <br>compravendita di autovetture.</p>
+                            <p>Affari a 4 ruote nasce con lo scopo di simulare la creazione di un sito <br>web per la compravendita di autovetture.</p>
 
                             <br>
 
