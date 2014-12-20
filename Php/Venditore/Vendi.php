@@ -62,6 +62,47 @@ if($_COOKIE['tipo_utente']==2)
 
                         <td id="center">
                             <h1 id="h1-vendi">Vendi</h1>
+
+                            <p>Inserisci le caretteristiche dell'auto che vuoi vendere:</p>
+
+                            <form action="Aggiungi.php" method="post" id="form-login">
+                                <table id="table-form">
+                                    <tr>
+                                        <td>Marca:</td>
+
+                                        <td><input type="text" name="marca" placeholder="Alfa Romeo" required/></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Modello:</td>
+
+                                        <td><input type="text" name="modello" placeholder="4c" required/></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Prezzo:</td>
+
+                                        <td><input type="number" name="prezzo" placeholder="34567" required/></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Anno:</td>
+
+                                        <td><input type="number" name="anno" placeholder="1993" required/></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Chilometri:</td>
+
+                                        <td><input type="number" name="chilometri" placeholder="23456" required/></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td></td>
+                                        <td><input type="submit" value="Cerca" id="tasto-login"/><td>
+                                    </tr>
+                                </table>
+                            </form>
                         </td>
 
                         <td id="right"></td>

@@ -62,6 +62,47 @@ if($_COOKIE['tipo_utente']==3)
 
                         <td id="center">
                             <h1 id="h1-cerca">Ricerca</h1>
+
+                            <p>Inserisci uno o pi&ugrave; filtri per effettuare la ricerca:</p>
+
+                            <form action="Home.php" method="post" id="form-login">
+                                <table id="table-form">
+                                    <tr>
+                                        <td>Marca:</td>
+
+                                        <td><input type="text" name="marca" placeholder="Tutto"/></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Modello:</td>
+
+                                        <td><input type="text" name="modello" placeholder="Tutto"/></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Prezzo:</td>
+
+                                        <td><input type="number" name="prezzo" placeholder="Fino a"/></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Anno:</td>
+
+                                        <td><input type="number" name="anno" placeholder="Da"/></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Chilometri:</td>
+
+                                        <td><input type="number" name="chilometri" placeholder="Fino a"/></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td></td>
+                                        <td><input type="submit" value="Cerca" id="tasto-login"/><td>
+                                    </tr>
+                                </table>
+                            </form>
                         </td>
 
                         <td id="right"></td>
