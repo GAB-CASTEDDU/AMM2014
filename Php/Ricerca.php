@@ -70,13 +70,13 @@ if(!isset($_COOKIE["tipo_utente"]))
                                     <tr>
                                         <td>Nome:</td>
 
-                                        <td><input type="text" name="nome" required/></td>
+                                        <td><input type="text" name="nome" placeholder="Alfa Romeo 4c" required/></td>
                                     </tr>
 
                                     <tr>
                                         <td>Prezzo:</td>
 
-                                        <td><input type="number" name="prezzo" required/></td>
+                                        <td><input type="number" name="prezzo" placeholder="12345"required/></td>
                                     </tr>
 
                                     <tr>
