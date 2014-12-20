@@ -67,14 +67,17 @@ if(!isset($_COOKIE["tipo_utente"]))
 
                 		<p>Tale progetto prevedeva di soddisfare alcuni requisiti:</p>
 
-                		<ul>
-                            <li>Utilizzo di HTML e CSS &nbsp; V</li>
-                            <li>Utilizzo di PHP e MySQL &nbsp; V</li>
-                            <li>Utilizzo del pattern MVC &nbsp; X</li>
+                		<ol>
+                            <li>Utilizzo di HTML e CSS</li>
+
+
+
+                            <li>Utilizzo di PHP e MySQL</li>
+                            <li>Utilizzo del pattern MVC</li>
                             <li>Almeno due ruoli (Amministratore-Venditore-Compratore)</li>
-                            <li>Transazione () &nbsp; Cooming soon</li>
-                            <li>Funzionalit&agrave; ajax () &nbsp; Cooming soon</li>
-                        </ul>
+                            <li>Transazione ()</li>
+                            <li>Funzionalit&agrave; ajax ()</li>
+                        </ol>
 
 
                 		<p>Nell'applicazione sono gi&agrave; registrati 3 utenti:</p>
@@ -82,24 +85,24 @@ if(!isset($_COOKIE["tipo_utente"]))
                			<ol>
                     		    <li>COMPRATORE</li>
 
-                   		    <ul>
+                   		    <li><ul>
                         		<li>Username: compratore@gmail.com</li>
                        			<li>Password: compratore</li>
-                            </ul>
+                            </ul></li>
 
                     		    <li>VENDITORE</li>
 
-                            <ul>
+                            <li><ul>
                         		<li>Username: venditore@gmail.com</li>
                         		<li>Password: venditore</li>
-                            </ul>
+                            </ul></li>
 
                     		    <li>AMMINISTRATORE</li>
 
-                            <ul>
+                            <li><ul>
                         		<li>Username: amministratore@gmail.com</li>
                         		<li>Password: amministratore</li>
-                            </ul>
+                            </ul></li>
                 		</ol>
 			</td>
 
