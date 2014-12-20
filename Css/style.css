@@ -293,14 +293,16 @@ div#content ol
 	list-style-type: upper-alpha;
 }
 
-div#content li
+div#content ul
 {
-	padding-top: 5px;
-	padding-bottom: 25px;
-
 	list-style-type: square;
 }
 
+div#content li
+{
+    padding-top: 5px;
+	padding-bottom: 5px;
+}
 
 
 #left
