@@ -69,21 +69,16 @@ if(!isset($_COOKIE["tipo_utente"]))
 
                             <ol>
                                 <li>Utilizzo di HTML e CSS <dir>&#10003;</li>
-
-                                <li><ul>
-                                    <li>&#10003;</li>
-                                </ul></li>
-
-                                <li>Utilizzo di PHP e MySQL</li>
-                                <li>Utilizzo del pattern MVC</li>
-
-                                <li><ul>
-                                    <li>&#10007;</li>
-                                </ul></li>
-
-                                <li>Almeno due ruoli (Amministratore-Venditore-Compratore)</li>
-                                <li>Transazione ()</li>
-                                <li>Funzionalit&agrave; ajax ()</li>
+                                <li>Utilizzo di PHP e MySQL <dir>&#10003;</li>
+                                <li>Utilizzo del pattern MVC <dir>&#10007;</li>
+                                <li>Almeno due ruoli (Amministratore-Venditore-Compratore)
+                                    <ul>
+                                        <li>Amministratore</li>
+                                        <li>Venditore</li>
+                                        <li>Compratore</li>
+                                    </ul></li>
+                                <li>Transazione <dir>COOMING SOON</li>
+                                <li>Funzionalit&agrave; ajax <dir>COOMING SOON</li>
                             </ol>
 
 
