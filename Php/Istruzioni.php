@@ -67,14 +67,14 @@ if(!isset($_COOKIE["tipo_utente"]))
 
                 		<p>Tale progetto prevedeva di soddisfare alcuni requisiti:</p>
 
-                		<ol>
+                		<ul>
                             <li>Utilizzo di HTML e CSS &nbsp; V</li>
                             <li>Utilizzo di PHP e MySQL &nbsp; V</li>
                             <li>Utilizzo del pattern MVC &nbsp; X</li>
                             <li>Almeno due ruoli (Amministratore-Venditore-Compratore)</li>
                             <li>Transazione () &nbsp; Cooming soon</li>
                             <li>Funzionalit&agrave; ajax () &nbsp; Cooming soon</li>
-                        </ol>
+                        </ul>
 
 
                 		<p>Nell'applicazione sono gi&agrave; registrati 3 utenti:</p>
