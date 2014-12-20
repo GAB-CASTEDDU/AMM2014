@@ -70,19 +70,19 @@ if($_COOKIE['tipo_utente']==2)
                                     <tr>
                                         <td>Marca:</td>
 
-                                        <td><input type="text" name="marca" placeholder="Alfa Romeo" required/></td>
+                                        <td><input type="text" name="marca" placeholder="Fiat" required/></td>
                                     </tr>
 
                                     <tr>
                                         <td>Modello:</td>
 
-                                        <td><input type="text" name="modello" placeholder="4c" required/></td>
+                                        <td><input type="text" name="modello" placeholder="Duna" required/></td>
                                     </tr>
 
                                     <tr>
                                         <td>Prezzo:</td>
 
-                                        <td><input type="number" name="prezzo" placeholder="34567" required/></td>
+                                        <td><input type="number" name="prezzo" placeholder="3456" required/></td>
                                     </tr>
 
                                     <tr>
@@ -94,7 +94,7 @@ if($_COOKIE['tipo_utente']==2)
                                     <tr>
                                         <td>Chilometri:</td>
 
-                                        <td><input type="number" name="chilometri" placeholder="23456" required/></td>
+                                        <td><input type="number" name="chilometri" placeholder="345678" required/></td>
                                     </tr>
 
                                     <tr>

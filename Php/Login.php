@@ -74,7 +74,7 @@ if(!isset($_COOKIE["tipo_utente"]))
                                     <tr>
                                         <td>Password:</td>
 
-                                        <td><input type="password" name="password" placeholder="password" required/></td>
+                                        <td><input type="password" name="password" placeholder="Password" required/></td>
                                     </tr>
 
                                     <tr>
