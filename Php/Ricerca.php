@@ -65,7 +65,7 @@ if(!isset($_COOKIE["tipo_utente"]))
 
                             <p>Inserisci uno o pi&ugrave; filtri per effettuare la ricerca:</p>
 
-                            <form action="Ricerca.php?ricerca=ok" method="post" id="form-ricerca">
+                            <form action="Ricerca.php?ricerca=ok" method="post" id="form-login">
                                 <table id="table-ricerca">
                                     <tr>
                                         <td>Nome:</td>
