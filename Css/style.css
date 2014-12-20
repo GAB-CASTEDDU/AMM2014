@@ -72,6 +72,17 @@ div#header p
 	text-shadow: 2px 2px 6px black;
 }
 
+div#header a:link, div#header a:visited
+{
+	color: #BBBBBB;
+	text-decoration: none;
+}
+
+div#header a:hover
+{
+	color: #FFFFFF;
+}
+
 
 
 #benvenuto
