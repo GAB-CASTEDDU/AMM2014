@@ -80,7 +80,7 @@ if(!isset($_COOKIE["tipo_utente"]))
                             </ol>
 
 
-                            <p>Nell'applicazione sono gi&agrave; registrati 3 utenti:</p>
+                            <p>&Egrave; possibile effettuare l'accesso all'applicazione utilizzando uno deggli utenti prefefiniti:</p>
 
                             <ol>
                     		    <li>AMMINISTRATORE
