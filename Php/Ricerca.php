@@ -68,15 +68,33 @@ if(!isset($_COOKIE["tipo_utente"]))
                             <form action="Ricerca.php?ricerca=ok" method="post" id="form-login">
                                 <table id="table-form">
                                     <tr>
-                                        <td>Nome:</td>
+                                        <td>Marca:</td>
 
-                                        <td><input type="text" name="nome" placeholder="Alfa Romeo 4c" required/></td>
+                                        <td><input type="text" name="marca" placeholder="Tutto"/></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Modello:</td>
+
+                                        <td><input type="text" name="modello" placeholder="Tutto"/></td>
                                     </tr>
 
                                     <tr>
                                         <td>Prezzo:</td>
 
-                                        <td><input type="number" name="prezzo" placeholder="12345"required/></td>
+                                        <td><input type="number" name="prezzo" placeholder="Fino a"/></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Anno:</td>
+
+                                        <td><input type="number" name="anno" placeholder="Da"/></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Chilometri:</td>
+
+                                        <td><input type="number" name="chilometri" placeholder="Fino a"/></td>
                                     </tr>
 
                                     <tr>
