@@ -64,50 +64,48 @@ if(!isset($_COOKIE["tipo_utente"]))
                             <h1 id="h1-istruzioni">Istruzioni</h1>
 
                             <h3>Funzioni:</h3>
-                                <p>Il progetto prevedeva di soddisfare alcuni requisiti:</p>
+                            <p>Il progetto prevedeva di soddisfare alcuni requisiti:</p>
 
-                                <ol>
-                                    <li>Utilizzo di HTML e CSS: &nbsp; &nbsp; &nbsp; &#10003;</li>
-                                    <li>Utilizzo di PHP e MySQL: &nbsp; &nbsp; &nbsp; &#10003;</li>
-                                    <li>Utilizzo del pattern MVC: &nbsp; &nbsp; &nbsp; &#10007;</li>
-                                    <li>Almeno due ruoli: &nbsp; &nbsp; &nbsp; &#10003;
-                                        <ul>
-                                            <li>Amministratore</li>
-                                            <li>Venditore</li>
-                                            <li>Compratore</li>
-                                        </ul></li>
-                                    <li>Transazione: &nbsp; &nbsp; &nbsp;<i>COOMING SOON</i></li>
-                                    <li>Funzionalit&agrave; ajax: &nbsp; &nbsp; &nbsp;<i>COOMING SOON</i></li>
-                                </ol>
-
+                            <ol>
+                                <li>Utilizzo di HTML e CSS: &nbsp; &nbsp; &nbsp; &#10003;</li>
+                                <li>Utilizzo di PHP e MySQL: &nbsp; &nbsp; &nbsp; &#10003;</li>
+                                <li>Utilizzo del pattern MVC: &nbsp; &nbsp; &nbsp; &#10007;</li>
+                                <li>Almeno due ruoli: &nbsp; &nbsp; &nbsp; &#10003;
+                                    <ul>
+                                        <li>Amministratore</li>
+                                        <li>Venditore</li>
+                                        <li>Compratore</li>
+                                    </ul></li>
+                                <li>Transazione: &nbsp; &nbsp; &nbsp;<i>COOMING SOON</i></li>
+                                <li>Funzionalit&agrave; ajax: &nbsp; &nbsp; &nbsp;<i>COOMING SOON</i></li>
+                            </ol>
 
                             <h3>Accesso:</h3>
 
-                                <p>&Egrave; possibile effettuare l'accesso all'applicazione utilizzando uno degli utenti <br>prefefiniti:</p>
+                            <p>&Egrave; possibile effettuare l'accesso all'applicazione utilizzando uno degli utenti <br>prefefiniti:</p>
 
-                                <ol>
-                                    <li>AMMINISTRATORE
-                                        <ul>
-                                            <li>Username: amministratore@gmail.com</li>
-                                            <li>Password: amministratore</li>
-                                        </ul>
-                                    </li>
+                            <ol>
+                                <li>AMMINISTRATORE
+                                    <ul>
+                                        <li>Username: amministratore@gmail.com</li>
+                                        <li>Password: amministratore</li>
+                                    </ul>
+                                </li>
 
-                                    <li>VENDITORE
-                                        <ul>
-                                            <li>Username: venditore@gmail.com</li>
-                                            <li>Password: venditore</li>
-                                        </ul>
-                                    </li>
+                                <li>VENDITORE
+                                    <ul>
+                                        <li>Username: venditore@gmail.com</li>
+                                        <li>Password: venditore</li>
+                                    </ul>
+                                </li>
 
-                                    <li>COMPRATORE
-                                        <ul>
-                                            <li>Username: compratore@gmail.com</li>
-                                            <li>Password: compratore</li>
-                                        </ul>
-                                    </li>
-                                </ol>
-
+                                <li>COMPRATORE
+                                    <ul>
+                                        <li>Username: compratore@gmail.com</li>
+                                        <li>Password: compratore</li>
+                                    </ul>
+                                </li>
+                            </ol>
                         </td>
 
                         <td id="right"></td>
