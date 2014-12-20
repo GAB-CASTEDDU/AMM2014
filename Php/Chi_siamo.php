@@ -67,7 +67,8 @@ if(!isset($_COOKIE["tipo_utente"]))
 
                             <br>
 
-                            <h3>Dove ci trovi</h3>
+                            <h3>Dove ci trovi:</h3>
+                            <p>Via Ospedale 72, Cagliari</p>
 
                             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d642.6530510159041!2d9.114043400000018!3d39.
                                     22241150036271!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12e7340581eb77df%3A0x4ae977f197f31069!
