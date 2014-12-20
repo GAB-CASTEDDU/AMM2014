@@ -75,6 +75,11 @@ if(!isset($_COOKIE["tipo_utente"]))
                                     2sVia+Ospedale%2C+72%2C+09124+Cagliari!5e1!3m2!1sit!2sit!4v1419077660963"
                                     width="500" height="380" frameborder="0" style="border:0">
                             </iframe>
+
+                            <br>
+
+                            <h3>Contattaci:</h3>
+                            <p><a href="mailto:info@a4r.it">info@a4r.it</a></p>
                         </td>
 
                         <td id="right"></td>
