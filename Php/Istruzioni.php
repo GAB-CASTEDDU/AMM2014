@@ -68,7 +68,7 @@ if(!isset($_COOKIE["tipo_utente"]))
                             <p>Tale progetto prevedeva di soddisfare alcuni requisiti:</p>
 
                             <ol>
-                                <li>Utilizzo di HTML e CSS</li>
+                                <li>Utilizzo di HTML e CSS <dir>&#10003;</li>
 
                                 <li><ul>
                                     <li>&#10003;</li>
