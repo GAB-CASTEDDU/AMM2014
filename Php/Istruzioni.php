@@ -71,7 +71,7 @@ if(!isset($_COOKIE["tipo_utente"]))
                                 <li>Utilizzo di HTML e CSS &nbsp; &nbsp; &#10003;</li>
                                 <li>Utilizzo di PHP e MySQL &nbsp; &nbsp; &#10003;</li>
                                 <li>Utilizzo del pattern MVC &nbsp; &nbsp; &#10007;</li>
-                                <li>Almeno due ruoli &#10003;
+                                <li>Almeno due ruoli &nbsp; &nbsp; &#10003;
                                     <ul>
                                         <li>Amministratore</li>
                                         <li>Venditore</li>
@@ -85,9 +85,9 @@ if(!isset($_COOKIE["tipo_utente"]))
                             <p>Nell'applicazione sono gi&agrave; registrati 3 utenti:</p>
 
                             <ol>
-                    		    <li>COMPRATORE</li>
+                    		    <li>COMPRATORE
 
-                                <li><ul>
+                                <ul>
                                     <li>Username: compratore@gmail.com</li>
                                     <li>Password: compratore</li>
                                 </ul></li>
