@@ -62,6 +62,29 @@ if(!isset($_COOKIE["tipo_utente"]))
 
                         <td id="center">
                             <h1 id="h1-cerca">Ricerca</h1>
+
+                            <p>Inserisci uno o pi&ugrave; filtri per effettuare la ricerca:</p>
+
+                            <form action="Ricerca.php?ricerca=ok" method="post" id="form-ricerca">
+                                <table id="table-ricerca">
+                                    <tr>
+                                        <td>Nome:</td>
+
+                                        <td><input type="text" name="nome" required/></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Prezzo:</td>
+
+                                        <td><input type="number" name="prezzo" required/></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td></td>
+                                        <td><input type="submit" value="Cerca" id="tasto-login"/><td>
+                                    </tr>
+                                </table>
+                            </form>
                         </td>
 
                         <td id="right"></td>
