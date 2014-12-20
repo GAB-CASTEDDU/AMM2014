@@ -63,9 +63,7 @@ if(!isset($_COOKIE["tipo_utente"]))
                         <td id="center">
                             <h1 id="h1-istruzioni">Istruzioni</h1>
 
-                            <p>A4R nasce con lo scopo di simulare la creazione di un sito web per la <br>compravendita di autovetture.</p>
-
-                            <p>Tale progetto prevedeva di soddisfare alcuni requisiti:</p>
+                            <p>Il progetto prevedeva di soddisfare alcuni requisiti:</p>
 
                             <ol>
                                 <li>Utilizzo di HTML e CSS: &nbsp; &nbsp; &nbsp; &#10003;</li>
@@ -111,9 +109,7 @@ if(!isset($_COOKIE["tipo_utente"]))
                         <td id="right"></td>
                     </tr>
                 </table>
-
             </div>
-
 
             <div id="footer">
                 <p>Copyright &copy; 2014 - Affari a 4 ruote. Tutti i diritti riservati.</p>
@@ -127,7 +123,6 @@ if(!isset($_COOKIE["tipo_utente"]))
                         <img style="border:0;width:88px;height:31px" src="http://jigsaw.w3.org/css-validator/images/vcss" alt="CSS Valido!" />
                     </a>
                 </p>
-
             </div>
         </div>
     </body>
