@@ -4,14 +4,14 @@
 
 body
 {
-	
+
 	margin: 0px;
         margin-top: 15px;
         margin-bottom: 15px;
 
 	background-image: url('../Immagini/back.png');
 
-	font: 15px Trebuchet MS;	
+	font: 15px Trebuchet MS;
 }
 
 
@@ -49,7 +49,7 @@ div#page a:hover
 
 #logo
 {
-	height: 150px;	
+	height: 150px;
 
 	background-color: #101D30;
 	background-image: url('../Immagini/A4R.png');
@@ -128,7 +128,7 @@ div#menu ul
 
 div#menu .current_page
 {
-	background-color: #B50F23;   	
+	background-color: #B50F23;
 }
 
 div#menu li
@@ -169,10 +169,10 @@ div#menu li
 {
 	margin-left: -10px;
 	padding-left: 20px;
-	
+
 	background-image: url('../Immagini/chi_siamo.png');
 	background-repeat: no-repeat;
-	background-position: left center;	
+	background-position: left center;
 }
 
 
@@ -182,10 +182,10 @@ div#menu li
 	margin-left: -10px;
 
 	padding-left: 20px;
-	
+
 	background-image: url('../Immagini/istruzioni.png');
 	background-repeat: no-repeat;
-	background-position: left center;	
+	background-position: left center;
 }
 
 
@@ -195,7 +195,7 @@ div#menu li
 	margin-left: -10px;
 
 	padding-left: 20px;
-	
+
 	background-image: url('../Immagini/ricerca.png');
 	background-repeat: no-repeat;
 	background-position: left center;
@@ -206,7 +206,7 @@ div#menu li
 	margin-left: -10px;
 
 	padding-left: 20px;
-	
+
 	background-image: url('../Immagini/account.png');
 	background-repeat: no-repeat;
 	background-position: left center;
@@ -217,7 +217,7 @@ div#menu li
 	margin-left: -10px;
 
 	padding-left: 20px;
-	
+
 	background-image: url('../Immagini/setting.png');
 	background-repeat: no-repeat;
 	background-position: left center;
@@ -228,7 +228,7 @@ div#menu li
 	margin-left: -10px;
 
 	padding-left: 20px;
-	
+
 	background-image: url('../Immagini/compra.png');
 	background-repeat: no-repeat;
 	background-position: left center;
@@ -239,7 +239,7 @@ div#menu li
 	margin-left: -10px;
 
 	padding-left: 20px;
-	
+
 	background-image: url('../Immagini/offri.png');
 	background-repeat: no-repeat;
 	background-position: left center;
@@ -250,7 +250,7 @@ div#menu li
 #content
 {
 	background-image: url('../Immagini/back_c.png');
-	
+
 	border-left: 5px solid #B50F23;
 	border-right: 5px solid #B50F23;
 	border-bottom: 5px solid #B50F23;
@@ -279,7 +279,7 @@ div#content h1
 	text-shadow: 1px 1px 3px black;
 }
 
-div#content p, div#content ol
+div#content p, div#content ol, div#content ul
 {
 	color: #444444;
 }
@@ -466,4 +466,3 @@ div#footer p
 
 
 
-    
