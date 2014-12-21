@@ -84,8 +84,8 @@ if(!isset($_COOKIE["tipo_utente"]))
 
 
 
-                            if(mysql_num_rows($queryvis))
-                            {
+                            //if(mysql_num_rows($queryvis))
+                            //{
                                 while($row = mysql_fetch_assoc($queryvis))
                                 {
                                 ?>
@@ -114,7 +114,7 @@ if(!isset($_COOKIE["tipo_utente"]))
                                     </table>
                                 <?
                                 }
-                            }
+                            //}
                             ?>
                         </td>
 
