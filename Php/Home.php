@@ -91,27 +91,29 @@ if(!isset($_COOKIE["tipo_utente"]))
                                 ?>
                                     <table>
                                         <tr>
-                                            <td><b>Marca:</b> <?$row->marca?> </td>
+                                            <td>Marca: $row->marca </td>
                                         </tr>
                                         <tr>
-                                            <td><b>Modello:</b> <?$row->modello?> </td>
+                                            <td>Modello: $row->modello </td>
                                         </tr>
                                         <tr>
-                                            <td><b>Colore:</b> <?$row->colore?> </td>
+                                            <td>Colore: $row->colore </td>
                                         </tr>
                                         <tr>
-                                            <td><b>Anno:</b> <?$row->anno?> </td>
+                                            <td>Anno: $row->anno </td>
                                         </tr>
                                         <tr>
-                                            <td><b>Alimentazione:</b> <?$row->alimentazione?> </td>
+                                            <td>Alimentazione: $row->alimentazione </td>
                                         </tr>
                                         <tr>
-                                            <td><b>Prezzo:</b> <?$row->prezzo?> </td>
+                                            <td>Prezzo: $row->prezzo </td>
                                         </tr>
                                         <tr>
-                                            <td><b>Chilometri:</b> <?$row->chilometri?> </td>
+                                            <td>Chilometri: $row->chilometri </td>
                                         </tr>
                                     </table>
+
+                                    <br><br>
                                 <?
                                 }
                             //}
