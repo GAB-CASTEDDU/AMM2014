@@ -92,7 +92,7 @@ if(!isset($_COOKIE["tipo_utente"]))
                                         <td>
                                             <table id="table-vis">
                                                 <tr>
-                                                    <td><img src="../Immagini/noimg.png" alt="No image aviable"></td>
+                                                    <td><img width="140" src="../Immagini/noimg.png" alt="No image aviable"></td>
                                                 </tr>
                                                 <tr>
                                                     <td>Prezzo: &nbsp;<?echo"$row->prezzo";?> &euro;</td>
