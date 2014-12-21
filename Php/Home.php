@@ -97,6 +97,9 @@ if(!isset($_COOKIE["tipo_utente"]))
                                                 <tr>
                                                     <td>Prezzo: &nbsp;<?echo"$row->prezzo";?> &euro;</td>
                                                 </tr>
+                                                <tr>
+                                                    <td><a href="Ricerca.php" id="carrello">>Aggiungi al carrello</a></td>
+                                                </tr>
                                             </table>
                                         </td>
 
