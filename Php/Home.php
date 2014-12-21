@@ -89,7 +89,7 @@ if(!isset($_COOKIE["tipo_utente"]))
                                 while($row = mysql_fetch_assoc($queryvis))
                                 {
                                 ?>
-                                    <table id="table-form">
+                                    <table id="table-vis">
                                         <tr>
                                             <td>Marca:</td><td>$row->marca</td>
                                         </tr>
