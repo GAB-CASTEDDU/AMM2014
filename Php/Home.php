@@ -89,7 +89,16 @@ if(!isset($_COOKIE["tipo_utente"]))
                             ?>
                                 <table id="table-vis">
                                     <tr>
-                                        <td><img src="../Immagini/noimg.png" alt="No image aviable"></td>
+                                        <td>
+                                            <table id="table-vis">
+                                                <tr>
+                                                    <td><img src="../Immagini/noimg.png" alt="No image aviable"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Prezzo:</td><td><?echo"$row->prezzo";?> &euro;</td>
+                                                </tr>
+                                            </table>
+                                        </td>
 
                                         <td>
                                             <table id="table-vis">
@@ -107,9 +116,6 @@ if(!isset($_COOKIE["tipo_utente"]))
                                                 </tr>
                                                 <tr>
                                                     <td>Alimentazione:</td><td><?echo"$row->alimentazione";?></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Prezzo:</td><td><?echo"$row->prezzo";?> &euro;</td>
                                                 </tr>
                                                 <tr>
                                                     <td>Chilometri:</td><td><?echo"$row->chilometri";?></td>
