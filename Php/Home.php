@@ -95,7 +95,7 @@ if(!isset($_COOKIE["tipo_utente"]))
                                                     <td><img src="../Immagini/noimg.png" alt="No image aviable"></td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Prezzo:</td><td><?echo"$row->prezzo";?> &euro;</td>
+                                                    <td>Prezzo: &nbsp;<?echo"$row->prezzo";?> &euro;</td>
                                                 </tr>
                                             </table>
                                         </td>
