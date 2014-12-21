@@ -84,7 +84,7 @@ if(!isset($_COOKIE["tipo_utente"]))
 
 
 
-                            while($row = mysql_fetch_assoc($queryvis))
+                            while($row = mysql_fetch_object($queryvis))
                             {
                             ?>
                                 <table id="table-vis">
