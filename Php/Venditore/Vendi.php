@@ -80,21 +80,37 @@ if($_COOKIE['tipo_utente']==2)
                                     </tr>
 
                                     <tr>
+                                        <td>Colore:</td>
+
+                                        <td><input type="text" name="colore" placeholder="Bianco" required/></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Alimentazione:</td>
+
+                                        <td>
+                                            <input type="radio" name="alimentazione" value="benzina" checked/>Benzina
+                                            <input type="radio" name="alimentazione" value="diesel"/>Diesel
+                                            <input type="radio" name="alimentazione" value="altro"/>Altro
+                                        </td>
+                                    </tr>
+
+                                    <tr>
                                         <td>Prezzo:</td>
 
-                                        <td><input type="number" name="prezzo" placeholder="3456" required/></td>
+                                        <td><input type="number" name="prezzo" min="0" placeholder="3456" required/></td>
                                     </tr>
 
                                     <tr>
                                         <td>Anno:</td>
 
-                                        <td><input type="number" name="anno" placeholder="1993" required/></td>
+                                        <td><input type="number" name="anno" min="1930" max="2015" placeholder="1993" required/></td>
                                     </tr>
 
                                     <tr>
                                         <td>Chilometri:</td>
 
-                                        <td><input type="number" name="chilometri" placeholder="345678" required/></td>
+                                        <td><input type="number" name="chilometri" min="0" placeholder="345678" required/></td>
                                     </tr>
 
                                     <tr>
