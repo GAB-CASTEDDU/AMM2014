@@ -88,19 +88,13 @@ if(!isset($_COOKIE["tipo_utente"]))
                             {
                                 while($row = mysql_fetch_assoc($queryvis))
                                 {
-                                    echo "
+                                    ?>
                                             <table width=500 height=100 border=3>
                                             <tr><td colspan = 2><b>Nome:</b> $row->marca </td></tr>
                                             <tr><td><b>Tipo:</b> $row->tipologia </td><td><b>Schermo:</b> $row->modello </td></tr>
-                                            <tr><td colspan = 2><b>Ram:</b> $row->ram </td></tr>
-                                            <tr><td colspan = 2><b>Cpu:</b> $row->cpu </td></tr>
-                                            <tr><td colspan = 2><b>Hard Disk:</b> $row->hard_disk </td></tr>
-                                            <tr><td colspan = 2><b>Sistema Operativo:</b> $row->os </td></tr>
-                                            <tr><td colspan = 2><b>Descrizione:</b> $row->descrizione </td></tr>
-                                            <tr><td colspan = 2><b>Quantità disponibile:</b> $row->art_disponibili </td></tr>
-                                            <tr><td colspan = 2><b>Prezzo:</b> $row->prezzo </td></tr>
+
                                             </table>
-                                            \n\n";
+                                            \n\n";<?
                                 }
                             }
                             ?>
