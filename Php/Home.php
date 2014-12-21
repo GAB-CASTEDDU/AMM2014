@@ -88,13 +88,31 @@ if(!isset($_COOKIE["tipo_utente"]))
                             {
                                 while($row = mysql_fetch_assoc($queryvis))
                                 {
-                                    ?>
-                                            <table width=500 height=100 border=3>
-                                            <tr><td colspan = 2><b>Nome:</b> $row->marca </td></tr>
-                                            <tr><td><b>Tipo:</b> $row->tipologia </td><td><b>Schermo:</b> $row->modello </td></tr>
-
-                                            </table>
-                                            \n\n";<?
+                                ?>
+                                    <table>
+                                        <tr>
+                                            <td><b>Marca:</b> <?$row->marca?> </td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Modello:</b> <?$row->modello?> </td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Colore:</b> <?$row->colore?> </td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Anno:</b> <?$row->anno?> </td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Alimentazione:</b> <?$row->alimentazione?> </td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Prezzo:</b> <?$row->prezzo?> </td>
+                                        </tr>
+                                        <tr>
+                                            <td><b>Chilometri:</b> <?$row->chilometri?> </td>
+                                        </tr>
+                                    </table>
+                                <?
                                 }
                             }
                             ?>
