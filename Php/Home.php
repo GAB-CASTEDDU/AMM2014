@@ -104,7 +104,7 @@ if(!isset($_COOKIE["tipo_utente"]))
                                         <td>Alimentazione:</td><td><?echo"$row->alimentazione";?></td>
                                     </tr>
                                     <tr>
-                                        <td>Prezzo:</td><td><?echo"$row->prezzo";?></td>
+                                        <td>Prezzo:</td><td><?echo"$row->prezzo";?> &euro;</td>
                                     </tr>
                                     <tr>
                                         <td>Chilometri:</td><td><?echo"$row->chilometri";?></td>
