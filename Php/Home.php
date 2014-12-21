@@ -125,7 +125,7 @@ if(!isset($_COOKIE["tipo_utente"]))
                                     </tr>
                                 </table>
 
-                                <br><br>
+                                <br><br><br><br>
                             <?
                             }
                             ?>
