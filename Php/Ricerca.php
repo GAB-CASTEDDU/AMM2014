@@ -89,7 +89,7 @@ if(!isset($_COOKIE["tipo_utente"]))
                                         <td>Alimentazione:</td>
 
                                         <td>
-                                            <input type="text" name="alimentazione"/>Benzina
+                                            <input type="text" name="alimentazione" value="Benzina"/>Benzina
 
                                         </td>
                                     </tr>
