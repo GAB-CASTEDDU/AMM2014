@@ -89,10 +89,10 @@ if(!isset($_COOKIE["tipo_utente"]))
                             while($row = mysql_fetch_object($queryvis))
                             {
                             ?>
-                                <table id="table-vis">
+                                <table>
                                     <tr>
                                         <td>
-                                            <table>
+                                            <table id="table-vis">
                                                 <tr>
                                                     <td><img src="../Immagini/noimg.png" alt="No image aviable"></td>
                                                 </tr>
@@ -106,7 +106,7 @@ if(!isset($_COOKIE["tipo_utente"]))
                                         </td>
 
                                         <td>
-                                            <table>
+                                            <table id="table-vis">
                                                 <tr>
                                                     <td>Marca:</td><td><?echo"$row->marca";?></td>
                                                 </tr>
