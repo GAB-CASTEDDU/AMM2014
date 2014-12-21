@@ -89,9 +89,9 @@ if(!isset($_COOKIE["tipo_utente"]))
                                         <td>Alimentazione:</td>
 
                                         <td>
-                                            <input type="radio" name="alimentazione" value="Benzina"/>Benzina
-                                            <input type="radio" name="alimentazione" value="Diesel"/>Diesel
-                                            <input type="radio" name="alimentazione" value="Gas"/>Gas
+                                            <input type="radio" name="alim" value="Benzina"/>Benzina
+                                            <input type="radio" name="alim" value="Diesel"/>Diesel
+                                            <input type="radio" name="alim" value="Gas"/>Gas
                                         </td>
                                     </tr>
 

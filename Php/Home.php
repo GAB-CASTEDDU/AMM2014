@@ -88,7 +88,7 @@ if(!isset($_COOKIE["tipo_utente"]))
                                 $_SESSION["marca"] = $_POST["marca"];
                                 $_SESSION["modello"] = $_POST["modello"];
                                 $_SESSION["anno"] = $_POST["anno"];
-                                //$_SESSION["alimentazione"] = $_POST["alimentazione"];
+                                $_SESSION["alim"] = $_POST["alim"];
                                 $_SESSION["prezzo"] = $_POST["prezzo"];
                                 $_SESSION["chilometri"] = $_POST["chilometri"];
 
