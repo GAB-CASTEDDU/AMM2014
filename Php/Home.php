@@ -83,7 +83,7 @@ if(!isset($_COOKIE["tipo_utente"]))
                             }
 
 
-                            if(isset($_ricerca))
+                            if(isset($_ricerca) && ($_ricerca=="ok"))
                             {
                                 $_SESSION["marca"] = $_POST["marca"];
                                 $_SESSION["modello"] = $_POST["modello"];
