@@ -86,10 +86,10 @@ if(!isset($_COOKIE["tipo_utente"]))
 
                             while($row = mysql_fetch_assoc($queryvis))
                             {
-                            echo"
+                            ?>
                                 <table id="table-vis">
                                     <tr>
-                                        <td>Marca:</td><td>$row->marca</td>
+                                        <td>Marca:</td><td><? echo"$row->marca";?></td>
                                     </tr>
                                     <tr>
                                         <td>Modello:</td><td>$row->modello</td>
@@ -112,7 +112,7 @@ if(!isset($_COOKIE["tipo_utente"]))
                                 </table>
 
                                 <br><br>
-                                ";
+                            <?
                             }
                             ?>
                         </td>
