@@ -92,7 +92,7 @@ if(!isset($_COOKIE["tipo_utente"]))
                                 $_SESSION["prezzo"] = $_POST["prezzo"];
                                 $_SESSION["chilometri"] = $_POST["chilometri"];
 
-                                $queryvis = mysql_query("SELECT * FROM auto WHERE marca='".$_SESSION["marca"]."' AND modello ='".$_SESSION["modello"]."'") or DIE('query non riuscita'.mysql_error());
+                                $queryvis = mysql_query("SELECT * FROM auto WHERE marca='".$_SESSION["marca"]."' AND (if(isset($_POST["modello"])) modello ='".$_SESSION["modello"]."'")) or DIE('query non riuscita'.mysql_error());
                             }
 
                             else
