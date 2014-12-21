@@ -82,7 +82,21 @@ if(!isset($_COOKIE["tipo_utente"]))
                                 die ("Errore: selezione del database errata ".mysql_error());
                             }
 
-                            $queryvis = mysql_query("SELECT * FROM auto") or DIE('query non riuscita'.mysql_error());
+
+                            if(isset($_ricerca=="ok")
+                            {
+                                $_SESSION["marca"] = $_POST["marca"];
+                                $_SESSION["modello"] = $_POST["modello"];
+                                $_SESSION["anno"] = $_POST["anno"];
+                                $_SESSION["alimentazione"] = $_POST["alimentazione"];
+                                $_SESSION["prezzo"] = $_POST["prezzo"];
+                                $_SESSION["chilometri"] = $_POST["chilometri"];
+
+                                $queryvis = mysql_query("SELECT * FROM auto WHERE marca='".$_SESSION["marca"]."' AND modello ='".$_SESSION["modello"]."'") or DIE('query non riuscita'.mysql_error());
+                            }
+
+                            else
+                                $queryvis = mysql_query("SELECT * FROM auto") or DIE('query non riuscita'.mysql_error());
 
 
 
