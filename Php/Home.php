@@ -82,7 +82,7 @@ if(!isset($_COOKIE["tipo_utente"]))
 
                             $queryvis = mysql_query("SELECT * FROM auto") or DIE('query non riuscita'.mysql_error());
 
-                            $result = $mysqli_query($queryvis);
+
 
                             //if(mysql_num_rows($queryvis))
                             //{
