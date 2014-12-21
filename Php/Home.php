@@ -62,6 +62,48 @@ if(!isset($_COOKIE["tipo_utente"]))
 
                         <td id="center">
                             <h1 id="h1-home">Home</h1>
+
+                            <?
+                            $connessione_al_server = mysql_connect("localhost","truduGabriele","beluga874");
+
+                            if(!$connessione_al_server)
+                            {
+                                die ("Errore: connessione non riuscita".mysql_error());
+                            }
+
+
+
+                            $db_selected = mysql_select_db("amm14_truduGabriele", $connessione_al_server);
+
+                            if(!$db_selected)
+                            {
+                                die ("Errore: selezione del database errata ".mysql_error());
+                            }
+
+                            $queryvis = mysql_query("SELECT * FROM auto") or DIE('query non riuscita'.mysql_error());
+
+
+
+                            if(mysql_num_rows($queryvis))
+                            {
+                                while($row = mysql_fetch_assoc($queryvis))
+                                {
+                                    echo "
+                                            <table width=500 height=100 border=3>
+                                            <tr><td colspan = 2><b>Nome:</b> $row->marca </td></tr>
+                                            <tr><td><b>Tipo:</b> $row->tipologia </td><td><b>Schermo:</b> $row->modello </td></tr>
+                                            <tr><td colspan = 2><b>Ram:</b> $row->ram </td></tr>
+                                            <tr><td colspan = 2><b>Cpu:</b> $row->cpu </td></tr>
+                                            <tr><td colspan = 2><b>Hard Disk:</b> $row->hard_disk </td></tr>
+                                            <tr><td colspan = 2><b>Sistema Operativo:</b> $row->os </td></tr>
+                                            <tr><td colspan = 2><b>Descrizione:</b> $row->descrizione </td></tr>
+                                            <tr><td colspan = 2><b>Quantità disponibile:</b> $row->art_disponibili </td></tr>
+                                            <tr><td colspan = 2><b>Prezzo:</b> $row->prezzo </td></tr>
+                                            </table>
+                                            \n\n";
+                                }
+                            }
+                            ?>
                         </td>
 
                         <td id="right"></td>
