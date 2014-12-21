@@ -100,7 +100,7 @@ if(!isset($_COOKIE["tipo_utente"]))
                                                     <td>Prezzo: &nbsp;<?echo"$row->prezzo";?> &euro;</td>
                                                 </tr>
                                                 <tr>
-                                                    <td><a href="Ricerca.php" id="carrello">Aggiungi al carrello</a></td>
+                                                    <td><a href="Aggiungi.php" id="carrello">Aggiungi al carrello</a></td>
                                                 </tr>
                                             </table>
                                         </td>
@@ -108,22 +108,22 @@ if(!isset($_COOKIE["tipo_utente"]))
                                         <td>
                                             <table id="table-vis">
                                                 <tr>
-                                                    <td>Marca:</td><td><?echo"$row->marca";?></td>
+                                                    <td>Marca:</td><td><?echo"$row_marca";?></td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Modello:</td><td><?echo"$row->modello";?></td>
+                                                    <td>Modello:</td><td><?echo"$row_modello";?></td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Colore:</td><td><?echo"$row->colore";?></td>
+                                                    <td>Colore:</td><td><?echo"$row_colore";?></td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Anno:</td><td><?echo"$row->anno";?></td>
+                                                    <td>Anno:</td><td><?echo"$row_anno";?></td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Alimentazione:</td><td><?echo"$row->alimentazione";?></td>
+                                                    <td>Alimentazione:</td><td><?echo"$row_alimentazione";?></td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Chilometri:</td><td><?echo"$row->chilometri";?></td>
+                                                    <td>Chilometri:</td><td><?echo"$row_chilometri";?></td>
                                                 </tr>
                                             </table>
                                         </td>
