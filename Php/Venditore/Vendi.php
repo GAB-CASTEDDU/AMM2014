@@ -86,6 +86,12 @@ if($_COOKIE['tipo_utente']==2)
                                     </tr>
 
                                     <tr>
+                                        <td>Anno:</td>
+
+                                        <td><input type="number" name="anno" min="1930" max="2015" placeholder="1993" required/></td>
+                                    </tr>
+
+                                    <tr>
                                         <td>Alimentazione:</td>
 
                                         <td>
@@ -99,12 +105,6 @@ if($_COOKIE['tipo_utente']==2)
                                         <td>Prezzo:</td>
 
                                         <td><input type="number" name="prezzo" min="0" placeholder="3456" required/></td>
-                                    </tr>
-
-                                    <tr>
-                                        <td>Anno:</td>
-
-                                        <td><input type="number" name="anno" min="1930" max="2015" placeholder="1993" required/></td>
                                     </tr>
 
                                     <tr>
