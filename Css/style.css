@@ -441,7 +441,7 @@ div#content iframe
 	padding-top: 20px;
 }
 
-#table-vis td
+#table-vis
 {
     margin-left: 50px;
 }
@@ -454,7 +454,7 @@ div#content iframe
 
 	width: 150px;
 
-	padding-top: 20px;
+	padding-bottom: 20px;
 }
 
 
