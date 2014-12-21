@@ -110,12 +110,12 @@ if($_COOKIE['tipo_utente']==2)
                                     <tr>
                                         <td>Chilometri:</td>
 
-                                        <td><input type="number" name="chilometri" min="0" placeholder="345678" required/></td>
+                                        <td><input type="number" name="chilometri" min="0" placeholder="234567" required/></td>
                                     </tr>
 
                                     <tr>
                                         <td></td>
-                                        <td><input type="submit" value="Cerca" id="tasto-login"/><td>
+                                        <td><input type="submit" value="Aggiungi" id="tasto-login"/><td>
                                     </tr>
                                 </table>
                             </form>

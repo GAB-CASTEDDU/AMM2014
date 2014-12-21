@@ -80,21 +80,31 @@ if($_COOKIE['tipo_utente']==1)
                                     </tr>
 
                                     <tr>
-                                        <td>Prezzo:</td>
+                                        <td>Anno:</td>
 
-                                        <td><input type="number" name="prezzo" placeholder="Fino a"/></td>
+                                        <td><input type="number" name="anno" min="1930" max="2015" placeholder="Da"/></td>
                                     </tr>
 
                                     <tr>
-                                        <td>Anno:</td>
+                                        <td>Alimentazione:</td>
 
-                                        <td><input type="number" name="anno" placeholder="Da"/></td>
+                                        <td>
+                                            <input type="radio" name="alimentazione" value="benzina"/>Benzina
+                                            <input type="radio" name="alimentazione" value="diesel"/>Diesel
+                                            <input type="radio" name="alimentazione" value="altro"/>Gas
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Prezzo:</td>
+
+                                        <td><input type="number" name="prezzo" min="0" placeholder="Fino a"/></td>
                                     </tr>
 
                                     <tr>
                                         <td>Chilometri:</td>
 
-                                        <td><input type="number" name="chilometri" placeholder="Fino a"/></td>
+                                        <td><input type="number" name="chilometri" min="0" placeholder="Fino a"/></td>
                                     </tr>
 
                                     <tr>
