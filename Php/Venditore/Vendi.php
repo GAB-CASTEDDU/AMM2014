@@ -63,7 +63,7 @@ if($_COOKIE['tipo_utente']==2)
                         <td id="center">
                             <h1 id="h1-vendi">Vendi</h1>
 
-                            <p>Inserisci le caretteristiche dell'auto che vuoi vendere:</p>
+                            <p>Inserisci le caretteristiche dell'auto che vuoi mettere in vendita:</p>
 
                             <form action="Aggiungi.php" method="post" id="form-login">
                                 <table id="table-form">
@@ -91,7 +91,7 @@ if($_COOKIE['tipo_utente']==2)
                                         <td>
                                             <input type="radio" name="alimentazione" value="benzina" checked/>Benzina
                                             <input type="radio" name="alimentazione" value="diesel"/>Diesel
-                                            <input type="radio" name="alimentazione" value="altro"/>Altro
+                                            <input type="radio" name="alimentazione" value="altro"/>Gas
                                         </td>
                                     </tr>
 
