@@ -77,7 +77,7 @@ if(!isset($_COOKIE["tipo_utente"]))
 
                             <h3>Contattaci:</h3>
 
-                            <p>Tel: 070123456 - E-mail: <a href="mailto:info@a4r.it">info@a4r.it</a></p>
+                            <p>Tel: <a href="callto:info@a4r.it">070123456</a> - E-mail: <a href="mailto:info@a4r.it">info@a4r.it</a></p>
                         </td>
 
                         <td id="right"></td>
