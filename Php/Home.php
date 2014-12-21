@@ -88,7 +88,7 @@ if(!isset($_COOKIE["tipo_utente"]))
                             {
                             ?>
                                 <table id="table-vis">
-                                    <td>
+                                    <tr><td>
                                         <tr><img src="../Immagini/noimg.png" alt="No image aviable">
 
                                     </td>
@@ -115,7 +115,7 @@ if(!isset($_COOKIE["tipo_utente"]))
                                         <tr>
                                             <td>Chilometri:</td><td><?echo"$row->chilometri";?></td>
                                         </tr>
-                                    </td>
+                                    </td></tr>
                                 </table>
 
                                 <br><br>
