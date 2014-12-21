@@ -426,7 +426,7 @@ div#content iframe
 }
 
 
-#form-login, #form-registrati
+#form-login
 {
 	margin-top: 30px;
 	margin-left: 50px;
@@ -436,6 +436,18 @@ div#content iframe
 
 #table-form td
 {
+	width: 120px;
+
+	padding-top: 20px;
+}
+
+#table-vis td
+{
+    margin-top: 30px;
+	margin-left: 50px;
+
+	color: #444444;
+
 	width: 120px;
 
 	padding-top: 20px;
