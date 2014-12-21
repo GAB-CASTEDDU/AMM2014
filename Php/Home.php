@@ -89,27 +89,27 @@ if(!isset($_COOKIE["tipo_utente"]))
                                 while($row = mysql_fetch_assoc($queryvis))
                                 {
                                 ?>
-                                    <table>
+                                    <table id="table-form">
                                         <tr>
-                                            <td>Marca: $row->marca </td>
+                                            <td>Marca:</td><td>$row->marca</td>
                                         </tr>
                                         <tr>
-                                            <td>Modello: $row->modello </td>
+                                            <td>Modello:</td><td>$row->modello</td>
                                         </tr>
                                         <tr>
-                                            <td>Colore: $row->colore </td>
+                                            <td>Colore:</td><td>$row->colore</td>
                                         </tr>
                                         <tr>
-                                            <td>Anno: $row->anno </td>
+                                            <td>Anno:</td><td>$row->anno</td>
                                         </tr>
                                         <tr>
-                                            <td>Alimentazione: $row->alimentazione </td>
+                                            <td>Alimentazione:</td><td>$row->alimentazione</td>
                                         </tr>
                                         <tr>
-                                            <td>Prezzo: $row->prezzo </td>
+                                            <td>Prezzo:</td><td>$row->prezzo</td>
                                         </tr>
                                         <tr>
-                                            <td>Chilometri: $row->chilometri </td>
+                                            <td>Chilometri:</td><td>$row->chilometri</td>
                                         </tr>
                                     </table>
 
