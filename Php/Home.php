@@ -63,6 +63,8 @@ if(!isset($_COOKIE["tipo_utente"]))
                         <td id="center">
                             <h1 id="h1-home">Home</h1>
 
+                            <h3>In vendita:</h3>
+
                             <?
                             $connessione_al_server = mysql_connect("localhost","truduGabriele","beluga874");
 
