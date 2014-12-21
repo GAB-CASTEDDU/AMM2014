@@ -448,9 +448,13 @@ div#content iframe
 
 #table-vis td
 {
+
+
 	color: #444444;
 
-	width: 150px;
+
+
+	padding-bottom: 20px;
 }
 
 
