@@ -108,7 +108,7 @@ if(!isset($_COOKIE["tipo_utente"]))
                                         <td>
                                             <table id="table-vis">
                                                 <tr>
-                                                    <td>Marca:</td><td><?echo"$row.marca";?></td>
+                                                    <td>Marca:</td><td><?echo"$row->marca";?></td>
                                                 </tr>
                                                 <tr>
                                                     <td>Modello:</td><td><?echo"$row->modello";?></td>
