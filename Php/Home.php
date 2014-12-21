@@ -84,39 +84,36 @@ if(!isset($_COOKIE["tipo_utente"]))
 
 
 
-                            //if(mysql_num_rows($queryvis))
-                            //{
-                                while($row = mysql_fetch_assoc($queryvis))
-                                {
-                                ?>
-                                    <table id="table-vis">
-                                        <tr>
-                                            <td>Marca:</td><td>$row->marca</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Modello:</td><td>$row->modello</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Colore:</td><td>$row->colore</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Anno:</td><td>$row->anno</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Alimentazione:</td><td>$row->alimentazione</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Prezzo:</td><td>$row->prezzo</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Chilometri:</td><td>$row->chilometri</td>
-                                        </tr>
-                                    </table>
+                            while($row = mysql_fetch_assoc($queryvis))
+                            {
+                            echo"
+                                <table id="table-vis">
+                                    <tr>
+                                        <td>Marca:</td><td>$row->marca</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Modello:</td><td>$row->modello</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Colore:</td><td>$row->colore</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Anno:</td><td>$row->anno</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Alimentazione:</td><td>$row->alimentazione</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Prezzo:</td><td>$row->prezzo</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Chilometri:</td><td>$row->chilometri</td>
+                                    </tr>
+                                </table>
 
-                                    <br><br>
-                                <?
-                                }
-                            //}
+                                <br><br>
+                                "
+                            }
                             ?>
                         </td>
 
