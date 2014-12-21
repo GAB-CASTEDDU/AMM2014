@@ -108,22 +108,22 @@ if(!isset($_COOKIE["tipo_utente"]))
                                         <td>
                                             <table id="table-vis">
                                                 <tr>
-                                                    <td>Marca:</td><td><?echo"$row_marca";?></td>
+                                                    <td>Marca:</td><td><?echo"$row.marca";?></td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Modello:</td><td><?echo"$row_modello";?></td>
+                                                    <td>Modello:</td><td><?echo"$row->modello";?></td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Colore:</td><td><?echo"$row_colore";?></td>
+                                                    <td>Colore:</td><td><?echo"$row->colore";?></td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Anno:</td><td><?echo"$row_anno";?></td>
+                                                    <td>Anno:</td><td><?echo"$row->anno";?></td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Alimentazione:</td><td><?echo"$row_alimentazione";?></td>
+                                                    <td>Alimentazione:</td><td><?echo"$row->alimentazione";?></td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Chilometri:</td><td><?echo"$row_chilometri";?></td>
+                                                    <td>Chilometri:</td><td><?echo"$row->chilometri";?></td>
                                                 </tr>
                                             </table>
                                         </td>
