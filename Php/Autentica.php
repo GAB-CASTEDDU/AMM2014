@@ -30,9 +30,9 @@ $_SESSION["password"] = $_POST["password"];
 
 /*if(isset($_COOKIE["redirect"]))
 {*/
-    $pagina_adm = $_COOKIE["redirect"];
-    $pagina_ven = $_COOKIE["redirect"];
-    $pagina_com = $_COOKIE["redirect"];
+    $pagina_adm = $_COOKIE["lol"];
+    $pagina_ven = $_COOKIE["lol"];
+    $pagina_com = $_COOKIE["lol"];
 /*}
 
 else
