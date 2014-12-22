@@ -256,6 +256,17 @@ div#menu li
 	background-position: left center;
 }
 
+#rimuovi
+{
+	margin-left: -10px;
+
+	padding-left: 20px;
+
+	background-image: url('../Immagini/rimuovi.png');
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+
 
 
 #content
