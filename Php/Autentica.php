@@ -32,11 +32,11 @@ $_SESSION["password"] = $_POST["password"];
 
 
 
-if(isset($_COOKIE["redirect"]))
+if(isset($pagina_redirect))
 {
-    $pagina_adm = $_COOKIE["redirect"];
-    $pagina_ven = $_COOKIE["redirect"];
-    $pagina_com = $_COOKIE["redirect"];
+    $pagina_adm = $pagina_redirect;
+    $pagina_ven = $pagina_redirect;
+    $pagina_com = $pagina_redirect;
 }
 
 else
