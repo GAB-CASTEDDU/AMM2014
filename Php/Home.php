@@ -123,7 +123,7 @@ if(!isset($_COOKIE["tipo_utente"]))
                             if(mysql_num_rows($queryvis)==0)
                             {
                             ?>
-                                <br><br><p>Nessun risultato. Clicca <a href=history.go(-1);>QUI</a> per tornare alla ricerca</p>
+                                <br><br><p>Nessun risultato. Clicca <a href="[removed]history.back()">QUI</a> per tornare alla ricerca</p>
                             <?
                             }
 
