@@ -101,13 +101,13 @@ if(!isset($_COOKIE["tipo_utente"]))
                                 if($_SESSION["modello"] !="")
                                     $wadd .= " AND modello ='".$_SESSION["modello"]."'";
                                 if($_SESSION["anno"] !="")
-                                    $wadd .= " AND anno ='".$_SESSION["anno"]."'";
+                                    $wadd .= " AND anno >='".$_SESSION["anno"]."'";
                                 if($_SESSION["alimentazione"] !="")
                                     $wadd .= " AND alimentazione ='".$_SESSION["alimentazione"]."'";
                                 if($_SESSION["prezzo"] !="")
-                                    $wadd .= " AND prezzo ='".$_SESSION["prezzo"]."'";
+                                    $wadd .= " AND prezzo <='".$_SESSION["prezzo"]."'";
                                 if($_SESSION["chilometri"] !="")
-                                    $wadd .= " AND chilometri ='".$_SESSION["chilometri"]."'";
+                                    $wadd .= " AND chilometri <='".$_SESSION["chilometri"]."'";
 
                                 $queryvis = mysql_query("SELECT * FROM auto $wadd") or DIE('query non riuscita'.mysql_error());
                             }
