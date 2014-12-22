@@ -114,7 +114,9 @@ if(!isset($_COOKIE["tipo_utente"]))
 
                             else
                             {
+                            ?>
                                 <h3>In vendita:</h3>
+                            <?
                                 $queryvis = mysql_query("SELECT * FROM auto") or DIE('query non riuscita'.mysql_error());
                             }
 
