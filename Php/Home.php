@@ -141,7 +141,7 @@ if(!isset($_COOKIE["tipo_utente"]))
                                                     <td>Prezzo: &nbsp;<?echo"$row->prezzo";?> &euro;</td>
                                                 </tr>
                                                 <tr>
-                                                    <td><a href="Login.php" id="login">Login come compratore</a></td>
+                                                    <td><a href="Login.php" id="login">Login compratore</a></td>
                                                 </tr>
                                             </table>
                                         </td>
