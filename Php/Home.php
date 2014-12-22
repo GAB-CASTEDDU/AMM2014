@@ -63,8 +63,6 @@ if(!isset($_COOKIE["tipo_utente"]))
                         <td id="center">
                             <h1 id="h1-home">Home</h1>
 
-                            <h3>In vendita:</h3>
-
                             <?
                             $connessione_al_server = mysql_connect("localhost","truduGabriele","beluga874");
 
@@ -85,6 +83,10 @@ if(!isset($_COOKIE["tipo_utente"]))
 
                             if(isset($_GET["ricerca"]) && ($_GET["ricerca"]=="ok"))
                             {
+                            ?>
+                                <h3>Risultati:</h3>
+                            <?
+
                                 $_SESSION["marca"] = $_POST["marca"];
                                 $_SESSION["modello"] = $_POST["modello"];
                                 $_SESSION["anno"] = $_POST["anno"];
@@ -98,12 +100,23 @@ if(!isset($_COOKIE["tipo_utente"]))
                                     $wadd .= " AND marca ='".$_SESSION["marca"]."'";
                                 if($_SESSION["modello"] !="")
                                     $wadd .= " AND modello ='".$_SESSION["modello"]."'";
+                                if($_SESSION["anno"] !="")
+                                    $wadd .= " AND anno ='".$_SESSION["anno"]."'";
+                                if($_SESSION["alimentazione"] !="")
+                                    $wadd .= " AND alimentazione ='".$_SESSION["alimentazione"]."'";
+                                if($_SESSION["prezzo"] !="")
+                                    $wadd .= " AND prezzo ='".$_SESSION["prezzo"]."'";
+                                if($_SESSION["chilometri"] !="")
+                                    $wadd .= " AND chilometri ='".$_SESSION["chilometri"]."'";
 
                                 $queryvis = mysql_query("SELECT * FROM auto $wadd") or DIE('query non riuscita'.mysql_error());
                             }
 
                             else
+                            {
+                                <h3>In vendita:</h3>
                                 $queryvis = mysql_query("SELECT * FROM auto") or DIE('query non riuscita'.mysql_error());
+                            }
 
 
 
