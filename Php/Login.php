@@ -4,8 +4,6 @@
 
 <?php
 
-setcookie("lol", $_COOKIE["redirect"], time()+300);
-
 if(!isset($_COOKIE["tipo_utente"]))
 {
 ?>

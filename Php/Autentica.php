@@ -2,6 +2,10 @@
 
 session_start();
 
+$pagina_redirect = $_COOKIE["redirect"];
+
+setcookie("redirect", $pagina_redirect, time()+300);
+
 
 
 $connessione_al_server = mysql_connect("localhost","truduGabriele","beluga874");
@@ -28,19 +32,19 @@ $_SESSION["password"] = $_POST["password"];
 
 
 
-/*if(isset($_COOKIE["redirect"]))
-{*/
-    $pagina_adm = $_COOKIE["lol"];
-    $pagina_ven = $_COOKIE["lol"];
-    $pagina_com = $_COOKIE["lol"];
-/*}
+if(isset($_COOKIE["redirect"]))
+{
+    $pagina_adm = $_COOKIE["redirect"];
+    $pagina_ven = $_COOKIE["redirect"];
+    $pagina_com = $_COOKIE["redirect"];
+}
 
 else
-{*/
+{
     $pagina_adm = "Amministratore/Home.php";
     $pagina_ven = "Venditore/Home.php";
     $pagina_com = "Compratore/Home.php";
-//}
+}
 
 
 
