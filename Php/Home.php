@@ -123,7 +123,7 @@ if(!isset($_COOKIE["tipo_utente"]))
                             if(mysql_num_rows($queryvis)==0)
                             {
                             ?>
-                                <p>Nessun risultato</p>
+                                <br><br><p>Nessun risultato</p>
                             <?
                             }
 
