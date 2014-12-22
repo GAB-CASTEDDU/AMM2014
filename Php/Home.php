@@ -120,7 +120,7 @@ if(!isset($_COOKIE["tipo_utente"]))
                                 $queryvis = mysql_query("SELECT * FROM auto") or DIE('query non riuscita'.mysql_error());
                             }
 
-                            if(empty($queryvis)
+                            if(empty($queryvis))
                             {
                             ?>
                                 <p>Nessun risultato</p>
