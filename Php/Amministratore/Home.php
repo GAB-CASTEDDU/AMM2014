@@ -62,6 +62,119 @@ if($_COOKIE['tipo_utente']==1)
 
                         <td id="center">
                             <h1 id="h1-home">Home</h1>
+
+                            <?
+                            $connessione_al_server = mysql_connect("localhost","truduGabriele","beluga874");
+
+                            if(!$connessione_al_server)
+                            {
+                                die ("Errore: connessione non riuscita".mysql_error());
+                            }
+
+
+
+                            $db_selected = mysql_select_db("amm14_truduGabriele", $connessione_al_server);
+
+                            if(!$db_selected)
+                            {
+                                die ("Errore: selezione del database errata ".mysql_error());
+                            }
+
+
+                            if(isset($_GET["ricerca"]) && ($_GET["ricerca"]=="ok"))
+                            {
+                            ?>
+                                <h3>Risultati:</h3>
+                            <?
+
+                                $_SESSION["marca"] = $_POST["marca"];
+                                $_SESSION["modello"] = $_POST["modello"];
+                                $_SESSION["anno"] = $_POST["anno"];
+                                $_SESSION["alimentazione"] = $_POST["alimentazione"];
+                                $_SESSION["prezzo"] = $_POST["prezzo"];
+                                $_SESSION["chilometri"] = $_POST["chilometri"];
+
+                                $wadd = "WHERE 1=1";
+
+                                if($_SESSION["marca"] !="")
+                                    $wadd .= " AND marca ='".$_SESSION["marca"]."'";
+                                if($_SESSION["modello"] !="")
+                                    $wadd .= " AND modello ='".$_SESSION["modello"]."'";
+                                if($_SESSION["anno"] !="")
+                                    $wadd .= " AND anno >='".$_SESSION["anno"]."'";
+                                if($_SESSION["alimentazione"] !="")
+                                    $wadd .= " AND alimentazione ='".$_SESSION["alimentazione"]."'";
+                                if($_SESSION["prezzo"] !="")
+                                    $wadd .= " AND prezzo <='".$_SESSION["prezzo"]."'";
+                                if($_SESSION["chilometri"] !="")
+                                    $wadd .= " AND chilometri <='".$_SESSION["chilometri"]."'";
+
+                                $queryvis = mysql_query("SELECT * FROM auto $wadd") or DIE('query non riuscita'.mysql_error());
+                            }
+
+                            else
+                            {
+                            ?>
+                                <h3>In vendita:</h3>
+                            <?
+                                $queryvis = mysql_query("SELECT * FROM auto") or DIE('query non riuscita'.mysql_error());
+                            }
+
+                            if(mysql_num_rows($queryvis)==0)
+                            {
+                            ?>
+                                <br><br><p>Nessun risultato. Clicca <a href="javascript:history.back()">QUI</a> per tornare alla ricerca</p>
+                            <?
+                            }
+
+                            while($row = mysql_fetch_object($queryvis))
+                            {
+                            ?>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <table id="table-vis">
+                                                <tr>
+                                                    <td><img src="../../Immagini/noimg.png" alt="No image aviable"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Prezzo: &nbsp;<?echo"$row->prezzo";?> &euro;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><a href="../Rimuovi.php" id="rimuovi">Rimuovi annuncio</a></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+
+                                        <td>
+                                            <table id="table-vis">
+                                                <tr>
+                                                    <td>Marca:</td><td><?echo"$row->marca";?></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Modello:</td><td><?echo"$row->modello";?></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Colore:</td><td><?echo"$row->colore";?></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Anno:</td><td><?echo"$row->anno";?></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Alimentazione:</td><td><?echo"$row->alimentazione";?></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Chilometri:</td><td><?echo"$row->chilometri";?></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+
+                                <br><br><br><br>
+                            <?
+                            }
+                            ?>
                         </td>
 
                         <td id="right"></td>

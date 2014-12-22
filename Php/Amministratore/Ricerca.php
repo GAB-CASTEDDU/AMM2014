@@ -65,7 +65,7 @@ if($_COOKIE['tipo_utente']==1)
 
                             <p>Inserisci uno o pi&ugrave; filtri per effettuare la ricerca:</p>
 
-                            <form action="Home.php" method="post" id="form-login">
+                            <form action="Home.php?ricerca=ok" method="post" id="form-login">
                                 <table id="table-form">
                                     <tr>
                                         <td>Marca:</td>
@@ -89,9 +89,9 @@ if($_COOKIE['tipo_utente']==1)
                                         <td>Alimentazione:</td>
 
                                         <td>
-                                            <input type="radio" name="alimentazione" value="benzina"/>Benzina
-                                            <input type="radio" name="alimentazione" value="diesel"/>Diesel
-                                            <input type="radio" name="alimentazione" value="altro"/>Gas
+                                            <input type="radio" name="alimentazione" value="Benzina" checked/>Benzina
+                                            <input type="radio" name="alimentazione" value="Diesel"/>Diesel
+                                            <input type="radio" name="alimentazione" value="Gas"/>Gas
                                         </td>
                                     </tr>
 

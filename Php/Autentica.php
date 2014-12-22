@@ -2,6 +2,10 @@
 
 session_start();
 
+$pagina_redirect = $_COOKIE["redirect"];
+
+setcookie("redirect", $pagina_redirect, time()+300);
+
 
 
 $connessione_al_server = mysql_connect("localhost","truduGabriele","beluga874");
