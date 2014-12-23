@@ -9,7 +9,7 @@ $(document).ready( function()
                                                     type: "POST",
                                                     url: "Checkemail.php",
                                                     data: emailok,
-                                                    success: function(response)
+                                                    success: function()
                                                                 {respo = "<?= $variabile; ?>";
                                                                     if(respo == "no")
                                                                     {
