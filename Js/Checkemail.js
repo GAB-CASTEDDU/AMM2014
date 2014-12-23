@@ -12,7 +12,7 @@ $(document).ready( function()
                                                     data: email+"="+this.value,
                                                     success: function(response)
                                                                 {
-                                                                    if(response == "1")
+                                                                    if(response == 1)
                                                                     {
                                                                     $("#checkemail").html("<font color='32CD32'>Disponibile</font>");
                                                                     }
