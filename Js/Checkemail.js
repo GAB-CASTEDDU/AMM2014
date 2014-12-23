@@ -10,7 +10,7 @@ $(document).ready( function()
                                                     url: "Checkemail.php",
                                                     data: emailok,
                                                     success: function()
-                                                                {respo = "<?= $variabile; ?>";
+                                                                {respo = "<?php echo($variabile); ?>";
                                                                     if(respo == 1)
                                                                     {
                                                                         $("#checkemail").html("<font color='32CD32'>Disponibile</font>");
