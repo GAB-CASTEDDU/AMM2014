@@ -84,14 +84,14 @@ if(!isset($_COOKIE["tipo_utente"]))
                                     die ("Errore: selezione del database errata ".mysql_error());
                                 }
 
-                                $query = "'INSERT INTO utenti (nome,cognome,citta,via,numciv,tipo,email,password)
-                                          VALUES ($_POST["nome"],$_POST["cognome"],$_POST["citta"],$_POST["via"],$_POST["numciv"],$_POST["tipo"],$_POST["email"],$_POST["password"])'";
+                                $query = "INSERT INTO utenti (nome,cognome,citta,via,numciv,tipo,email,password)
+                                          VALUES ('$_POST["nome"]','$_POST["cognome"]','$_POST["citta"]','$_POST["via"]','$_POST["numciv"]','$_POST["tipo"]','$_POST["email"]','$_POST["password"]')";
 
                                 $result = mysql_query($query);
-
-                                if(!$result)
+#B20000
+                                if(!$result)#B20000
                                 {
-                                    die("Errore nella query: ".mysql_error());
+                                    die("Errore nella query: ".mysql_error());#B20000
 
                                     $pagina_login = "Registrati.php";
 
