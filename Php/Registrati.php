@@ -49,6 +49,7 @@ if(!isset($_COOKIE["tipo_utente"]))
                                                                     });
                                                         });
                                 });
+        </script>
     </head>
 
 
