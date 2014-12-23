@@ -11,10 +11,10 @@ $(document).ready( function()
                                                     url: "Checkemail.php",
                                                     data: emailok+"="+this.value,
                                                     success: function(respons)
-                                                                {
-                                                                    if(response == "yes")
-                                                                    {                                                var response = "yes";
+                                                                {                                                var response = "yes";
 
+                                                                    if(response == "yes")
+                                                                    {
                                                                         $("#checkemail").html("<font color='B20000'>Non disponibile</font>");
                                                                         $("#emailok").val("");
                                                                     }
