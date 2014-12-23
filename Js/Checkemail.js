@@ -1,3 +1,5 @@
+<script type="text/javascript">
+
 $(document).ready( function()
                     {
                         $("#emailok").keyup(function()
