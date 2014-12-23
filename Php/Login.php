@@ -66,7 +66,7 @@ if(!isset($_COOKIE["tipo_utente"]))
                             {
                             ?>
 
-                            <a>Combinazione E-mail - Password errata!</a>
+                            <a class="error">Combinazione E-mail - Password errata!</a>
 
                             <?
                                 setcookie("errlogin", null);
