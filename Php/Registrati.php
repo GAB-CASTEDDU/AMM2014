@@ -31,7 +31,7 @@ if(!isset($_COOKIE["tipo_utente"]))
                                                         {
                                                             var email = this.id;
                                                             $.ajax({ type: "POST",
-                                                            url: "checkemail.php",
+                                                            url: "Checkemail.php",
                                                             data: email+"="+this.value,
                                                             success: function(response)
                                                                         {
