@@ -8,11 +8,11 @@ $(document).ready( function()
                                                 {
                                                     type: "POST",
                                                     url: "Checkemail.php",
-                                                    dataType: "json"
+
                                                     data: emailok,
                                                     success: function(response)
                                                                 {
-                                                                    if(response == "yes")
+                                                                    if($emok == "yes")
                                                                     {
                                                                         $("#checkemail").html("<font color='B20000'>Non disponibile</font>");
                                                                         $("#emailok").val("");

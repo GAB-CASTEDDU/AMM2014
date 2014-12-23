@@ -24,11 +24,13 @@ $queryemail = mysql_query("SELECT email FROM users WHERE email='$email'") or die
 
 if(mysql_num_rows($queryemail)==0)
 {
-    echo json_encode("no");
+    $emok="no";
+    echo $emok;
 }
 
 else
 {
-    echo json_encode("yes");
+    $emok="yes";
+    echo $emok;
 }
 ?>
