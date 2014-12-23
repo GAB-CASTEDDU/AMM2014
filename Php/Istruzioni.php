@@ -106,6 +106,8 @@ if(!isset($_COOKIE["tipo_utente"]))
                                     </ul>
                                 </li>
                             </ol>
+
+                            <p>NB: &Egrave; comunque possibile registrare nuovi utenti nella sezione <a href="Registrati.php">REGISTRATI</a></p>
                         </td>
 
                         <td id="right"></td>
