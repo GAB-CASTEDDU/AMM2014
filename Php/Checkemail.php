@@ -14,6 +14,6 @@ $result = mysql_query($link,$query);
 
 $occupato = mysql_num_rows($result);
 
-echo $occupato;
+return $occupato;
 
 ?>

@@ -40,13 +40,13 @@ if(!isset($_COOKIE["tipo_utente"]))
                                                                             {
                                                                                 if(response == 0)
                                                                                 {
-                                                                                    $("#checkemail").html("Disponibile");
+                                                                                    $("#checkemail").html("Non disponibile");
+                                                                                    $("#email").val("");
                                                                                 }
 
                                                                                 else
                                                                                 {
-                                                                                    $("#checkemail").html("Non disponibile");
-                                                                                    $("#email").val("");
+                                                                                    $("#checkemail").html("Disponibile");
                                                                                 }
                                                                             }
                                                             });
