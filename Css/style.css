@@ -524,6 +524,11 @@ div#footer p
 	text-decoration: underline;
 }
 
+.error
+{
+    color: #B20000;
+}
+
 
 
 
