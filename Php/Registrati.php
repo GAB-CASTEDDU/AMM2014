@@ -23,6 +23,7 @@ if(!isset($_COOKIE["tipo_utente"]))
         <link rel="shortcut icon" type="image/x-icon" href="../Immagini/favicon.ico"/>
         <link rel="Stylesheet" type="text/css" href="../Css/style.css" media="screen"/>
 
+        <script src='http://code.jquery.com/jquery-1.9.1.min.js'></script>
         <script type="text/javascript" src="../Js/Checkemail.js"></script>
     </head>
 

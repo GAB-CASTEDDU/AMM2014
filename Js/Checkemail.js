@@ -1,6 +1,3 @@
-<script src='http://code.jquery.com/jquery-1.9.1.min.js'></script>
-<script type="text/javascript">
-
 $(document).ready( function()
                     {
                         $("#emailok").keyup(function()
