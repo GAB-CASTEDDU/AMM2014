@@ -22,7 +22,7 @@ $email=$_POST["emailok"];
 
 $queryemail = mysql_query("SELECT email FROM users WHERE email='$email'") or die("Query non riuscita".mysql_error());
 
-if(mysql_num_rows($queryemail)>0)
+if(mysql_num_rows($queryemail)==0)
 {
     echo "no";
 }

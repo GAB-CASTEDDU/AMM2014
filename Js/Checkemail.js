@@ -2,7 +2,7 @@ $(document).ready( function()
                     {
                         $("#emailok").keyup(function()
                                             {
-                                                var emailok = $("#emailok").serialize();
+                                                var emailok = $("#emailok").val();
 
                                                 $.ajax(
                                                 {
@@ -14,6 +14,7 @@ $(document).ready( function()
                                                                     if(response == "no")
                                                                     {
                                                                         $("#checkemail").html("<font color='32CD32'>Disponibile</font>");
+                                                                        echo "response";
                                                                     }
 
                                                                     else
