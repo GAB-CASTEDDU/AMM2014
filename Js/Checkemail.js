@@ -3,7 +3,7 @@ $(document).ready( function()
                     {
                         $("#emailok").keyup(function()
                                             {
-                                                var emailok = this.id;
+                                                var emailok = $("#emailok").val();
 
                                                 $.ajax(
                                                 {
@@ -12,12 +12,16 @@ $(document).ready( function()
                                                     data: emailok+"="+this.value,
                                                     success: function(response)
                                                                 {
-                                                                    success: function(response) {
-        alert(response); // la richiesta ha avuto successo
-     },
-     error: function(xhr) {
-        alert('Error!  Status = ' + xhr.status); // errore
-     }
+                                                                    if(response == "no")
+                                                                    {
+                                                                    $("#checkemail").html("<font color='32CD32'>Disponibile</font>");
+                                                                    }
+
+                                                                    else
+                                                                    {
+                                                                        $("#checkemail").html("<font color='B20000'>Non disponibile</font>");
+                                                                        $("#emailok").val("");
+                                                                    }
                                                                 }
                                                 });
                                             });
