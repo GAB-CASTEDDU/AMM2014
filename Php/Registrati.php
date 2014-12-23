@@ -38,9 +38,9 @@ if(!isset($_COOKIE["tipo_utente"]))
                                                                 dataType: "html",
                                                                 url: "Checkemail.php",
                                                                 data: datasend,
-                                                                success: function(data)
+                                                                success: function(response)
                                                                             {
-                                                                                if(data == '0')
+                                                                                if(response == '0')
                                                                                 {
                                                                                     $("#checkemail").html("Disponibile");
                                                                                 }
