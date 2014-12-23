@@ -38,14 +38,14 @@ if(!isset($_COOKIE["tipo_utente"]))
                                                                 data: email+"="+this.value,
                                                                 success: function(response)
                                                                             {
-                                                                                if(response == '0')
+                                                                                if(response == "0")
                                                                                 {
-                                                                                    $("#check_email").html('<img src="../Immagini/rimuovi.png">Disponibile ');
+                                                                                    $("#checkemail").html("Disponibile");
                                                                                 }
 
                                                                                 else
                                                                                 {
-                                                                                    $("#check_email").html('<img src="../Immagini/rimuovi.png">Non disponibile ');
+                                                                                    $("#checkemail").html("Non disponibile");
                                                                                     $("#email").val("");
                                                                                 }
                                                                             }
@@ -141,7 +141,7 @@ if(!isset($_COOKIE["tipo_utente"]))
                             {
                             ?>
 
-                            <p>Inserisci i tuoi dati e registrati a Affari a 4 ruote:</p>
+                            <p>Inserisci iiiii tuoi dati e registrati a Affari a 4 ruote:</p>
 
                             <form action="Registrati.php?campi=ok" method="post" id="form-login">
                                 <table id="table-form">
@@ -189,7 +189,7 @@ if(!isset($_COOKIE["tipo_utente"]))
 
                                         <td>
                                             <input id="email" type="text" name="email" placeholder="mail@a4r.it" required/>
-                                            <span id="check_email"></span>
+                                            <span id="checkemail"></span>
                                         </td>
                                     </tr>
 
