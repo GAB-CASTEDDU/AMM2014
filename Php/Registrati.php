@@ -27,7 +27,7 @@ if(!isset($_COOKIE["tipo_utente"]))
         <script type="text/javascript">
             $(document).ready( function()
                                 {
-                                    $("#email").keyup(function()
+                                    $("#emailok").keyup(function()
                                                         {
                                                             var email = this.id;
 
@@ -41,7 +41,7 @@ if(!isset($_COOKIE["tipo_utente"]))
                                                                                 if(response == 0)
                                                                                 {
                                                                                     $("#checkemail").html("Non disponibile");
-                                                                                    $("#email").val("");
+                                                                                    $("#emailok").val("");
                                                                                 }
 
                                                                                 else
@@ -188,7 +188,7 @@ if(!isset($_COOKIE["tipo_utente"]))
                                         <td>E-mail:</td>
 
                                         <td>
-                                            <input id="email" type="text" name="email" placeholder="mail@a4r.it" required/>
+                                            <input id="emailok" type="text" name="email" placeholder="mail@a4r.it" required/>
                                             <span id="checkemail"></span>
                                         </td>
                                     </tr>
