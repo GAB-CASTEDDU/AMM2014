@@ -24,13 +24,11 @@ $queryemail = mysql_query("SELECT email FROM users WHERE email='$email'") or die
 
 if(mysql_num_rows($queryemail)==0)
 {
-    $response="no";
-    echo $response;
+    echo "no";
 }
 
 else
 {
-    $response="yes";
-    echo $response;
+    echo "yes";
 }
 ?>
