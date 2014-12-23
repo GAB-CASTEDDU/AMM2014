@@ -18,8 +18,13 @@ if(!$db_selected)
 
 $queryemail = mysql_query("SELECT email FROM users WHERE email='$email'") or DIE('query non riuscita'.mysql_error());
 
-$ris = mysql_num_rows($queryemail);
+if(mysql_num_rows($queryemail)==0)
+{
+    echo "no";
+}
 
-    echo $ris;
-
+else
+{
+    echo "yes";
+}
 ?>
