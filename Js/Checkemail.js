@@ -3,7 +3,7 @@ $(document).ready( function()
                     {
                         $("#emailok").keyup(function()
                                             {
-                                                var email = this.emailok;
+                                                var email = this.value;
 
                                                 $.ajax(
                                                 {
