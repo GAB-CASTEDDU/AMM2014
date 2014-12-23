@@ -10,7 +10,7 @@ $query = "SELECT email FROM users WHERE email='$email'";
 
 
 
-$result = mysql_query($connessione_al_server,$query);
+$result = mysql_query($link,$query);
 
 if(mysql_num_rows($result) > 0)
 {
