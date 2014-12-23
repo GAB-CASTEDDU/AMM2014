@@ -3,13 +3,13 @@ $(document).ready( function()
                     {
                         $("#emailok").keyup(function()
                                             {
-                                                var email = this.value;
+                                                var email = this.id;
 
                                                 $.ajax(
                                                 {
                                                     type: "POST",
                                                     url: "Checkemail.php",
-                                                    data: email,
+                                                    data: email+"="+this.value,
                                                     success: function(response)
                                                                 {
                                                                     if(response == "no")
