@@ -94,7 +94,7 @@ if($_COOKIE['tipo_utente']==1)
                                 $_SESSION["prezzo"] = $_POST["prezzo"];
                                 $_SESSION["chilometri"] = $_POST["chilometri"];
 
-                                $wadd = "WHERE 1=1";
+                                $wadd = "WHERE compratore IS NULL";
 
                                 if($_SESSION["marca"] !="")
                                     $wadd .= " AND marca ='".$_SESSION["marca"]."'";
@@ -110,6 +110,13 @@ if($_COOKIE['tipo_utente']==1)
                                     $wadd .= " AND chilometri <='".$_SESSION["chilometri"]."'";
 
                                 $queryvis = mysql_query("SELECT * FROM auto $wadd") or DIE('query non riuscita'.mysql_error());
+
+                                if(mysql_num_rows($queryvis)==0)
+                                {
+                                ?>
+                                    <br><br><p>Nessun risultato. Clicca <a href="javascript:history.back()">QUI</a> per tornare alla ricerca</p>
+                                <?
+                                }
                             }
 
                             else
@@ -117,14 +124,14 @@ if($_COOKIE['tipo_utente']==1)
                             ?>
                                 <h3>In vendita:</h3>
                             <?
-                                $queryvis = mysql_query("SELECT * FROM auto") or DIE('query non riuscita'.mysql_error());
-                            }
+                                $queryvis = mysql_query("SELECT * FROM auto WHERE compratore IS NULL") or DIE('query non riuscita'.mysql_error());
 
-                            if(mysql_num_rows($queryvis)==0)
-                            {
-                            ?>
-                                <br><br><p>Nessun risultato. Clicca <a href="javascript:history.back()">QUI</a> per tornare alla ricerca</p>
-                            <?
+                                if(mysql_num_rows($queryvis)==0)
+                                {
+                                ?>
+                                    <br><br><p>Nessun veicolo in vendita al momento. Riprova tra poco</p>
+                                <?
+                                }
                             }
 
                             while($row = mysql_fetch_object($queryvis))
