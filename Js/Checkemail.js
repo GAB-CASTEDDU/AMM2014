@@ -8,7 +8,7 @@ $(document).ready( function()
                                                 {
                                                     type: "POST",
                                                     url: "Checkemail.php",
-                                                    dataType: "json",
+
                                                     data: emailok,
                                                     success: function(response)
                                                                 {
