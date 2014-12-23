@@ -88,10 +88,10 @@ if(!isset($_COOKIE["tipo_utente"]))
                                           VALUES ('$_POST["nome"]','$_POST["cognome"]','$_POST["citta"]','$_POST["via"]','$_POST["numciv"]','$_POST["tipo"]','$_POST["email"]','$_POST["password"]')";
 
                                 $result = mysql_query($query);
-#B20000
-                                if(!$result)#B20000
+
+                                if(!$result)
                                 {
-                                    die("Errore nella query: ".mysql_error());#B20000
+                                    die("Errore nella query: ".mysql_error());
 
                                     $pagina_login = "Registrati.php";
 
