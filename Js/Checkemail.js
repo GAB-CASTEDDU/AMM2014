@@ -14,12 +14,12 @@ $(document).ready( function()
                                                                 {
                                                                     if(response == "0")
                                                                     {
-                                                                    $("#checkemail").html("Disponibile");
+                                                                    $("#checkemail").html("<font color='#32CD32'>Disponibile</font>"););
                                                                     }
 
                                                                     else
                                                                     {
-                                                                        $("#checkemail").html("<font color='B20000'>Non disponibile</font>");
+                                                                        $("#checkemail").html("<font color='#B20000'>Non disponibile</font>");
                                                                         $("#emailok").val("");
                                                                     }
                                                                 }
