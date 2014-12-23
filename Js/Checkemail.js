@@ -14,7 +14,7 @@ $(document).ready( function()
                                                                 {
                                                                     if(response == "0")
                                                                     {
-                                                                    $("#checkemail").html("<font color='32CD32'>Disponibile</font>"););
+                                                                    $("#checkemail").html("<font color='32CD32'>Disponibile</font>");
                                                                     }
 
                                                                     else
