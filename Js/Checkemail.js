@@ -2,13 +2,13 @@ $(document).ready( function()
                     {
                         $("#emailok").keyup(function()
                                             {
-                                                var emailok = $("#emailok");
+                                                var emailok = $("#emailok").serialize();
 
                                                 $.ajax(
                                                 {
                                                     type: "POST",
                                                     url: "Checkemail.php",
-                                                    data: "emailok="+emailok.val(),
+                                                    data: emailok,
                                                     success: function(response)
                                                                 {
                                                                     if(response == "yes")
