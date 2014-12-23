@@ -11,7 +11,7 @@ $(document).ready( function()
                                                     data: emailok,
                                                     success: function()
                                                                 {respo = "<?= $variabile; ?>";
-                                                                    if(respo == "no")
+                                                                    if(respo == 1)
                                                                     {
                                                                         $("#checkemail").html("<font color='32CD32'>Disponibile</font>");
                                                                         echo "response";
