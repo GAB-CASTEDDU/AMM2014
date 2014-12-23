@@ -2,7 +2,7 @@
 
 
 
-$link = mysqli_connect("localhost", "truduGabriele", "beluga874", "users");
+$link = mysqli_connect("localhost", "amm14_truduGabriele", "beluga874", "users");
 
 $email = $_POST["email"];
 
