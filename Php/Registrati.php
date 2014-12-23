@@ -73,7 +73,7 @@ if(!isset($_COOKIE["tipo_utente"]))
 
                                 if(!$connessione_al_server)
                                 {
-                                    die ("Errore: connessione non riuscita".mysql_error());
+                                    die("Errore: connessione non riuscita".mysql_error());
                                 }
 
 
@@ -82,7 +82,7 @@ if(!isset($_COOKIE["tipo_utente"]))
 
                                 if(!$db_selected)
                                 {
-                                    die ("Errore: selezione del database errata ".mysql_error());
+                                    die("Errore: selezione del database errata ".mysql_error());
                                 }
 
                                 $query = "INSERT INTO utenti (nome,cognome,citta,via,numciv,tipo,email,password)

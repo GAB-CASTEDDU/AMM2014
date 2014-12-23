@@ -68,7 +68,7 @@ if(!isset($_COOKIE["tipo_utente"]))
 
                             if(!$connessione_al_server)
                             {
-                                die ("Errore: connessione non riuscita".mysql_error());
+                                die("Errore: connessione non riuscita".mysql_error());
                             }
 
 
@@ -77,7 +77,7 @@ if(!isset($_COOKIE["tipo_utente"]))
 
                             if(!$db_selected)
                             {
-                                die ("Errore: selezione del database errata ".mysql_error());
+                                die("Errore: selezione del database errata ".mysql_error());
                             }
 
 
@@ -109,7 +109,7 @@ if(!isset($_COOKIE["tipo_utente"]))
                                 if($_SESSION["chilometri"] !="")
                                     $wadd .= " AND chilometri <='".$_SESSION["chilometri"]."'";
 
-                                $queryvis = mysql_query("SELECT * FROM auto $wadd") or DIE('query non riuscita'.mysql_error());
+                                $queryvis = mysql_query("SELECT * FROM auto $wadd") or die("query non riuscita".mysql_error());
 
                                 if(mysql_num_rows($queryvis)==0)
                                 {
@@ -124,7 +124,7 @@ if(!isset($_COOKIE["tipo_utente"]))
                             ?>
                                 <h3>In vendita:</h3>
                             <?
-                                $queryvis = mysql_query("SELECT * FROM auto WHERE compratore IS NULL") or DIE('query non riuscita'.mysql_error());
+                                $queryvis = mysql_query("SELECT * FROM auto WHERE compratore IS NULL") or die("query non riuscita".mysql_error());
 
                                 if(mysql_num_rows($queryvis)==0)
                                 {

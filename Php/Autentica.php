@@ -12,7 +12,7 @@ $connessione_al_server = mysql_connect("localhost","truduGabriele","beluga874");
 
 if(!$connessione_al_server)
 {
-	die ("Errore: connessione non riuscita".mysql_error());
+	die("Errore: connessione non riuscita".mysql_error());
 }
 
 
@@ -21,7 +21,7 @@ $db_selected = mysql_select_db("amm14_truduGabriele", $connessione_al_server);
 
 if(!$db_selected)
 {
-	die ("Errore: selezione del database errata ".mysql_error());
+	die("Errore: selezione del database errata ".mysql_error());
 }
 
 
@@ -48,11 +48,11 @@ else
 
 
 
-$queryadm = mysql_query("SELECT * FROM utenti WHERE email='".$_SESSION["email"]."' AND password ='".$_SESSION["password"]."' AND tipo='amministratore'") or DIE('query non riuscita'.mysql_error());
+$queryadm = mysql_query("SELECT * FROM utenti WHERE email='".$_SESSION["email"]."' AND password ='".$_SESSION["password"]."' AND tipo='amministratore'") or die('Query non riuscita'.mysql_error());
 
-$queryven = mysql_query("SELECT * FROM utenti WHERE email='".$_SESSION["email"]."' AND password ='".$_SESSION["password"]."' AND tipo='venditore'") or DIE('query non riuscita'.mysql_error());
+$queryven = mysql_query("SELECT * FROM utenti WHERE email='".$_SESSION["email"]."' AND password ='".$_SESSION["password"]."' AND tipo='venditore'") or die('Query non riuscita'.mysql_error());
 
-$querycom = mysql_query("SELECT * FROM utenti WHERE email='".$_SESSION["email"]."' AND password ='".$_SESSION["password"]."' AND tipo='compratore'") or DIE('query non riuscita'.mysql_error());
+$querycom = mysql_query("SELECT * FROM utenti WHERE email='".$_SESSION["email"]."' AND password ='".$_SESSION["password"]."' AND tipo='compratore'") or die('Query non riuscita'.mysql_error());
 
 
 
