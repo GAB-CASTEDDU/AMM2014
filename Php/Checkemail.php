@@ -26,7 +26,7 @@ $query = "SELECT email FROM users WHERE email='$email'";
 
 $result = mysql_query($connessione_al_server,$query);
 
-if(mysql_num_rows($result) > 0)
+/*if(mysql_num_rows($result) > 0)
 {
     echo '1';
 }
@@ -34,5 +34,5 @@ if(mysql_num_rows($result) > 0)
 else
 {
     echo '0';
-}
+}*/
 ?>
