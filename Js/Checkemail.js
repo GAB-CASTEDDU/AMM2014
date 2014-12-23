@@ -19,7 +19,7 @@ $(document).ready( function()
 
                                                                     else
                                                                     {
-                                                                        $("#checkemail").html("Non disponibile").style.color("#B20000");
+                                                                        $("#checkemail").html("Non disponibile");
                                                                         $("#emailok").val("");
                                                                     }
                                                                 }
