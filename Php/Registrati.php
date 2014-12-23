@@ -104,6 +104,7 @@ if(!isset($_COOKIE["tipo_utente"]))
 
                                     header("Location:".$pagina_login);
                                 }
+                            }
 
                             else
                             {
