@@ -4,7 +4,6 @@ $(document).ready( function()
                         $("#emailok").keyup(function()
                                             {
                                                 var emailok = this.id;
-                                                var response = "yes";
 
                                                 $.ajax(
                                                 {
@@ -14,7 +13,8 @@ $(document).ready( function()
                                                     success: function(respons)
                                                                 {
                                                                     if(response == "yes")
-                                                                    {
+                                                                    {                                                var response = "yes";
+
                                                                         $("#checkemail").html("<font color='B20000'>Non disponibile</font>");
                                                                         $("#emailok").val("");
                                                                     }
