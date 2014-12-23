@@ -174,6 +174,8 @@ if(!isset($_COOKIE["tipo_utente"]))
                                 <br><br><br><br>
                             <?
                             }
+
+                            mysqli_close($connessione_al_server);
                             ?>
                         </td>
 

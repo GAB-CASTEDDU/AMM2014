@@ -63,8 +63,6 @@ if(!isset($_COOKIE["tipo_utente"]))
                         <td id="center">
                             <h1 id="h1-registrati">Registrati</h1>
 
-                            <p>Inserisci i tuoi dati e registrati a Affari a 4 ruote:</p>
-
                             <?
                             if(isset($_GET["campi"]) && ($_GET["campi"]=="ok"))
                             {
@@ -87,7 +85,9 @@ if(!isset($_COOKIE["tipo_utente"]))
                                 $query = 'INSERT INTO utenti (nome,cognome,citta,via,numciv,tipo,email,password)
                                           VALUES ($_POST["nome"],$_POST["cognome"],$_POST["citta"],$_POST["via"],$_POST["numciv"],$_POST["tipo"],$_POST["email"],$_POST["password"])';
 
-                                $result = mysql_query($query);
+                                $result = mysql_query($connessione_al_server,$query);
+
+                                mysqli_close($connessione_al_server);
 
                                 if(!$result)
                                 {
@@ -109,6 +109,8 @@ if(!isset($_COOKIE["tipo_utente"]))
                             else
                             {
                             ?>
+
+                            <p>Inserisci i tuoi dati e registrati a Affari a 4 ruote:</p>
 
                             <form action="Registrati.php?campi=ok" method="post" id="form-login">
                                 <table id="table-form">
@@ -139,7 +141,7 @@ if(!isset($_COOKIE["tipo_utente"]))
                                     <tr>
                                         <td>Numero civ.:</td>
 
-                                        <td><input type="number" name="numciv" required/></td>
+                                        <td><input type="number" name="numciv" min="0" required/></td>
                                     </tr>
 
                                     <tr>
