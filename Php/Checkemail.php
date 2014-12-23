@@ -24,11 +24,11 @@ $queryemail = mysql_query("SELECT email FROM users WHERE email='$email'") or die
 
 if(mysql_num_rows($queryemail)==0)
 {
-    $variabile= 1;
+    echo "no";
 }
 
 else
 {
-    $variabile= 2;
+    echo "yes";
 }
 ?>
