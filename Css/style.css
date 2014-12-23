@@ -436,6 +436,12 @@ div#content iframe
 	background-repeat: no-repeat;
 }
 
+#h1-registrati
+{
+	background-image: url('../Immagini/registrati.png');
+	background-repeat: no-repeat;
+}
+
 
 #form-login
 {
