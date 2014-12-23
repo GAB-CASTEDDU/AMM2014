@@ -36,7 +36,7 @@ if(!isset($_COOKIE["tipo_utente"]))
                                                             success: function(response)
                                                                         {
 
-                                                                            if(response != '0')
+                                                                            if(response == '0')
                                                                             {
                                                                                 $("#check_email").html('<img src="../Immagini/rimuovi.png">Disponibile ');
                                                                             }
