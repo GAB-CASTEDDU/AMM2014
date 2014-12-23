@@ -12,15 +12,15 @@ $(document).ready( function()
                                                     data: emailok+"="+this.value,
                                                     success: function(response)
                                                                 {
-                                                                    if(response == "no")
+                                                                    if(response == "yes")
                                                                     {
-                                                                    $("#checkemail").html("<font color='32CD32'>Disponibile</font>");
+                                                                        $("#checkemail").html("<font color='B20000'>Non disponibile</font>");
+                                                                        $("#emailok").val("");
                                                                     }
 
                                                                     else
                                                                     {
-                                                                        $("#checkemail").html("<font color='B20000'>Non disponibile</font>");
-                                                                        $("#emailok").val("");
+                                                                        $("#checkemail").html("<font color='32CD32'>Disponibile</font>");
                                                                     }
                                                                 }
                                                 });
