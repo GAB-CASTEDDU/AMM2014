@@ -62,7 +62,7 @@ if(!isset($_COOKIE["tipo_utente"]))
                             <h1 id="h1-login">Login</h1>
 
                             <?
-                            if(isset($_COOKIE(errlogin)) && ($_COOKIE(errlogin)==1))
+                            if(isset($_COOKIE["errlogin"]) && ($_COOKIE["errlogin"]==1))
                             {
                             ?>
 
