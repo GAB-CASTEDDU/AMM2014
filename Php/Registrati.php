@@ -138,7 +138,7 @@ if(!isset($_COOKIE["tipo_utente"]))
                             {
                             ?>
 
-                            <p>Inserisci i tuoi dati e registrati a Affari a 4 ruote:</p>
+                            <p>Inserisci iiii tuoi dati e registrati a Affari a 4 ruote:</p>
 
                             <form action="Registrati.php?campi=ok" method="post" id="form-login">
                                 <table id="table-form">
