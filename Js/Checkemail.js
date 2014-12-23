@@ -1,18 +1,17 @@
-
 $(document).ready( function()
                     {
                         $("#emailok").keyup(function()
                                             {
-                                                var emailok = this.value;
+                                                var emailok = $("#emailok").value;
 
                                                 $.ajax(
                                                 {
                                                     type: "POST",
                                                     url: "Checkemail.php",
                                                     data: emailok,
-                                                    success: function(($_COOKIE["emok"])
+                                                    success: function(response)
                                                                 {
-                                                                    if($_COOKIE["emok"] == "yes")
+                                                                    if(response == "yes")
                                                                     {
                                                                         $("#checkemail").html("<font color='B20000'>Non disponibile</font>");
                                                                         $("#emailok").val("");
@@ -26,4 +25,3 @@ $(document).ready( function()
                                                 });
                                             });
                     });
-

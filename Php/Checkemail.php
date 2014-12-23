@@ -2,8 +2,6 @@
 
 $connessione_al_server = mysql_connect("localhost","truduGabriele","beluga874");
 
-setcookie("emok", null);
-
 if(!$connessione_al_server)
 {
     die("Errore: connessione non riuscita".mysql_error());
@@ -26,11 +24,11 @@ $queryemail = mysql_query("SELECT email FROM users WHERE email='$email'") or die
 
 if(mysql_num_rows($queryemail)==0)
 {
-    setcookie("emok", "no");
+    echo "no";
 }
 
 else
 {
-    setcookie("emok", "yes");
+    echo "yes";
 }
 ?>
