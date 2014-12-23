@@ -4,6 +4,7 @@ $(document).ready( function()
                         $("#emailok").keyup(function()
                                             {
                                                 var emailok = this.id;
+                                                var response = "yes";
 
                                                 $.ajax(
                                                 {
