@@ -20,11 +20,11 @@ $queryemail = mysql_query("SELECT email FROM users WHERE email='$email'") or DIE
 
 if(mysql_num_rows($queryemail)>0)
 {
-    echo "1";
+    return "1";
 }
 
 else
 {
-    echo "0";
+    return "0";
 }
 ?>
