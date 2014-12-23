@@ -27,26 +27,28 @@ if(!isset($_COOKIE["tipo_utente"]))
         <script type="text/javascript">
             $(document).ready( function()
                                 {
-                                    $("#email").keyup(function()
+                                    $("#emailrec").keyup(function()
                                                         {
-                                                            var email = this.id;
+                                                            var dati = $("#emailrec").attr("value");
+                                                            var datasend = "email="+dati;
 
                                                             $.ajax(
                                                             {
                                                                 type: "POST",
+                                                                dataType: "html",
                                                                 url: "Checkemail.php",
-                                                                data: email+"="+this.value,
-                                                                success: function(response)
+                                                                data: datasend,
+                                                                success: function(data)
                                                                             {
-                                                                                if(response == '0')
+                                                                                if(data == '0')
                                                                                 {
-                                                                                    $("#check_email").html('Disponibile');
+                                                                                    $("#checkemail").html("Disponibile");
                                                                                 }
 
                                                                                 else
                                                                                 {
-                                                                                    $("#check_email").html('Non disponibile');
-                                                                                    $("#email").val("");
+                                                                                    $("#checkemail").html("Non disponibile");
+                                                                                    $("#email").val();
                                                                                 }
                                                                             }
                                                             });
@@ -189,7 +191,7 @@ if(!isset($_COOKIE["tipo_utente"]))
 
                                         <td>
                                             <input id="email" type="text" name="email" placeholder="mail@a4r.it" required/>
-                                            <span id="check_email"></span>
+                                            <span id="checkemail"></span>
                                         </td>
                                     </tr>
 
