@@ -22,6 +22,33 @@ if(!isset($_COOKIE["tipo_utente"]))
 
         <link rel="shortcut icon" type="image/x-icon" href="../Immagini/favicon.ico"/>
         <link rel="Stylesheet" type="text/css" href="../Css/style.css" media="screen"/>
+
+        <script src='http://code.jquery.com/jquery-1.9.1.min.js'></script>
+        <script type="text/javascript">
+            $(document).ready( function()
+                                {
+                                    $("#email").keyup( function()
+                                                        {
+                                                            var email = this.id;
+                                                            $.ajax({ type: "POST",
+                                                            url: "checkemail.php",
+                                                            data: email+"="+this.value,
+                                                            success: function(response)
+                                                                        {
+
+                                                                            if(response == '0')
+                                                                            {
+                                                                                $("#check_email").html('<img src="Immagini/rimuovi.png" >  Disponibile ');
+                                                                            }
+                                                                            else
+                                                                            {
+                                                                                $("#check_email").html('<img src="Immagini/rimuovi.png" >  Non disponibile ');
+                                                                                $("#email").val("");
+                                                                            }
+                                                                        }
+                                                                    });
+                                                        });
+                                });
     </head>
 
 
@@ -156,7 +183,10 @@ if(!isset($_COOKIE["tipo_utente"]))
                                     <tr>
                                         <td>E-mail:</td>
 
-                                        <td><input type="text" name="email" placeholder="mail@a4r.it" required/></td>
+                                        <td>
+                                            <input type="text" name="email" placeholder="mail@a4r.it" required/>
+                                            <span id="check_email"></span>
+                                        </td>
                                     </tr>
 
                                     <tr>
