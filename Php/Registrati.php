@@ -205,8 +205,8 @@ if(!isset($_COOKIE["tipo_utente"]))
                                         <td>Tipo account:</td>
 
                                         <td>
-                                            <input type="radio" name="tipo" value="compratore" checked/>Compratore
-                                            <input type="radio" name="tipo" value="Diesel"/>Venditore
+                                            <input type="radio" name="tipo" value="compratore" checked/>Comprat.
+                                            <input type="radio" name="tipo" value="venditore"/>Vendit.
                                         </td>
                                     </tr>
 
