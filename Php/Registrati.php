@@ -27,14 +27,13 @@ if(!isset($_COOKIE["tipo_utente"]))
         <script type="text/javascript">
             $("#email").keyup(function()
                                 {
-                                    var email = $('#email').attr('value');
-                                    var data_send = "email=" + email;
+                                    var email = this.id;
 
                                     $.ajax(
                                     {
                                         type: "POST",
                                         url: "Checkemail.php",
-                                        data: data_send,
+                                        data: email+"="+this.value,
                                         success: function(response)
                                                     {
                                                         if(response == '0')
