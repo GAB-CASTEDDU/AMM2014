@@ -85,9 +85,9 @@ if(!isset($_COOKIE["tipo_utente"]))
                                 $query = 'INSERT INTO utenti (nome,cognome,citta,via,numciv,tipo,email,password)
                                           VALUES ($_POST["nome"],$_POST["cognome"],$_POST["citta"],$_POST["via"],$_POST["numciv"],$_POST["tipo"],$_POST["email"],$_POST["password"])';
 
-                                $result = mysql_query("localhost","truduGabriele","beluga874",$query);
+                                $result = mysql_query("localhost",$query);
 
-                                mysqli_close("localhost","truduGabriele","beluga874");
+                                mysqli_close("localhost");
 
                                 if(!$result)
                                 {
