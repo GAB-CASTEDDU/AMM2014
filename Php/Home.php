@@ -174,8 +174,6 @@ if(!isset($_COOKIE["tipo_utente"]))
                                 <br><br><br><br>
                             <?
                             }
-
-                            mysqli_close("localhost","truduGabriele","beluga874");
                             ?>
                         </td>
 

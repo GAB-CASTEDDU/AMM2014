@@ -62,8 +62,6 @@ if(mysql_num_rows($queryadm))
 
 	setcookie("tipo_utente", 1);
 
-	mysqli_close($connessione_al_server);
-
 	header("Location:".$pagina_adm);
 }
 
@@ -73,8 +71,6 @@ else
         $row = mysql_fetch_assoc($queryven);
 
         setcookie("tipo_utente", 2);
-
-        mysqli_close($connessione_al_server);
 
         header("Location:".$pagina_ven);
     }
@@ -86,15 +82,11 @@ else
 
             setcookie("tipo_utente", 3);
 
-            mysqli_close($connessione_al_server);
-
             header("Location:".$pagina_com);
         }
 
         else
         {
-            mysqli_close($connessione_al_server);
-
             setcookie("errlogin", 1);
 
             $pagina_login = "Login.php";
