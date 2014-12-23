@@ -25,7 +25,34 @@ if(!isset($_COOKIE["tipo_utente"]))
 
         <script src='http://code.jquery.com/jquery-1.9.1.min.js'></script>
         <script type="text/javascript">
-            $(document).ready( function()
+            $("#email").keyup(function()
+                                {
+                                    var email = $('#email').attr('value');
+                                    var data_send = "email=" + email;
+
+                                    $.ajax(
+                                    {
+                                        type: "POST",
+                                        url: "Checkemail.php",
+                                        data: data_send,
+                                        success: function(response)
+                                                    {
+                                                        if(response == '0')
+                                                        {
+                                                            $("#check_email").html('<img src="../Immagini/rimuovi.png">Disponibile ');
+                                                        }
+
+                                                        else
+                                                        {
+                                                            $("#check_email").html('<img src="../Immagini/rimuovi.png">Non disponibile ');
+                                                            $("#email").val("");
+                                                        }
+                                                    }
+                                    });
+                                });
+
+
+            /*$(document).ready( function()
                                 {
                                     $("#email").keyup( function()
                                                         {
@@ -48,7 +75,7 @@ if(!isset($_COOKIE["tipo_utente"]))
                                                                         }
                                                                     });
                                                         });
-                                });
+                                });*/
         </script>
     </head>
 
