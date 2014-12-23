@@ -40,44 +40,18 @@ if(!isset($_COOKIE["tipo_utente"]))
                                                                             {
                                                                                 if(response == '0')
                                                                                 {
-                                                                                    $("#check_email").html('<img src="../Immagini/rimuovi.png">Disponibile ');
+                                                                                    $("#check_email").html('Disponibile');
                                                                                 }
 
                                                                                 else
                                                                                 {
-                                                                                    $("#check_email").html('<img src="../Immagini/rimuovi.png">Non disponibile ');
+                                                                                    $("#check_email").html('Non disponibile');
                                                                                     $("#email").val("");
                                                                                 }
                                                                             }
                                                             });
                                                         });
                                 });
-
-
-            /*$(document).ready( function()
-                                {
-                                    $("#email").keyup( function()
-                                                        {
-                                                            var email = this.id;
-                                                            $.ajax({ type: "POST",
-                                                            url: "Checkemail.php",
-                                                            data: email+"="+this.value,
-                                                            success: function(response)
-                                                                        {
-
-                                                                            if(response == '0')
-                                                                            {
-                                                                                $("#check_email").html('<img src="../Immagini/rimuovi.png">Disponibile ');
-                                                                            }
-                                                                            else
-                                                                            {
-                                                                                $("#check_email").html('<img src="../Immagini/rimuovi.png">Non disponibile ');
-                                                                                $("#email").val("");
-                                                                            }
-                                                                        }
-                                                                    });
-                                                        });
-                                });*/
         </script>
     </head>
 
@@ -205,8 +179,8 @@ if(!isset($_COOKIE["tipo_utente"]))
                                         <td>Tipo account:</td>
 
                                         <td>
-                                            <input type="radio" name="tipo" value="compratore" checked/>Comprat.
-                                            <input type="radio" name="tipo" value="venditore"/>Vendit.
+                                            <input type="radio" name="tipo" value="compratore" checked/>Compratore
+                                            <input type="radio" name="tipo" value="venditore"/>Venditore
                                         </td>
                                     </tr>
 

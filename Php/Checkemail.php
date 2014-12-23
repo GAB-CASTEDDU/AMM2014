@@ -4,9 +4,9 @@
 
 $link = mysqli_connect("localhost", "amm14_truduGabriele", "beluga874", "users");
 
-$email = $_POST["email"];
+$email = $_GET["email"];
 
-$query = "SELECT email FROM users WHERE email='$email'";
+$query = "SELECT email FROM users WHERE email = '".$email."'";
 
 
 
