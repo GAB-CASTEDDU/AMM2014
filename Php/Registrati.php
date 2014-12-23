@@ -25,7 +25,7 @@ if(!isset($_COOKIE["tipo_utente"]))
 
         <script src='http://code.jquery.com/jquery-1.9.1.min.js'></script>
         <script type="text/javascript">
-            $("#email").keyup(function()
+            /*$("#email").keyup(function()
                                 {
                                     var email = this.id;
 
@@ -48,10 +48,10 @@ if(!isset($_COOKIE["tipo_utente"]))
                                                         }
                                                     }
                                     });
-                                });
+                                });*/
 
 
-            /*$(document).ready( function()
+            $(document).ready( function()
                                 {
                                     $("#email").keyup( function()
                                                         {
@@ -74,7 +74,7 @@ if(!isset($_COOKIE["tipo_utente"]))
                                                                         }
                                                                     });
                                                         });
-                                });*/
+                                });
         </script>
     </head>
 
@@ -164,7 +164,7 @@ if(!isset($_COOKIE["tipo_utente"]))
                             {
                             ?>
 
-                            <p>Inserisci iiii tuoi dati e registrati a Affari a 4 ruote:</p>
+                            <p>Inserisci i tuoi dati e registrati a Affari a 4 ruote:</p>
 
                             <form action="Registrati.php?campi=ok" method="post" id="form-login">
                                 <table id="table-form">
