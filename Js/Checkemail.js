@@ -11,7 +11,7 @@ $(document).ready( function()
                                                     type: "POST",
                                                     url: "Checkemail.php",
                                                     data: emailok+"="+this.value,
-                                                    success: function(response)
+                                                    success: function(respons)
                                                                 {
                                                                     if(response == "yes")
                                                                     {
