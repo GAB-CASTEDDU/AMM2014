@@ -38,15 +38,15 @@ if(!isset($_COOKIE["tipo_utente"]))
                                                                 data: email+"="+this.value,
                                                                 success: function(response)
                                                                             {
-                                                                                if(response == 0)
+                                                                                if(response == "0")
                                                                                 {
-                                                                                    $("#checkemail").html("Non disponibile");
-                                                                                    $("#emailok").val("");
+                                                                                    $("#checkemail").html("Disponibile");
                                                                                 }
 
                                                                                 else
                                                                                 {
-                                                                                    $("#checkemail").html("Disponibile");
+                                                                                    $("#checkemail").html("Non disponibile");
+                                                                                    $("#emailok").val("");
                                                                                 }
                                                                             }
                                                             });
