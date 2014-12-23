@@ -83,7 +83,7 @@ if(!isset($_COOKIE["tipo_utente"]))
                                 }
 
                                 $query = "INSERT INTO 'utenti' (nome,cognome,citta,via,numciv,tipo,email,password)
-                                          VALUES ('$_POST["nome"]','$_POST["cognome"]','$_POST["citta"]','$_POST["via"]','$_POST["numciv"]','$_POST["tipo"]','$_POST["email"]','$_POST["password"]')";
+                                          VALUES ('$_POST['"nome"']','$_POST['"cognome"']','$_POST['"citta"']','$_POST['"via"']','$_POST['"numciv"']','$_POST['"tipo"']','$_POST['"email"']','$_POST['"password"']')";
 
                                 $result = mysql_query($query);
 
