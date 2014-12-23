@@ -38,11 +38,11 @@ if(!isset($_COOKIE["tipo_utente"]))
 
                                                                             if(response == '0')
                                                                             {
-                                                                                $("#check_email").html('<img src="Immagini/rimuovi.png" >  Disponibile ');
+                                                                                $("#check_email").html('<img src="../Immagini/rimuovi.png">Disponibile ');
                                                                             }
                                                                             else
                                                                             {
-                                                                                $("#check_email").html('<img src="Immagini/rimuovi.png" >  Non disponibile ');
+                                                                                $("#check_email").html('<img src="../Immagini/rimuovi.png">Non disponibile ');
                                                                                 $("#email").val("");
                                                                             }
                                                                         }
