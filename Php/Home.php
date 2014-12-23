@@ -175,7 +175,7 @@ if(!isset($_COOKIE["tipo_utente"]))
                             <?
                             }
 
-                            mysqli_close($connessione_al_server);
+                            mysqli_close();
                             ?>
                         </td>
 
