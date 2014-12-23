@@ -94,7 +94,7 @@ if(!isset($_COOKIE["tipo_utente"]))
                                 $_SESSION["prezzo"] = $_POST["prezzo"];
                                 $_SESSION["chilometri"] = $_POST["chilometri"];
 
-                                $wadd = "WHERE compratore=null";
+                                $wadd = "WHERE compratore ISNULL";
 
                                 if($_SESSION["marca"] !="")
                                     $wadd .= " AND marca ='".$_SESSION["marca"]."'";
@@ -117,7 +117,7 @@ if(!isset($_COOKIE["tipo_utente"]))
                             ?>
                                 <h3>In vendita:</h3>
                             <?
-                                $queryvis = mysql_query("SELECT * FROM auto WHERE compratore=null") or DIE('query non riuscita'.mysql_error());
+                                $queryvis = mysql_query("SELECT * FROM auto WHERE compratore ISNULL") or DIE('query non riuscita'.mysql_error());
                             }
 
                             if(mysql_num_rows($queryvis)==0)
