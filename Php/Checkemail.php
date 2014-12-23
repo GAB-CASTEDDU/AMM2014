@@ -12,13 +12,8 @@ $query = "SELECT email FROM users WHERE email = '".$email."'";
 
 $result = mysql_query($link,$query);
 
-if(mysql_num_rows($result) > 0)
-{
-    echo "0";
-}
+$occupato = mysql_num_rows($result);
 
-else
-{
-    echo "1";
-}
+echo $occupato;
+
 ?>
