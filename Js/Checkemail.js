@@ -10,9 +10,9 @@ $(document).ready( function()
                                                     type: "POST",
                                                     url: "Checkemail.php",
                                                     data: emailok,
-                                                    success: function(response)
+                                                    success: function(($_COOKIE["emok"])
                                                                 {
-                                                                    if(response == "yes")
+                                                                    if($_COOKIE["emok"] == "yes")
                                                                     {
                                                                         $("#checkemail").html("<font color='B20000'>Non disponibile</font>");
                                                                         $("#emailok").val("");
