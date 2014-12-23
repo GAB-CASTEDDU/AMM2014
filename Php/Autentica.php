@@ -87,6 +87,8 @@ else
 
         else
         {
+            setcookie("errlogin", 1);
+
             $pagina_login = "Login.php";
 
             header("Location:".$pagina_login);

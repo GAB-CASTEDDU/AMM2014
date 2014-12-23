@@ -61,6 +61,18 @@ if(!isset($_COOKIE["tipo_utente"]))
                         <td id="center">
                             <h1 id="h1-login">Login</h1>
 
+                            <?
+                            if(isset($_COOKIE(errlogin)) && $_COOKIE(errlogin)==1)
+                            {
+                            ?>
+
+                            <p>Combinazione E-mail - Password errata!</p>
+
+                            <?
+                                setcookie("errlogin", null);
+                            }
+                            ?>
+
                             <p>Inserisci i tuoi dati per effettuare l'accesso ad Affari a 4 ruote:</p>
 
                             <form action="Autentica.php" method="post" id="form-login">

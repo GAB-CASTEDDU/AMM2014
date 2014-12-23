@@ -65,30 +65,74 @@ if(!isset($_COOKIE["tipo_utente"]))
 
                             <p>Inserisci i tuoi dati e registrati a Affari a 4 ruote:</p>
 
+                            <?
+                            if(isset($_GET["campi"]) && ($_GET["campi"]=="ok"))
+                            {
+                                $connessione_al_server = mysql_connect("localhost","truduGabriele","beluga874");
+
+                                if(!$connessione_al_server)
+                                {
+                                    die ("Errore: connessione non riuscita".mysql_error());
+                                }
+
+
+
+                                $db_selected = mysql_select_db("amm14_truduGabriele", $connessione_al_server);
+
+                                if(!$db_selected)
+                                {
+                                    die ("Errore: selezione del database errata ".mysql_error());
+                                }
+
+                                $query = "INSERT INTO utenti (nome,cognome,citta,via,numciv,tipo,email,password)
+                                          VALUES ($_POST["nome"],$_POST["cognome"],$_POST["citta"],$_POST["via"],$_POST["numciv"],$_POST["tipo"],$_POST["email"],$_POST["password"])";
+
+                                $result = mysql_query($query);
+
+                                if(!$result)
+                                {
+                                    die("Errore nella query: ".mysql_error());
+
+                                    $pagina_login = "Registrati.php";
+
+                                    header("Location:".$pagina_login);
+                                }
+
+                                else
+                                {
+                                    $pagina_login = "Login.php";
+
+                                    header("Location:".$pagina_login);
+                                }
+
+                            else
+                            {
+                            ?>
+
                             <form action="Registrati.php?campi=ok" method="post" id="form-login">
                                 <table id="table-form">
                                     <tr>
                                         <td>Nome:</td>
 
-                                        <td><input type="text" name="nome" required/></td>
+                                        <td><input type="text" name="nome" placeholder="Nome" required/></td>
                                     </tr>
 
                                     <tr>
                                         <td>Cognome:</td>
 
-                                        <td><input type="text" name="cognome" required/></td>
+                                        <td><input type="text" name="cognome" placeholder="Cognome" required/></td>
                                     </tr>
 
                                     <tr>
                                         <td>Citt&agrave;:</td>
 
-                                        <td><input type="text" name="citta" required/></td>
+                                        <td><input type="text" name="citta" placeholder="Citta'" required/></td>
                                     </tr>
 
                                     <tr>
                                         <td>Via:</td>
 
-                                        <td><input type="text" name="via" required/></td>
+                                        <td><input type="text" name="via" placeholder="Via" required/></td>
                                     </tr>
 
                                     <tr>
@@ -115,7 +159,7 @@ if(!isset($_COOKIE["tipo_utente"]))
                                     <tr>
                                         <td>Password:</td>
 
-                                        <td><input type="password" name="password" required/></td>
+                                        <td><input type="password" name="password" placeholder="Password" required/></td>
                                     </tr>
 
                                     <tr>
@@ -124,6 +168,11 @@ if(!isset($_COOKIE["tipo_utente"]))
                                     </tr>
                                 </table>
                             </form>
+
+                            <?
+                            }
+                            ?>
+
                         </td>
 
                         <td id="right"></td>
