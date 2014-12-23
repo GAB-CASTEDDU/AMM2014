@@ -110,6 +110,14 @@ if(!isset($_COOKIE["tipo_utente"]))
                                     $wadd .= " AND chilometri <='".$_SESSION["chilometri"]."'";
 
                                 $queryvis = mysql_query("SELECT * FROM auto $wadd") or DIE('query non riuscita'.mysql_error());
+
+                                if(mysql_num_rows($queryvis)==0)
+                                {
+                                ?>
+                                    <br><br><p>Nessun risultato. Clicca <a href="javascript:history.back()">QUI</a> per tornare alla ricerca</p>
+                                <?
+                                }
+                            }
                             }
 
                             else
@@ -118,13 +126,13 @@ if(!isset($_COOKIE["tipo_utente"]))
                                 <h3>In vendita:</h3>
                             <?
                                 $queryvis = mysql_query("SELECT * FROM auto WHERE compratore ISNULL") or DIE('query non riuscita'.mysql_error());
-                            }
 
-                            if(mysql_num_rows($queryvis)==0)
-                            {
-                            ?>
-                                <br><br><p>Nessun risultato. Clicca <a href="javascript:history.back()">QUI</a> per tornare alla ricerca</p>
-                            <?
+                                if(mysql_num_rows($queryvis)==0)
+                                {
+                                ?>
+                                    <br><br><p>Nessun veicolo in vendita al momento. Riprova tra poco</p>
+                                <?
+                                }
                             }
 
                             while($row = mysql_fetch_object($queryvis))
