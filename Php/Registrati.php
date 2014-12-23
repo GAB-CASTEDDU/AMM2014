@@ -27,27 +27,25 @@ if(!isset($_COOKIE["tipo_utente"]))
         <script type="text/javascript">
             $(document).ready( function()
                                 {
-                                    $("#emailrec").keyup(function()
+                                    $("#email").keyup(function()
                                                         {
-                                                            var dati = $("#emailrec").attr("value");
-                                                            var datasend = "email="+dati;
+                                                            var email = this.id;
 
                                                             $.ajax(
                                                             {
                                                                 type: "POST",
-                                                                dataType: "html",
                                                                 url: "Checkemail.php",
-                                                                data: datasend,
+                                                                data: email+"="+this.value,
                                                                 success: function(response)
                                                                             {
-                                                                                if(response == '0')
+                                                                                if(response == "0")
                                                                                 {
-                                                                                    $("#checkemail").html("Disponibile");
+                                                                                    $("#check_email").html("Disponibile");
                                                                                 }
 
                                                                                 else
                                                                                 {
-                                                                                    $("#checkemail").html("Non disponibile");
+                                                                                    $("#check_email").html("Non disponibile");
                                                                                     $("#email").val();
                                                                                 }
                                                                             }
