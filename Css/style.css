@@ -519,18 +519,14 @@ div#footer p
 
 
 
-.current_page
-{
-	text-decoration: underline;
-}
-
-.error
+#error
 {
     color: #B20000;
 }
 
 
 
-
-
-
+.current_page
+{
+	text-decoration: underline;
+}
