@@ -10,9 +10,9 @@ $(document).ready( function()
                                                     type: "POST",
                                                     url: "Checkemail.php",
                                                     data: emailok+"="+this.value,
-                                                    success: function($response)
+                                                    success: function(response)
                                                                 {
-                                                                    if(response == "yes")
+                                                                    if($response == "yes")
                                                                     {
                                                                         $("#checkemail").html("<font color='B20000'>Non disponibile</font>");
                                                                         $("#emailok").val("");
