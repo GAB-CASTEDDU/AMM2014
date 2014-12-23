@@ -77,7 +77,7 @@ if(!isset($_COOKIE["tipo_utente"]))
                                         <li>Compratore</li>
                                     </ul></li>
                                 <li>Transazione: &nbsp; &nbsp; &nbsp;<i>COOMING SOON</i></li>
-                                <li>Funzionalit&agrave; ajax: &nbsp; &nbsp; &nbsp;<i>COOMING SOON</i></li>
+                                <li>Funzionalit&agrave; ajax: &nbsp; &nbsp; &nbsp;<i>IN PROGRESS</i></li>
                             </ol>
 
                             <h3>Accesso:</h3>
