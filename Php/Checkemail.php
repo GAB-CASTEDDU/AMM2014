@@ -16,6 +16,8 @@ if(!$db_selected)
     die("Errore: selezione del database errata ".mysql_error());
 }
 
+$email=$_POST["emailok"];
+
 $queryemail = mysql_query("SELECT email FROM users WHERE email='$email'") or die("Query non riuscita".mysql_error());
 
 if(mysql_num_rows($queryemail)==0)
