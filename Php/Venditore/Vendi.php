@@ -82,7 +82,7 @@ if($_COOKIE['tipo_utente']==2)
                                     die("Errore: selezione del database errata ".mysql_error());
                                 }
 
-                                $email = $_COOKIE["id_utente"];
+                                $email = $_COOKIE["utente"];
 
                                 $query = "INSERT INTO auto (marca,modello,colore,anno,alimentazione,prezzo,chilometri,venditore)
                                 VALUES (\"".$_POST["marca"]."\",\"".$_POST["modello"]."\",\"".$_POST["colore"]."\",\"".$_POST["anno"]."\",\"".$_POST["alimentazione"]."\",\"".$_POST["prezzo"]."\",\"".$_POST["chilometri"]."\",\"".$email."\")";
