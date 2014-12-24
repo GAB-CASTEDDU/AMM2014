@@ -153,9 +153,9 @@ if($_COOKIE['tipo_utente']==2)
                                         <td>Alimentazione:</td>
 
                                         <td>
-                                            <input type="radio" name="alimentazione" value="benzina" checked/>Benzina
-                                            <input type="radio" name="alimentazione" value="diesel"/>Diesel
-                                            <input type="radio" name="alimentazione" value="altro"/>Gas
+                                            <input type="radio" name="alimentazione" value="Benzina" checked/>Benzina
+                                            <input type="radio" name="alimentazione" value="Diesel"/>Diesel
+                                            <input type="radio" name="alimentazione" value="Gas"/>Gas
                                         </td>
                                     </tr>
 
