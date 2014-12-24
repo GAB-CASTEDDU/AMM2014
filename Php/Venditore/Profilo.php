@@ -96,7 +96,7 @@ if($_COOKIE['tipo_utente']==2)
                                                 <td>Credito: &nbsp;<?echo"$row->credito";?> &euro;</td>
                                             </tr>
                                             <tr>
-                                                <td><a href="../Ricarica.php" id="ricarica">Ricarica</a></td>
+                                                <td><a href="../Riscuoti.php" id="ricarica">Riscuoti</a></td>
                                             </tr>
                                         </table>
                                     </td>
