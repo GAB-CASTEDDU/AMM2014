@@ -73,7 +73,7 @@ else
     {
         $ris = mysql_query("SELECT email FROM utenti WHERE email='".$_SESSION["email"]."' AND password ='".$_SESSION["password"]."'");
         $row = mysql_fetch_array($ris);
-        $id = mysql_result($ris "email");
+        $id = mysql_result($ris, "email");
 
         setcookie("tipo_utente", 2);
         setcookie("utente", $ris);
