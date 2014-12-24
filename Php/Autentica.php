@@ -83,7 +83,7 @@ else
         if(mysql_num_rows($querycom))
         {
             $row = mysql_fetch_array($querycom);
-            $id = array("email")
+            $id = array("email");
 
             setcookie("tipo_utente", 3);
             setcookie("id_utente", $id);
