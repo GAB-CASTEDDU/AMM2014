@@ -11,7 +11,7 @@ $(document).ready( function()
                                                     data: emailok,
                                                     success: function(response)
                                                                 {
-                                                                    if(response == "0")
+                                                                    if(response == 0)
                                                                     {
                                                                         $("#checkemail").html("<font color='32CD32'>Disponibile</font>");
                                                                     }
