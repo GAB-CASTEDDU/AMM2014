@@ -10,7 +10,7 @@ $(document).ready( function()
                                                     url: "Checkemail.php",
                                                     data: emailok,
                                                     dataType: "json",
-                                                    success: function(response)
+                                                    success: function(data, state, response)
                                                                 {
                                                                     if(response == 0)
                                                                     {
