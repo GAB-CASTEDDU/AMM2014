@@ -126,6 +126,8 @@ if($_COOKIE['tipo_utente']==2)
                                 </tr>
                             </table>
 
+                            <br><br><br><br><br><br><br><br>
+
                             <h3>Tuoi in vendita:</h3>
                             <?
                             $queryvis2 = mysql_query("SELECT * FROM auto WHERE venditore='".$_COOKIE["utente"]."'") or die("query non riuscita".mysql_error());
@@ -187,6 +189,8 @@ if($_COOKIE['tipo_utente']==2)
                             <?
                             }
                             ?>
+
+                            <br><br><br><br>
 
                             <h3>Tuoi venduti:</h3>
                             <?
