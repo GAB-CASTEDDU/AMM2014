@@ -108,7 +108,7 @@ if($_COOKIE['tipo_utente']==2)
                                                 <td>Cognome:</td><td><?echo"$row->cognome";?></td>
                                             </tr>
                                             <tr>
-                                                <td>Via:</td><td><?echo"$row->via $row->numciv";?></td>
+                                                <td>Via:</td><td><?echo"$row->via";?></td>
                                             </tr>
                                             <tr>
                                                 <td>Citt&agrave;:</td><td><?echo"$row->citta";?></td>
@@ -148,9 +148,6 @@ if($_COOKIE['tipo_utente']==2)
                                                 </tr>
                                                 <tr>
                                                     <td>Prezzo: &nbsp;<?echo"$row->prezzo";?> &euro;</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><a href="../Rimuovi.php" id="cestino">Rimuovi annuncio</a></td>
                                                 </tr>
                                             </table>
                                         </td>
@@ -210,9 +207,6 @@ if($_COOKIE['tipo_utente']==2)
                                                 </tr>
                                                 <tr>
                                                     <td>Prezzo: &nbsp;<?echo"$row->prezzo";?> &euro;</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><a href="../Rimuovi.php" id="cestino">Rimuovi annuncio</a></td>
                                                 </tr>
                                             </table>
                                         </td>
