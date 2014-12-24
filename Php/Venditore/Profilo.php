@@ -82,7 +82,9 @@ if($_COOKIE['tipo_utente']==2)
 
                             $queryvis = mysql_query("SELECT * FROM utenti WHERE email='".$_COOKIE["utente"]."'") or die("query non riuscita".mysql_error());
 
+                            $row = mysql_fetch_object($queryvis);
                             ?>
+
                             <table>
                                 <tr>
                                     <td>
@@ -108,7 +110,7 @@ if($_COOKIE['tipo_utente']==2)
                                                 <td>Cognome:</td><td><?echo"$row->cognome";?></td>
                                             </tr>
                                             <tr>
-                                                <td>Via:</td><td><?echo"$row->via";?></td>
+                                                <td>Via:</td><td><?echo"$row->via $row->numciv";?></td>
                                             </tr>
                                             <tr>
                                                 <td>Citt&agrave;:</td><td><?echo"$row->citta";?></td>
@@ -136,7 +138,7 @@ if($_COOKIE['tipo_utente']==2)
                             <?
                             }
 
-                            while($row = mysql_fetch_object($queryvis2))
+                            while($row2 = mysql_fetch_object($queryvis2))
                             {
                             ?>
                                 <table>
@@ -147,7 +149,10 @@ if($_COOKIE['tipo_utente']==2)
                                                     <td><img src="../../Immagini/noimg.png" alt="No image aviable"></td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Prezzo: &nbsp;<?echo"$row->prezzo";?> &euro;</td>
+                                                    <td>Prezzo: &nbsp;<?echo"$row2->prezzo";?> &euro;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><a href="../Rimuovi.php" id="cestino">Rimuovi annuncio</a></td>
                                                 </tr>
                                             </table>
                                         </td>
@@ -155,22 +160,22 @@ if($_COOKIE['tipo_utente']==2)
                                         <td>
                                             <table id="table-vis">
                                                 <tr>
-                                                    <td>Marca:</td><td><?echo"$row->marca";?></td>
+                                                    <td>Marca:</td><td><?echo"$row2->marca";?></td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Modello:</td><td><?echo"$row->modello";?></td>
+                                                    <td>Modello:</td><td><?echo"$row2->modello";?></td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Colore:</td><td><?echo"$row->colore";?></td>
+                                                    <td>Colore:</td><td><?echo"$row2->colore";?></td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Anno:</td><td><?echo"$row->anno";?></td>
+                                                    <td>Anno:</td><td><?echo"$row2->anno";?></td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Alimentazione:</td><td><?echo"$row->alimentazione";?></td>
+                                                    <td>Alimentazione:</td><td><?echo"$row2->alimentazione";?></td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Chilometri:</td><td><?echo"$row->chilometri";?></td>
+                                                    <td>Chilometri:</td><td><?echo"$row2->chilometri";?></td>
                                                 </tr>
                                             </table>
                                         </td>
@@ -195,7 +200,7 @@ if($_COOKIE['tipo_utente']==2)
                             <?
                             }
 
-                            while($row = mysql_fetch_object($queryvis3))
+                            while($row3 = mysql_fetch_object($queryvis3))
                             {
                             ?>
                                 <table>
@@ -206,7 +211,10 @@ if($_COOKIE['tipo_utente']==2)
                                                     <td><img src="../../Immagini/noimg.png" alt="No image aviable"></td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Prezzo: &nbsp;<?echo"$row->prezzo";?> &euro;</td>
+                                                    <td>Prezzo: &nbsp;<?echo"$row3->prezzo";?> &euro;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><a href="../Rimuovi.php" id="cestino">Rimuovi annuncio</a></td>
                                                 </tr>
                                             </table>
                                         </td>
@@ -214,22 +222,22 @@ if($_COOKIE['tipo_utente']==2)
                                         <td>
                                             <table id="table-vis">
                                                 <tr>
-                                                    <td>Marca:</td><td><?echo"$row->marca";?></td>
+                                                    <td>Marca:</td><td><?echo"$row3->marca";?></td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Modello:</td><td><?echo"$row->modello";?></td>
+                                                    <td>Modello:</td><td><?echo"$row3->modello";?></td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Colore:</td><td><?echo"$row->colore";?></td>
+                                                    <td>Colore:</td><td><?echo"$row3->colore";?></td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Anno:</td><td><?echo"$row->anno";?></td>
+                                                    <td>Anno:</td><td><?echo"$row3->anno";?></td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Alimentazione:</td><td><?echo"$row->alimentazione";?></td>
+                                                    <td>Alimentazione:</td><td><?echo"$row3->alimentazione";?></td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Chilometri:</td><td><?echo"$row->chilometri";?></td>
+                                                    <td>Chilometri:</td><td><?echo"$row3->chilometri";?></td>
                                                 </tr>
                                             </table>
                                         </td>
