@@ -60,7 +60,7 @@ if(mysql_num_rows($queryadm))
 {
     $ris = mysql_query("SELECT email FROM utenti WHERE email='".$_SESSION["email"]."' AND password ='".$_SESSION["password"]."'");
 	$row = mysql_fetch_array($ris);
-	$id = mysql_result($queryadm, "email");
+	$id = mysql_result($ris, "email");
 
 	setcookie("tipo_utente", 1);
 	setcookie("utente", $ris);
@@ -73,7 +73,7 @@ else
     {
         $ris = mysql_query("SELECT email FROM utenti WHERE email='".$_SESSION["email"]."' AND password ='".$_SESSION["password"]."'");
         $row = mysql_fetch_array($ris);
-        $id = mysql_result($queryven, "email");
+        $id = mysql_result($ris "email");
 
         setcookie("tipo_utente", 2);
         setcookie("utente", $ris);
@@ -86,7 +86,7 @@ else
         {
             $ris = mysql_query("SELECT email FROM utenti WHERE email='".$_SESSION["email"]."' AND password ='".$_SESSION["password"]."'");
             $row = mysql_fetch_array($ris);
-            $id = mysql_result($querycom, "email");
+            $id = mysql_result($ris, "email");
 
             setcookie("tipo_utente", 3);
             setcookie("utente", $ris);
