@@ -90,8 +90,6 @@ if(!isset($_COOKIE["tipo_utente"]))
 
                                 $result = mysql_query($query);
 
-                                mysqli_close($connessione_al_server);
-
                                 if(!$result)
                                 {
                                     die("Errore nella query: ".mysql_error());
