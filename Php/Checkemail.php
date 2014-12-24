@@ -26,9 +26,5 @@ $response = mysqli_num_rows($queryemail);
 
 
 
-$json = array();
-
-$json["response"] = $response;
-
-echo json_encode($json);
+echo $response;
 ?>

@@ -9,7 +9,6 @@ $(document).ready( function()
                                                     type: "POST",
                                                     url: "Checkemail.php",
                                                     data: emailok,
-                                                    dataType: "json",
                                                     success: function(data, state, response)
                                                                 {
                                                                     if(response == 0)
