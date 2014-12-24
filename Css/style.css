@@ -278,6 +278,17 @@ div#menu li
 	background-position: left center;
 }
 
+#ricarica
+{
+	margin-left: -10px;
+
+	padding-left: 20px;
+
+	background-image: url('../Immagini/ricarica.png');
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+
 
 
 #content

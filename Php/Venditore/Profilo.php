@@ -198,7 +198,7 @@ if($_COOKIE['tipo_utente']==2)
                             {
 
                             ?>
-                            <br><br><p>Nessun veicolo in vendita al momento. Riprova tra poco</p>
+                            <br><br><p>Nessun veicolo venduto al momento. Riprova tra poco</p>
                             <?
                             }
 
@@ -214,9 +214,6 @@ if($_COOKIE['tipo_utente']==2)
                                                 </tr>
                                                 <tr>
                                                     <td>Prezzo: &nbsp;<?echo"$row3->prezzo";?> &euro;</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><a href="../Rimuovi.php" id="cestino">Rimuovi annuncio</a></td>
                                                 </tr>
                                             </table>
                                         </td>
