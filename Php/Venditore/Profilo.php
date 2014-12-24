@@ -126,7 +126,7 @@ if($_COOKIE['tipo_utente']==2)
                                 </tr>
                             </table>
 
-                            <br><br><br><br><br><br><br><br>
+                            <br><br><br><br>
 
                             <h3>Tuoi in vendita:</h3>
                             <?
@@ -189,8 +189,6 @@ if($_COOKIE['tipo_utente']==2)
                             <?
                             }
                             ?>
-
-                            <br><br><br><br>
 
                             <h3>Tuoi venduti:</h3>
                             <?
