@@ -9,17 +9,17 @@ $(document).ready( function()
                                                     type: "POST",
                                                     url: "Checkemail.php",
                                                     data: emailok,
-                                                    success: function(data, state, response)
+                                                    success: function(response)
                                                                 {
-                                                                    if(response == 0)
+                                                                    if(response != 0)
                                                                     {
-                                                                        $("#checkemail").html("<font color='32CD32'>Disponibile</font>");
+                                                                        $("#checkemail").html("<font color='B20000'>Non disponibile</font>");
+                                                                        $("#emailok").val("");
                                                                     }
 
                                                                     else
                                                                     {
-                                                                        $("#checkemail").html("<font color='B20000'>Non disponibile</font>");
-                                                                        $("#emailok").val("");
+                                                                        $("#checkemail").html("<font color='32CD32'>Disponibile</font>");
                                                                     }
                                                                 }
                                                 });

@@ -58,7 +58,7 @@ $querycom = mysql_query("SELECT * FROM utenti WHERE email='".$_SESSION["email"].
 
 if(mysql_num_rows($queryadm))
 {
-    $ris = mysql_query("SELECT email FROM utenti");
+    $ris = mysql_query("SELECT email FROM utenti WHERE email='".$_SESSION["email"]."' AND password ='".$_SESSION["password"]."'");
 	$row = mysql_fetch_array($ris);
 	$id = mysql_result($queryadm, "email");
 
@@ -71,7 +71,7 @@ if(mysql_num_rows($queryadm))
 else
     if(mysql_num_rows($queryven))
     {
-        $ris = mysql_query("SELECT email FROM utenti");
+        $ris = mysql_query("SELECT email FROM utenti WHERE email='".$_SESSION["email"]."' AND password ='".$_SESSION["password"]."'");
         $row = mysql_fetch_array($ris);
         $id = mysql_result($queryven, "email");
 
@@ -84,7 +84,7 @@ else
     else
         if(mysql_num_rows($querycom))
         {
-            $ris = mysql_query("SELECT email FROM utenti");
+            $ris = mysql_query("SELECT email FROM utenti WHERE email='".$_SESSION["email"]."' AND password ='".$_SESSION["password"]."'");
             $row = mysql_fetch_array($ris);
             $id = mysql_result($querycom, "email");
 
