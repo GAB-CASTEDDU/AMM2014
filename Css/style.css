@@ -267,6 +267,17 @@ div#menu li
 	background-position: left center;
 }
 
+#cestino
+{
+	margin-left: -10px;
+
+	padding-left: 20px;
+
+	background-image: url('../Immagini/cestino.png');
+	background-repeat: no-repeat;
+	background-position: left center;
+}
+
 
 
 #content

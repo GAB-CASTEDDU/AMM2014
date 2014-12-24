@@ -148,7 +148,7 @@ if($_COOKIE['tipo_utente']==1)
                                                     <td>Prezzo: &nbsp;<?echo"$row->prezzo";?> &euro;</td>
                                                 </tr>
                                                 <tr>
-                                                    <td><a href="../Rimuovi.php" id="rimuovi">Rimuovi annuncio</a></td>
+                                                    <td><a href="../Rimuovi.php" id="cestino">Rimuovi annuncio</a></td>
                                                 </tr>
                                             </table>
                                         </td>
