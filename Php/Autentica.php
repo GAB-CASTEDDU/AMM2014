@@ -71,6 +71,7 @@ if(mysql_num_rows($queryadm))
 else
     if(mysql_num_rows($queryven))
     {
+        $ris = mysql_query("SELECT email FROM utenti");
         $row = mysql_fetch_array($ris);
         $id = mysql_result($queryven, "email");
 
@@ -83,6 +84,7 @@ else
     else
         if(mysql_num_rows($querycom))
         {
+            $ris = mysql_query("SELECT email FROM utenti");
             $row = mysql_fetch_array($ris);
             $id = mysql_result($querycom, "email");
 
