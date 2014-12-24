@@ -8,7 +8,7 @@ $(document).ready( function()
                                                 {
                                                     type: "POST",
                                                     url: "Checkemail.php",
-                                                    data: email+"="+this.value,
+                                                    data: emailok+"="+this.value,
                                                     success: function(response)
                                                                 {
                                                                     if(response== '0')
