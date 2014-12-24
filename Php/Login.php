@@ -66,10 +66,20 @@ if(!isset($_COOKIE["tipo_utente"]))
                             {
                             ?>
 
-                            <a class="error">Combinazione E-mail - Password errata!</a>
+                            <p class="error"><font color="B20000">Combinazione E-mail - Password errata!</font></p>
 
                             <?
                                 setcookie("errlogin", null);
+                            }
+
+                            if(isset($_COOKIE["logout"]) && ($_COOKIE["logout"]==1))
+                            {
+                            ?>
+
+                            <p class="error"><font color="B20000">Hai effettuato il logout!</font></p>
+
+                            <?
+                                setcookie("logout", null);
                             }
                             ?>
 

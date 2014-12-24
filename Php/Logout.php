@@ -12,6 +12,7 @@ else
 
 setcookie("tipo_utente", null);
 setcookie("id_utente", null);
+setcookie("logout", 1);
 
 session_destroy();
 
