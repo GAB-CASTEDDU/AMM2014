@@ -62,7 +62,7 @@ if(mysql_num_rows($queryadm))
 	$id = array("email");
 
 	setcookie("tipo_utente", 1);
-	setcookie("id_utente", $id);
+	setcookie("id_utente", array("email"));
 
 	header("Location:".$pagina_adm);
 }
@@ -74,7 +74,7 @@ else
         $id = array("email");
 
         setcookie("tipo_utente", 2);
-        setcookie("id_utente", $id);
+        setcookie("id_utente", array("email"));
 
         header("Location:".$pagina_ven);
     }
@@ -86,7 +86,7 @@ else
             $id = array("email");
 
             setcookie("tipo_utente", 3);
-            setcookie("id_utente", $id);
+            setcookie("id_utente", array("email"));
 
             header("Location:".$pagina_com);
         }
