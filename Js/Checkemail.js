@@ -2,16 +2,16 @@ $(document).ready( function()
                     {
                         $("#emailok").blur(function()
                                             {
-                                                var emailok = $("#emailok").val();
+                                                var emailok = this.id;
 
                                                 $.ajax(
                                                 {
                                                     type: "POST",
                                                     url: "Checkemail.php",
-                                                    data: emailok,
+                                                    data: email+"="+this.value,
                                                     success: function(response)
                                                                 {
-                                                                    if(response > 0)
+                                                                    if(response== '0')
                                                                     {
                                                                         $("#checkemail").html("<font color='B20000'>Non disponibile</font>");
                                                                         $("#emailok").val("");
