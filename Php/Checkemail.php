@@ -20,9 +20,9 @@ if(!$db_selected)
 
 $email=$_POST["emailok"];
 
-$queryemail = mysqli_query("SELECT email FROM utenti WHERE email='$email'") or die("Query non riuscita".mysql_error());
+$queryemail = mysql_query("SELECT email FROM utenti WHERE email='$email'") or die("Query non riuscita".mysql_error());
 
-if(mysqli_num_rows($queryemail)>0);
+if(mysql_num_rows($queryemail)>0);
 {
 echo '1';
 }
