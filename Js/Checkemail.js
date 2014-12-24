@@ -11,7 +11,7 @@ $(document).ready( function()
                                                     data: emailok,
                                                     success: function(response)
                                                                 {
-                                                                    if(response == "yes")
+                                                                    if(response == 1)
                                                                     {
                                                                         $("#checkemail").html("<font color='B20000'>Non disponibile</font>");
                                                                         $("#emailok").val("");
