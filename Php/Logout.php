@@ -11,6 +11,8 @@ else
 }
 
 setcookie("tipo_utente", null);
+setcookie("id_utente", null);
+
 session_destroy();
 
 header("Location:".$pagina_login);

@@ -63,9 +63,65 @@ if($_COOKIE['tipo_utente']==2)
                         <td id="center">
                             <h1 id="h1-vendi">Vendi</h1>
 
+                            <?
+                            if(isset($_GET["campi"]) && ($_GET["campi"]=="ok"))
+                            {
+                                $connessione_al_server = mysql_connect("localhost","truduGabriele","beluga874");
+
+                                if(!$connessione_al_server)
+                                {
+                                    die("Errore: connessione non riuscita".mysql_error());
+                                }
+
+
+
+                                $db_selected = mysql_select_db("amm14_truduGabriele", $connessione_al_server);
+
+                                if(!$db_selected)
+                                {
+                                    die("Errore: selezione del database errata ".mysql_error());
+                                }
+
+                                $query = "INSERT INTO utenti (marca,modello,colore,anno,alimentazione,prezzo,chilometri,venditore)
+                                VALUES (\"".$_POST["marca"]."\",\"".$_POST["modello"]."\",\"".$_POST["colore"]."\",\"".$_POST["anno"]."\",\"".$_POST["alimentazione"]."\",\"".$_POST["prezzo"]."\",\"".$_POST["chilometri"]."\",\"".$_COOKIE["id_utente"]."\")";
+
+                                $result = mysql_query($query);
+
+                                if(!$result)
+                                {
+                                    die("Errore nella query: ".mysql_error());
+
+                                    $pagina_login = "Vendi.php";
+
+                                    header("Location:".$pagina_login);
+                                }
+
+                                else
+                                {
+                                    $pagina_login = "Vendi.php?agg=ok";
+
+                                    header("Location:".$pagina_login);
+                                }
+                            }
+
+                            else
+                            {
+                            ?>
+
+                            <?
+                            if(isset($_GET["agg"]) && ($_GET["agg"]=="ok"))
+                            {
+                            ?>
+
+                            <p>Il tuo annuncio &egrave; stato aggiunto con successo!</p>
+
+                            <?
+                            }
+                            ?>
+
                             <p>Inserisci le caretteristiche dell'auto che vuoi mettere in vendita:</p>
 
-                            <form action="Aggiungi.php" method="post" id="form-login">
+                            <form action="Vendii.php?campi=ok" method="post" id="form-login">
                                 <table id="table-form">
                                     <tr>
                                         <td>Marca:</td>
@@ -119,6 +175,11 @@ if($_COOKIE['tipo_utente']==2)
                                     </tr>
                                 </table>
                             </form>
+
+                            <?
+                            }
+                            ?>
+
                         </td>
 
                         <td id="right"></td>

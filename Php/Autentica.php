@@ -59,8 +59,10 @@ $querycom = mysql_query("SELECT * FROM utenti WHERE email='".$_SESSION["email"].
 if(mysql_num_rows($queryadm))
 {
 	$row = mysql_fetch_assoc($queryadm);
+	$id = mysql_result($queryadm, $row, "email");
 
 	setcookie("tipo_utente", 1);
+	setcookie("id_utente", $id);
 
 	header("Location:".$pagina_adm);
 }
@@ -69,8 +71,10 @@ else
     if(mysql_num_rows($queryven))
     {
         $row = mysql_fetch_assoc($queryven);
+        $id = mysql_result($queryven, $row, "email");
 
         setcookie("tipo_utente", 2);
+        setcookie("id_utente", $id);
 
         header("Location:".$pagina_ven);
     }
@@ -79,8 +83,10 @@ else
         if(mysql_num_rows($querycom))
         {
             $row = mysql_fetch_assoc($querycom);
+            $id = mysql_result($querycom, $row, "email");
 
             setcookie("tipo_utente", 3);
+            setcookie("id_utente", $id);
 
             header("Location:".$pagina_com);
         }
