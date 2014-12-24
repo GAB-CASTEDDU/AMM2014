@@ -115,7 +115,7 @@ if($_COOKIE['tipo_utente']==2)
                             {
                             ?>
 
-                            <p>Il tuo annuncio &egrave; stato aggiunto con successo!</p>
+                            <p><font color="32CD32">Il tuo annuncio &egrave; stato aggiunto con successo!</font></p>
 
                             <?
                             }
