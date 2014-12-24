@@ -197,7 +197,7 @@ if($_COOKIE['tipo_utente']==2)
                             {
 
                             ?>
-                            <br><br><p>Nessun veicolo venduto al momento. Riprova tra poco</p>
+                            <br><p>Nessun veicolo venduto al momento. Riprova tra poco</p><br><br>
                             <?
                             }
 
