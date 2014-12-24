@@ -94,8 +94,6 @@ if(!isset($_COOKIE["tipo_utente"]))
                                 {
                                     die("Errore nella query: ".mysql_error());
 
-                                    ?><p>Clicca <a href="javascript:history.back()">QUI</a> per tornare alla sezione Registrati</p><?
-
                                     $pagina_login = "Registrati.php";
 
                                     header("Location:".$pagina_login);
