@@ -121,7 +121,7 @@ if($_COOKIE['tipo_utente']==2)
 
                             <p>Inserisci le caretteristiche dell'auto che vuoi mettere in vendita:</p>
 
-                            <form action="Vendii.php?campi=ok" method="post" id="form-login">
+                            <form action="Vendi.php?campi=ok" method="post" id="form-login">
                                 <table id="table-form">
                                     <tr>
                                         <td>Marca:</td>
