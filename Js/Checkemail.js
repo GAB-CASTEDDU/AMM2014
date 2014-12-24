@@ -1,6 +1,6 @@
 $(document).ready( function()
                     {
-                        $("#emailok").keyup(function()
+                        $("#emailok").blur(function()
                                             {
                                                 var emailok = $("#emailok").val();
 
@@ -11,7 +11,7 @@ $(document).ready( function()
                                                     data: emailok,
                                                     success: function(response)
                                                                 {
-                                                                    if(response == 1)
+                                                                    if(response == "1")
                                                                     {
                                                                         $("#checkemail").html("<font color='B20000'>Non disponibile</font>");
                                                                         $("#emailok").val("");
