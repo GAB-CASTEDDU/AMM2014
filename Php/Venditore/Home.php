@@ -7,7 +7,7 @@
 setcookie("redirect", null);
 
 if($_COOKIE['tipo_utente']==2)
-{   echo $_COOKIE["tipo_utente"];
+{   echo $_COOKIE["utente"];
 ?>
 
 
