@@ -85,7 +85,7 @@ if(!isset($_COOKIE["tipo_utente"]))
                             {
                             ?>
                                 <h3>Risultati:</h3>
-                            <?
+                                <?
 
                                 $_SESSION["marca"] = $_POST["marca"];
                                 $_SESSION["modello"] = $_POST["modello"];

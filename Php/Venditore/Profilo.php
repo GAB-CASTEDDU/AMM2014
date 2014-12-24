@@ -62,6 +62,192 @@ if($_COOKIE['tipo_utente']==2)
 
                         <td id="center">
                             <h1 id="h1-utenti">Profilo</h1>
+
+                            <?
+                            $connessione_al_server = mysql_connect("localhost","truduGabriele","beluga874");
+
+                            if(!$connessione_al_server)
+                            {
+                                die("Errore: connessione non riuscita".mysql_error());
+                            }
+
+
+
+                            $db_selected = mysql_select_db("amm14_truduGabriele", $connessione_al_server);
+
+                            if(!$db_selected)
+                            {
+                                die("Errore: selezione del database errata ".mysql_error());
+                            }
+
+                            $queryvis = mysql_query("SELECT * FROM utenti WHERE email='".$_COOKIE["utente"]."'") or die("query non riuscita".mysql_error());
+
+                            ?>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <table id="table-vis">
+                                            <tr>
+                                                <td><img src="../../Immagini/noprof.png" alt="No image aviable"></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Credito: &nbsp;<?echo"$row->credito";?> &euro;</td>
+                                            </tr>
+                                            <tr>
+                                                <td><a href="../Login.php" id="login">Login compratore</a></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+
+                                    <td>
+                                        <table id="table-vis">
+                                            <tr>
+                                                <td>Nome:</td><td><?echo"$row->nome";?></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Cognome:</td><td><?echo"$row->cognome";?></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Via:</td><td><?echo"$row->via $row->numciv";?></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Citt&agrave;:</td><td><?echo"$row->citta";?></td>
+                                            </tr>
+                                            <tr>
+                                                <td>E-mail:</td><td><?echo"$row->email";?></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Tipo account:</td><td><?echo"$row->tipo";?></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <h3>Tuoi in vendita:</h3>
+                            <?
+                            $queryvis2 = mysql_query("SELECT * FROM auto WHERE venditore='".$_COOKIE["utente"]."'") or die("query non riuscita".mysql_error());
+
+                            if(mysql_num_rows($queryvis2)==0)
+                            {
+
+                            ?>
+                            <br><br><p>Nessun veicolo in vendita al momento. Riprova tra poco</p>
+                            <?
+                            }
+
+                            while($row = mysql_fetch_object($queryvis2))
+                            {
+                            ?>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <table id="table-vis">
+                                                <tr>
+                                                    <td><img src="../../Immagini/noimg.png" alt="No image aviable"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Prezzo: &nbsp;<?echo"$row->prezzo";?> &euro;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><a href="../Rimuovi.php" id="cestino">Rimuovi annuncio</a></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+
+                                        <td>
+                                            <table id="table-vis">
+                                                <tr>
+                                                    <td>Marca:</td><td><?echo"$row->marca";?></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Modello:</td><td><?echo"$row->modello";?></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Colore:</td><td><?echo"$row->colore";?></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Anno:</td><td><?echo"$row->anno";?></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Alimentazione:</td><td><?echo"$row->alimentazione";?></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Chilometri:</td><td><?echo"$row->chilometri";?></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+
+                                <br><br><br><br>
+
+                            <?
+                            }
+                            ?>
+
+                            <h3>Tuoi venduti:</h3>
+                            <?
+                            $queryvis3 = mysql_query("SELECT * FROM auto WHERE compratore IS NOT NULL AND compratore != 0") or die("query non riuscita".mysql_error());
+
+                            if(mysql_num_rows($queryvis3)==0)
+                            {
+
+                            ?>
+                            <br><br><p>Nessun veicolo in vendita al momento. Riprova tra poco</p>
+                            <?
+                            }
+
+                            while($row = mysql_fetch_object($queryvis3))
+                            {
+                            ?>
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <table id="table-vis">
+                                                <tr>
+                                                    <td><img src="../../Immagini/noimg.png" alt="No image aviable"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Prezzo: &nbsp;<?echo"$row->prezzo";?> &euro;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><a href="../Rimuovi.php" id="cestino">Rimuovi annuncio</a></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+
+                                        <td>
+                                            <table id="table-vis">
+                                                <tr>
+                                                    <td>Marca:</td><td><?echo"$row->marca";?></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Modello:</td><td><?echo"$row->modello";?></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Colore:</td><td><?echo"$row->colore";?></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Anno:</td><td><?echo"$row->anno";?></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Alimentazione:</td><td><?echo"$row->alimentazione";?></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Chilometri:</td><td><?echo"$row->chilometri";?></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+
+                                <br><br><br><br>
+
+                            <?
+                            }
+                            ?>
+
                         </td>
 
                         <td id="right"></td>

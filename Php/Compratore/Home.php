@@ -123,7 +123,7 @@ if($_COOKIE['tipo_utente']==3)
                             {
                             ?>
                                 <h3>In vendita:</h3>
-                            <?
+                                <?
                                 $queryvis = mysql_query("SELECT * FROM auto WHERE compratore IS NULL") or die("query non riuscita".mysql_error());
 
                                 if(mysql_num_rows($queryvis)==0)
