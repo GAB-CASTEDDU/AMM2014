@@ -74,7 +74,7 @@ else
         $id = array("email");
 
         setcookie("tipo_utente", 2);
-        setcookie("id_utente", $id);
+        setcookie("utente", 3);
 
         header("Location:".$pagina_ven);
     }
@@ -86,7 +86,7 @@ else
             $id = array("email")
 
             setcookie("tipo_utente", 3);
-            setcookie("id_utente", $id);
+            setcookie("utente", 3);
 
             header("Location:".$pagina_com);
         }
