@@ -85,6 +85,8 @@ if($_COOKIE['tipo_utente']==2)
                             $row = mysql_fetch_object($queryvis);
                             ?>
 
+                            <h3><?echo"$row->email";?>:</h3>
+
                             <table>
                                 <tr>
                                     <td>
@@ -114,9 +116,6 @@ if($_COOKIE['tipo_utente']==2)
                                             </tr>
                                             <tr>
                                                 <td>Citt&agrave;:</td><td><?echo"$row->citta";?></td>
-                                            </tr>
-                                            <tr>
-                                                <td>E-mail:</td><td><?echo"$row->email";?></td>
                                             </tr>
                                             <tr>
                                                 <td>Tipo account:</td><td><?echo"$row->tipo";?></td>
