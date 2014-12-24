@@ -24,6 +24,8 @@ $queryemail = mysql_query("SELECT email FROM users WHERE email='$email'") or die
 
 $response = mysql_num_rows($queryemail);
 
+
+
 $json = array();
 
 $json["response"] = $response;
