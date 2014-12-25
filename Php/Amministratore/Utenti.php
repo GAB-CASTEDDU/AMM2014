@@ -87,7 +87,7 @@ if($_COOKIE['tipo_utente']==1)
 
                             <h3>Tu:</h3>
 
-                            <br><br>
+                            <br>
 
                             <table>
                                 <tr>
@@ -124,7 +124,7 @@ if($_COOKIE['tipo_utente']==1)
                                 </tr>
                             </table>
 
-                            <br><br>
+                            <br><br><br>
 
                             <?
                             $queryvis2 = mysql_query("SELECT * FROM utenti WHERE email!='".$_COOKIE["utente"]."'") or die("query non riuscita".mysql_error());
@@ -143,7 +143,7 @@ if($_COOKIE['tipo_utente']==1)
                             ?>
                                 <h3><?echo"$row2->email";?>:</h3>
 
-                                <br><br>
+                                <br>
 
                                 <table>
                                     <tr>
@@ -180,7 +180,7 @@ if($_COOKIE['tipo_utente']==1)
                                     </tr>
                                 </table>
 
-                                <br><br>
+                                <br><br><br>
 
                             <?
                             }
