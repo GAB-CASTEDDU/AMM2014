@@ -80,18 +80,65 @@ if($_COOKIE['tipo_utente']==1)
                                 die("Errore: selezione del database errata ".mysql_error());
                             }
 
-                            $queryvis = mysql_query("SELECT * FROM utenti") or die("query non riuscita".mysql_error());
+                            $queryvis = mysql_query("SELECT * FROM utenti WHERE email='".$_COOKIE["utente"]."'") or die("query non riuscita".mysql_error());
 
                             $row = mysql_fetch_object($queryvis);
+                            ?>
 
-                            if(mysql_num_rows($queryvis)==0)
+                            <h3>Tu:</h3>
+
+                            <br><br>
+
+                            <table>
+                                <tr>
+                                    <td>
+                                        <table id="table-vis">
+                                            <tr>
+                                                <td><img src="../../Immagini/noprof.png" alt="No image aviable"></td>
+                                            </tr>
+                                            <tr>
+                                                <td><?echo"$row->email";?> &euro;</td>
+                                            </tr>
+                                        </table>
+                                    </td>
+
+                                    <td>
+                                        <table id="table-vis">
+                                            <tr>
+                                                <td>Nome:</td><td><?echo"$row->nome";?></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Cognome:</td><td><?echo"$row->cognome";?></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Via:</td><td><?echo"$row->via $row->numciv";?></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Citt&agrave;:</td><td><?echo"$row->citta";?></td>
+                                            </tr>
+                                            <tr>
+                                                <td>Tipo account:</td><td><?echo"$row->tipo";?></td>
+                                            </tr>
+                                        </table>
+                                    </td>
+                                </tr>
+                            </table>
+
+                            <br><br>
+
+                            <?
+                            $queryvis2 = mysql_query("SELECT * FROM utenti WHERE email!='".$_COOKIE["utente"]."'") or die("query non riuscita".mysql_error());
+
+                            $row2 = mysql_fetch_object($queryvis);
+
+                            if(mysql_num_rows($queryvis2)==0)
                             {
                             ?>
                                 <br><br><p>Nessun utente registrato al momento. Riprova tra poco</p>
                             <?
                             }
 
-                            while($row = mysql_fetch_object($queryvis))
+                            while($row2 = mysql_fetch_object($queryvis2))
                             {
                             ?>
                                 <h3><?echo"$row->email";?>:</h3>
@@ -106,7 +153,7 @@ if($_COOKIE['tipo_utente']==1)
                                                     <td><img src="../../Immagini/noprof.png" alt="No image aviable"></td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Credito: &nbsp;<?echo"$row->credito";?> &euro;</td>
+                                                    <td>Credito: &nbsp;<?echo"$row2->credito";?> &euro;</td>
                                                 </tr>
                                             </table>
                                         </td>
@@ -114,19 +161,19 @@ if($_COOKIE['tipo_utente']==1)
                                         <td>
                                             <table id="table-vis">
                                                 <tr>
-                                                    <td>Nome:</td><td><?echo"$row->nome";?></td>
+                                                    <td>Nome:</td><td><?echo"$row2->nome";?></td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Cognome:</td><td><?echo"$row->cognome";?></td>
+                                                    <td>Cognome:</td><td><?echo"$row2->cognome";?></td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Via:</td><td><?echo"$row->via $row->numciv";?></td>
+                                                    <td>Via:</td><td><?echo"$row2->via $row2->numciv";?></td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Citt&agrave;:</td><td><?echo"$row->citta";?></td>
+                                                    <td>Citt&agrave;:</td><td><?echo"$row2->citta";?></td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Tipo account:</td><td><?echo"$row->tipo";?></td>
+                                                    <td>Tipo account:</td><td><?echo"$row2->tipo";?></td>
                                                 </tr>
                                             </table>
                                         </td>

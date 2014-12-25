@@ -131,7 +131,7 @@ if($_COOKIE['tipo_utente']==2)
 
                             <h3>Tuoi in vendita:</h3>
                             <?
-                            $queryvis2 = mysql_query("SELECT * FROM utenti") or die("query non riuscita".mysql_error());
+                            $queryvis2 = mysql_query("SELECT * FROM auto WHERE venditore='".$_COOKIE["utente"]."'") or die("query non riuscita".mysql_error());
 
                             if(mysql_num_rows($queryvis2)==0)
                             {
@@ -144,8 +144,6 @@ if($_COOKIE['tipo_utente']==2)
                             while($row2 = mysql_fetch_object($queryvis2))
                             {
                             ?>
-                                <h3><?echo"$row->email";?>:</h3>
-
                                 <br><br>
 
                                 <table>
@@ -153,10 +151,13 @@ if($_COOKIE['tipo_utente']==2)
                                         <td>
                                             <table id="table-vis">
                                                 <tr>
-                                                    <td><img src="../../Immagini/noprof.png" alt="No image aviable"></td>
+                                                    <td><img src="../../Immagini/noimg.png" alt="No image aviable"></td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Credito: &nbsp;<?echo"$row2->credito";?> &euro;</td>
+                                                    <td>Prezzo: &nbsp;<?echo"$row2->prezzo";?> &euro;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><a href="../Rimuovi.php" id="cestino">Rimuovi annuncio</a></td>
                                                 </tr>
                                             </table>
                                         </td>
@@ -164,19 +165,22 @@ if($_COOKIE['tipo_utente']==2)
                                         <td>
                                             <table id="table-vis">
                                                 <tr>
-                                                    <td>Nome:</td><td><?echo"$row2->nome";?></td>
+                                                    <td>Marca:</td><td><?echo"$row2->marca";?></td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Cognome:</td><td><?echo"$row2->cognome";?></td>
+                                                    <td>Modello:</td><td><?echo"$row2->modello";?></td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Via:</td><td><?echo"$row2->via $row2->numciv";?></td>
+                                                    <td>Colore:</td><td><?echo"$row2->colore";?></td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Citt&agrave;:</td><td><?echo"$row2->citta";?></td>
+                                                    <td>Anno:</td><td><?echo"$row2->anno";?></td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Tipo account:</td><td><?echo"$row2->tipo";?></td>
+                                                    <td>Alimentazione:</td><td><?echo"$row2->alimentazione";?></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Chilometri:</td><td><?echo"$row2->chilometri";?></td>
                                                 </tr>
                                             </table>
                                         </td>
