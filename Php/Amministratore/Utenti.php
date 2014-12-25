@@ -108,9 +108,6 @@ if($_COOKIE['tipo_utente']==1)
                                                 <tr>
                                                     <td>Credito: &nbsp;<?echo"$row->credito";?> &euro;</td>
                                                 </tr>
-                                                <tr>
-                                                    <td><a href="../Riscuoti.php" id="ricarica">Riscuoti</a></td>
-                                                </tr>
                                             </table>
                                         </td>
 
