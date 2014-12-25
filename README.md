@@ -38,7 +38,7 @@ La homepage del progetto si trova sulla URL http://spano.sc.unica.it/amm2014/tru
 
 
 
-Si può accedere alla applicazione con le seguenti credenziali:
+Si puo' accedere alla applicazione con le seguenti credenziali:
 
 
 AMMINISTRATORE
