@@ -97,7 +97,7 @@ if($_COOKIE['tipo_utente']==1)
                                                 <td><img src="../../Immagini/noprof.png" alt="No image aviable"></td>
                                             </tr>
                                             <tr>
-                                                <td><?echo"$row->email";?> &euro;</td>
+                                                <td><?echo"$row->email";?></td>
                                             </tr>
                                         </table>
                                     </td>
@@ -141,7 +141,7 @@ if($_COOKIE['tipo_utente']==1)
                             while($row2 = mysql_fetch_object($queryvis2))
                             {
                             ?>
-                                <h3><?echo"$row->email";?>:</h3>
+                                <h3><?echo"$row2->email";?>:</h3>
 
                                 <br><br>
 
