@@ -137,7 +137,7 @@ if($_COOKIE['tipo_utente']==1)
                             while($row = mysql_fetch_object($queryvis))
                             {
                             ?>
-                                <br><br>
+                                <br>
 
                                 <table>
                                     <tr>
@@ -177,7 +177,7 @@ if($_COOKIE['tipo_utente']==1)
                                     </tr>
                                 </table>
 
-                                <br><br>
+                                <br><br><br>
                             <?
                             }
                             ?>
