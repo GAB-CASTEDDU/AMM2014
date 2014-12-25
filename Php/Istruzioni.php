@@ -80,7 +80,7 @@ if(!isset($_COOKIE["tipo_utente"]))
                                 <li>Funzionalit&agrave; ajax: &nbsp; &nbsp; &nbsp; &#10003;</li>
                             </ol>
 
-                            <p>Per maggiori informazioni su Affari a 4 ruote clicca <a href="../README.md">QUI</a></p>
+                            <p>Per maggiori informazioni su Affari a 4 ruote &egrave; possibile leggere il <a href="../README.md">README</a></p>
 
                             <br><br>
 
