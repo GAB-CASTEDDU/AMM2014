@@ -82,6 +82,8 @@ if(!isset($_COOKIE["tipo_utente"]))
 
                             <p>Per maggiori informazioni su Affari a 4 ruote clicca <a href="../README.md">QUI</a></p>
 
+                            <br><br>
+
                             <h3>Accesso:</h3>
 
                             <p>&Egrave; possibile effettuare l'accesso all'applicazione utilizzando uno degli utenti <br>prefefiniti:</p>
