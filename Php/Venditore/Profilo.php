@@ -87,6 +87,8 @@ if($_COOKIE['tipo_utente']==2)
 
                             <h3><?echo"$row->email";?>:</h3>
 
+                            <br><br>
+
                             <table>
                                 <tr>
                                     <td>
@@ -125,7 +127,7 @@ if($_COOKIE['tipo_utente']==2)
                                 </tr>
                             </table>
 
-                            <br><br><br><br>
+                            <br><br>
 
                             <h3>Tuoi in vendita:</h3>
                             <?
@@ -142,6 +144,8 @@ if($_COOKIE['tipo_utente']==2)
                             while($row2 = mysql_fetch_object($queryvis2))
                             {
                             ?>
+                                <br><br>
+
                                 <table>
                                     <tr>
                                         <td>
@@ -183,7 +187,7 @@ if($_COOKIE['tipo_utente']==2)
                                     </tr>
                                 </table>
 
-                                <br><br><br><br>
+                                <br><br>
 
                             <?
                             }
@@ -204,6 +208,8 @@ if($_COOKIE['tipo_utente']==2)
                             while($row3 = mysql_fetch_object($queryvis3))
                             {
                             ?>
+                                <br><br>
+
                                 <table>
                                     <tr>
                                         <td>
@@ -242,7 +248,7 @@ if($_COOKIE['tipo_utente']==2)
                                     </tr>
                                 </table>
 
-                                <br><br><br><br>
+                                <br><br>
 
                             <?
                             }

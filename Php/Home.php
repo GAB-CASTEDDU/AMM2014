@@ -137,6 +137,8 @@ if(!isset($_COOKIE["tipo_utente"]))
                             while($row = mysql_fetch_object($queryvis))
                             {
                             ?>
+                                <br><br>
+
                                 <table>
                                     <tr>
                                         <td>
@@ -178,7 +180,7 @@ if(!isset($_COOKIE["tipo_utente"]))
                                     </tr>
                                 </table>
 
-                                <br><br><br><br>
+                                <br><br>
                             <?
                             }
                             ?>

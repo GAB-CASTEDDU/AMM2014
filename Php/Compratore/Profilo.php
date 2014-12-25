@@ -87,6 +87,8 @@ if($_COOKIE['tipo_utente']==3)
 
                             <h3><?echo"$row->email";?>:</h3>
 
+                            <br><br>
+
                             <table>
                                 <tr>
                                     <td>
@@ -125,7 +127,7 @@ if($_COOKIE['tipo_utente']==3)
                                 </tr>
                             </table>
 
-                            <br><br><br><br>
+                            <br><br>
 
                             <h3>Tuoi acquisti:</h3>
                             <?
@@ -142,6 +144,8 @@ if($_COOKIE['tipo_utente']==3)
                             while($row2 = mysql_fetch_object($queryvis2))
                             {
                             ?>
+                                <br><br>
+
                                 <table>
                                     <tr>
                                         <td>
@@ -180,7 +184,7 @@ if($_COOKIE['tipo_utente']==3)
                                     </tr>
                                 </table>
 
-                                <br><br><br><br>
+                                <br><br>
 
                             <?
                             }
