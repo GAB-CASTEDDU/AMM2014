@@ -77,8 +77,10 @@ if(!isset($_COOKIE["tipo_utente"]))
                                         <li>Compratore</li>
                                     </ul></li>
                                 <li>Transazione: &nbsp; &nbsp; &nbsp;<i>COOMING SOON</i></li>
-                                <li>Funzionalit&agrave; ajax: &nbsp; &nbsp; &nbsp;<i>IN PROGRESS</i></li>
+                                <li>Funzionalit&agrave; ajax: &nbsp; &nbsp; &nbsp; &#10003;</li>
                             </ol>
+
+                            <p>Per maggiori informazioni su Affari a 4 ruote clicca <a href="../README.md">QUI</a></p>
 
                             <h3>Accesso:</h3>
 
