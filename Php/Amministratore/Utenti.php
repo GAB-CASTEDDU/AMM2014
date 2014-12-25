@@ -62,6 +62,86 @@ if($_COOKIE['tipo_utente']==1)
 
                         <td id="center">
                             <h1 id="h1-utenti">Utenti</h1>
+
+                            <?
+                            $connessione_al_server = mysql_connect("localhost","truduGabriele","beluga874");
+
+                            if(!$connessione_al_server)
+                            {
+                                die("Errore: connessione non riuscita".mysql_error());
+                            }
+
+
+
+                            $db_selected = mysql_select_db("amm14_truduGabriele", $connessione_al_server);
+
+                            if(!$db_selected)
+                            {
+                                die("Errore: selezione del database errata ".mysql_error());
+                            }
+
+                            $queryvis = mysql_query("SELECT * FROM utenti") or die("query non riuscita".mysql_error());
+
+                            $row = mysql_fetch_object($queryvis);
+
+                            if(mysql_num_rows($queryvis)==0)
+                            {
+                            ?>
+                                <br><br><p>Nessun utente registrato al momento. Riprova tra poco</p>
+                            <?
+                            }
+
+                            while($row = mysql_fetch_object($queryvis))
+                            {
+                            ?>
+                                <h3><?echo"$row->email";?>:</h3>
+
+                                <br><br>
+
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <table id="table-vis">
+                                                <tr>
+                                                    <td><img src="../../Immagini/noprof.png" alt="No image aviable"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Credito: &nbsp;<?echo"$row->credito";?> &euro;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><a href="../Riscuoti.php" id="ricarica">Riscuoti</a></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+
+                                        <td>
+                                            <table id="table-vis">
+                                                <tr>
+                                                    <td>Nome:</td><td><?echo"$row->nome";?></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Cognome:</td><td><?echo"$row->cognome";?></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Via:</td><td><?echo"$row->via $row->numciv";?></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Citt&agrave;:</td><td><?echo"$row->citta";?></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Tipo account:</td><td><?echo"$row->tipo";?></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+
+                                <br><br>
+
+                            <?
+                            }
+                            ?>
+
                         </td>
 
                         <td id="right"></td>
