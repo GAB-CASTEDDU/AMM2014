@@ -14,9 +14,9 @@ if(!isset($_COOKIE["tipo_utente"]))
 
 <html>
     <head>
-        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
-        <meta name="keywords" content="AMM esami docente" />
-        <meta name="description" content="Una pagina per gestire le funzioni dei docenti" />
+        <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+        <meta name="author" content="Trudu Gabriele 47801"/>
+        <meta name="description" content="Sito di compravendita auto usate"/>
 
         <title>Affari a 4 ruote - Progetto AMM 2013-2014</title>
 
