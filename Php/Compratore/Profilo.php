@@ -100,7 +100,7 @@ if($_COOKIE['tipo_utente']==3)
                                                 <td>Credito: &nbsp;<?echo"$row->credito";?> &euro;</td>
                                             </tr>
                                             <tr>
-                                                <td><a href="../Ricarica.php" id="ricarica">Ricarica</a></td>
+                                                <td><a href="Ricarica.php" id="ricarica">Ricarica</a></td>
                                             </tr>
                                         </table>
                                     </td>
