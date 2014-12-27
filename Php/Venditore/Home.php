@@ -126,6 +126,39 @@ if($_COOKIE['tipo_utente']==2)
                                 <?
                                 $queryvis = mysql_query("SELECT * FROM auto WHERE compratore IS NULL") or die("query non riuscita".mysql_error());
 
+                                if(isset($_GET["rim"]) && ($_GET["rim"]=="ok"))
+                                {
+                                ?>
+
+                                <p><font color="32CD32">Annuncio rimosso dalla lista!</font></p>
+
+                                <?
+                                }
+
+                                else
+                                {
+                                    if(isset($_GET["rim"]) && ($_GET["rim"]=="err"))
+                                    {
+                                    ?>
+
+                                    <p><font color="B20000">Errore! Annuncio non rimosso correttamente.</font></p>
+
+                                    <?
+                                    }
+
+                                    else
+                                    {
+                                        if(isset($_GET["rim"]) && ($_GET["rim"]=="errpres"))
+                                        {
+                                        ?>
+
+                                        <p><font color="B20000">Errore! Annuncio non presente.</font></p>
+
+                                        <?
+                                        }
+                                    }
+                                }
+
                                 if(mysql_num_rows($queryvis)==0)
                                 {
                                 ?>
