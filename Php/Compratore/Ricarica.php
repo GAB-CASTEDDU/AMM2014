@@ -88,7 +88,7 @@ if($_COOKIE['tipo_utente']==3)
                             {
                                 $impric = $_POST["ricarica"];
 
-                                $query = "UPDATE utenti SET credito = '".$row->credito + $impric."'";
+                                $query = "UPDATE utenti SET credito = '".$row->credito."' + '".$impric."' WHERE email='".$_COOKIE["utente"]."'";
 
                                 $result = mysql_query($query);
 
