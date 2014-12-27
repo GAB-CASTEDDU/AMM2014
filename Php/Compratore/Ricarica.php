@@ -86,7 +86,7 @@ if($_COOKIE['tipo_utente']==3)
 
                             if(isset($_GET["aggiungi"]) && ($_GET["aggiungi"]=="ok"))
                             {
-                                $impric = $_GET["ricarica"];
+                                $impric = $_POS["ricarica"];
 
                                 $query = "UPDATE utenti SET credito = '".$row->credito + $impric."' WHERE email='".$_COOKIE["utente"]."'";
 
