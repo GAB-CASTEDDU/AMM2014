@@ -93,7 +93,7 @@ if($_COOKIE['tipo_utente']==2)
                                 {
                                     die("Errore nella query: ".mysql_error());
 
-                                    $pagina_login = "Vendi.php";
+                                    $pagina_login = "Vendi.php?agg=err";
 
                                     header("Location:".$pagina_login);
                                 }
@@ -106,11 +106,6 @@ if($_COOKIE['tipo_utente']==2)
                                 }
                             }
 
-                            else
-                            {
-                            ?>
-
-                            <?
                             if(isset($_GET["agg"]) && ($_GET["agg"]=="ok"))
                             {
                             ?>
@@ -119,7 +114,17 @@ if($_COOKIE['tipo_utente']==2)
 
                             <?
                             }
-                            ?>
+
+                            else
+                                if(isset($_GET["agg"]) && ($_GET["agg"]=="err"))
+                                {
+                                ?>
+
+                                <p><font color="B20000">Errore! Annuncio non inserito</font></p>
+
+                                <?
+                                }
+                                ?>
 
                             <p>Inserisci le caretteristiche dell'auto che vuoi mettere in vendita:</p>
 

@@ -81,6 +81,33 @@ if($_COOKIE['tipo_utente']==3)
                             }
 
 
+
+                            if(isset($_GET["aggiuungi"]) && ($_GET["aggiungi"]!=0))
+                            {
+                                $query = "INSERT INTO carrello (id,compratore)
+                                VALUES (\"".$aggiungi."\",\"".$_COOKIE["utente"]."\")";
+
+                                $result = mysql_query($query);
+
+                                if(!$result)
+                                {
+                                    die("Errore nella query: ".mysql_error());
+
+                                    $pagina_login = "Home.php?agg=err";
+
+                                    header("Location:".$pagina_login);
+                                }
+
+                                else
+                                {
+                                    $pagina_login = "Home.php?agg=ok";
+
+                                    header("Location:".$pagina_login);
+                                }
+                            }
+
+
+
                             if(isset($_GET["ricerca"]) && ($_GET["ricerca"]=="ok"))
                             {
                             ?>
@@ -125,6 +152,26 @@ if($_COOKIE['tipo_utente']==3)
                                 <h3>In vendita:</h3>
                                 <?
                                 $queryvis = mysql_query("SELECT * FROM auto WHERE compratore IS NULL") or die("query non riuscita".mysql_error());
+
+                                if(isset($_GET["agg"]) && ($_GET["agg"]=="ok"))
+                                {
+                                ?>
+
+                                <p><font color="32CD32">Articolo aggiunto al tuo carrello!</font></p>
+
+                                <?
+                                }
+
+                                else
+                                    if(isset($_GET["agg"]) && ($_GET["agg"]=="err"))
+                                    {
+                                    ?>
+
+                                    <p><font color="B20000">Errore! Articolo non aggiunto al carrello.</font></p>
+
+                                    <?
+                                    }
+                                }
 
                                 if(mysql_num_rows($queryvis)==0)
                                 {
