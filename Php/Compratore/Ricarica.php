@@ -92,7 +92,7 @@ if($_COOKIE['tipo_utente']==3)
                                     <tr>
                                         <td>Credito attuale:</td>
 
-                                        <td>&nbsp; &nbsp; &nbsp; <?echo"$row->credito";?> &euro;</td>
+                                        <td>&nbsp; &nbsp; <?echo"$row->credito";?> &euro;</td>
                                     </tr>
 
                                     <tr>
