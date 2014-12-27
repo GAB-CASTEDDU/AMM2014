@@ -39,4 +39,11 @@ if(isset($_GET["aggiungi"]) && ($_GET["aggiungi"]!=0))
         header("Location:".$pagina_login);
     }
 }
+
+else
+{
+    $pagina_login = "Home.php?agg=err";
+
+    header("Location:".$pagina_login);
+}
 ?>
