@@ -110,7 +110,7 @@ if($_COOKIE['tipo_utente']==3)
 
                             <br>
 
-                            <p>Ricordati di confermare gli acquisti aggiunti al <a href="Home.php">CARRELLO</a></p>
+                            <p>Ricordati di confermare l'acquisto delle auto dal <a href="Carrello.php">CARRELLO</a></p>
                         </td>
 
                         <td id="right"></td>
