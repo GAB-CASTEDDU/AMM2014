@@ -182,11 +182,6 @@ if($_COOKIE['tipo_utente']==2)
                                     </tr>
                                 </table>
                             </form>
-
-                            <?
-                            }
-                            ?>
-
                         </td>
 
                         <td id="right"></td>
