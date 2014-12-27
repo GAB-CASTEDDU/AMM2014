@@ -82,32 +82,6 @@ if($_COOKIE['tipo_utente']==3)
 
 
 
-                            if(isset($_GET["aggiuungi"]) && ($_GET["aggiungi"]!=0))
-                            {
-                                $query = "INSERT INTO carrello (id,compratore)
-                                VALUES (\"".$aggiungi."\",\"".$_COOKIE["utente"]."\")";
-
-                                $result = mysql_query($query);
-
-                                if(!$result)
-                                {
-                                    die("Errore nella query: ".mysql_error());
-
-                                    $pagina_login = "Home.php?agg=err";
-
-                                    header("Location:".$pagina_login);
-                                }
-
-                                else
-                                {
-                                    $pagina_login = "Home.php?agg=ok";
-
-                                    header("Location:".$pagina_login);
-                                }
-                            }
-
-
-
                             if(isset($_GET["ricerca"]) && ($_GET["ricerca"]=="ok"))
                             {
                             ?>
@@ -198,7 +172,7 @@ if($_COOKIE['tipo_utente']==3)
                                                     <td>Prezzo: &nbsp;<?echo"$row->prezzo";?> &euro;</td>
                                                 </tr>
                                                 <tr>
-                                                    <td><a href="Home.php?aggiungi=<?echo $row->id?>" id="carrello">Aggiungi al carrello</a></td>
+                                                    <td><a href="Aggiungi.php?aggiungi=<?echo $row->id?>" id="carrello">Aggiungi al carrello</a></td>
                                                 </tr>
                                             </table>
                                         </td>
