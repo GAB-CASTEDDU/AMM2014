@@ -198,7 +198,7 @@ if($_COOKIE['tipo_utente']==3)
                                                     <td>Prezzo: &nbsp;<?echo"$row->prezzo";?> &euro;</td>
                                                 </tr>
                                                 <tr>
-                                                    <td><a href="Aggiungi.php?aggiungi=<?echo $row->id?>" id="carrello">Aggiungi al carrello</a></td>
+                                                    <td><a href="Home.php?aggiungi=<?echo $row->id?>" id="carrello">Aggiungi al carrello</a></td>
                                                 </tr>
                                             </table>
                                         </td>
