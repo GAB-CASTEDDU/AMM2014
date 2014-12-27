@@ -96,14 +96,14 @@ if($_COOKIE['tipo_utente']==2)
                                 {
                                     die("Errore nella query: ".mysql_error());
 
-                                    $pagina_login = "Ricarica.php?ris=err";
+                                    $pagina_login = "Riscuoti.php?ris=err";
 
                                     header("Location:".$pagina_login);
                                 }
 
                                 else
                                 {
-                                    $pagina_login = "Ricarica.php?ris=ok";
+                                    $pagina_login = "Riscuoti.php?ris=ok";
 
                                     header("Location:".$pagina_login);
                                 }
@@ -113,7 +113,7 @@ if($_COOKIE['tipo_utente']==2)
                             {
                             ?>
 
-                            <p><font color="32CD32">Ricarica effettuata con successo!</font></p>
+                            <p><font color="32CD32">Prelievo effettuata con successo!</font></p>
 
                             <?
                             }
@@ -124,7 +124,7 @@ if($_COOKIE['tipo_utente']==2)
                                 {
                                 ?>
 
-                                <p><font color="B20000">Errore! Impossibile ricaricare, riprova pi&urave; tardi.</font></p>
+                                <p><font color="B20000">Errore! Impossibile prelevare, riprova pi&urave; tardi.</font></p>
 
                                 <?
                                 }
@@ -133,7 +133,7 @@ if($_COOKIE['tipo_utente']==2)
 
                             <p>Inserisci l'importo da aggiungere al tuo salvadanaio:</p>
 
-                            <form action="Ricarica.php?riscuoti=ok" method="post" id="form-login">
+                            <form action="Riscuoti.php?riscuoti=ok" method="post" id="form-login">
                                 <table id="table-form">
                                     <tr>
                                         <td>Credito attuale:</td>
@@ -144,7 +144,7 @@ if($_COOKIE['tipo_utente']==2)
                                     <tr>
                                         <td>Preleva importo:</td>
 
-                                        <td><input type="number" name="preleva" min="0" max="$row->credito" required/></td>
+                                        <td><input type="number" name="preleva" min="0"  required/></td>
                                     </tr>
 
                                     <tr>
