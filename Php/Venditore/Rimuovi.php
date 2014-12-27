@@ -32,14 +32,14 @@ if(isset($_GET["rimuovi"]) && ($_GET["rimuovi"]!=0))
         {
             die("Errore nella query: ".mysql_error());
 
-            $pagina_login = "Home.php?rim=err";
+            $pagina_login = "Profilo.php?rim=err";
 
             header("Location:".$pagina_login);
         }
 
         else
         {
-            $pagina_login = "Home.php?rim=ok";
+            $pagina_login = "Profilo.php?rim=ok";
 
             header("Location:".$pagina_login);
         }
@@ -47,7 +47,7 @@ if(isset($_GET["rimuovi"]) && ($_GET["rimuovi"]!=0))
 
     else
     {
-        $pagina_login = "Home.php?rim=errpres";
+        $pagina_login = "Profilo.php?rim=errpres";
 
         header("Location:".$pagina_login);
     }
@@ -55,7 +55,7 @@ if(isset($_GET["rimuovi"]) && ($_GET["rimuovi"]!=0))
 
 else
 {
-    $pagina_login = "Home.php?rim=err";
+    $pagina_login = "Profilo.php?rim=err";
 
     header("Location:".$pagina_login);
 }
