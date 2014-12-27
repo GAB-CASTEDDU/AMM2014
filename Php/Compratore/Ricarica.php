@@ -92,18 +92,18 @@ if($_COOKIE['tipo_utente']==3)
                                     <tr>
                                         <td>Importo attuale:</td>
 
-                                        <td><<?echo"$row->credito";?></td>
+                                        <td><?echo"$row->credito";?> &euro;</td>
                                     </tr>
 
                                     <tr>
-                                        <td>Ricarica:</td>
+                                        <td>Aggiungi importo:</td>
 
                                         <td><input type="number" name="ricarica" min="0" required/></td>
                                     </tr>
 
                                     <tr>
                                         <td></td>
-                                        <td><input type="submit" value="Accedi" id="tasto-login"/><td>
+                                        <td><input type="submit" value="Ricarica" id="tasto-login"/><td>
                                     </tr>
                                 </table>
                             </form>
