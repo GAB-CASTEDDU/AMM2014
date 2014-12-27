@@ -83,11 +83,58 @@ if($_COOKIE['tipo_utente']==3)
                             $queryvis = mysql_query("SELECT * FROM utenti WHERE email='".$_COOKIE["utente"]."'") or die("query non riuscita".mysql_error());
 
                             $row = mysql_fetch_object($queryvis);
+
+                            if(isset($_GET["aggiungi"]) && ($_GET["aggiungi"]=="ok"))
+                            {
+                                $impric = $_GET["ricarica"];
+
+                                $query = "UPDATE utenti SET credito = '"$row->credito + $impric"' WHERE email='".$_COOKIE["utente"]."'";
+
+                                $result = mysql_query($query);
+
+                                if(!$result)
+                                {
+                                    die("Errore nella query: ".mysql_error());
+
+                                    $pagina_login = "Ricarica.php?agg=err";
+
+                                    header("Location:".$pagina_login);
+                                }
+
+                                else
+                                {
+                                    $pagina_login = "Ricarica.php?agg=ok";
+
+                                    header("Location:".$pagina_login);
+                                }
+                            }
+
+                            if(isset($_GET["agg"]) && ($_GET["agg"]=="ok"))
+                            {
+                            ?>
+
+                            <p><font color="32CD32">Ricarica effettuata con successo!</font></p>
+
+                            <?
+                            }
+
+                            else
+                            {
+                                if(isset($_GET["agg"]) && ($_GET["agg"]=="err"))
+                                {
+                                ?>
+
+                                <p><font color="B20000">Errore! Impossibile ricaricare, riprova pi&urave; tardi.</font></p>
+
+                                <?
+                                }
+
+
                             ?>
 
                             <p>Inserisci l'importo da aggiungere al tuo salvadanaio:</p>
 
-                            <form action="Ricarica.php?agg=ok" method="post" id="form-login">
+                            <form action="Ricarica.php?aggiungi=ok" method="post" id="form-login">
                                 <table id="table-form">
                                     <tr>
                                         <td>Credito attuale:</td>
