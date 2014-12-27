@@ -1,6 +1,6 @@
 <?php
 
-if(isset($_GET["aggfiungi"]) && ($_GET["aggiungi"]!=0))
+if(isset($_GET["aggiungi"]))
 {
     $connessione_al_server = mysql_connect("localhost","truduGabriele","beluga874");
 
@@ -19,7 +19,7 @@ if(isset($_GET["aggfiungi"]) && ($_GET["aggiungi"]!=0))
     }
 
     $query = "INSERT INTO carrello (id,compratore)
-    VALUES (\"".$aggiungi."\",\"".$_COOKIE["utente"]."\")";
+    VALUES ($aggiungi,\"".$_COOKIE["utente"]."\")";
 
     $result = mysql_query($query);
 
