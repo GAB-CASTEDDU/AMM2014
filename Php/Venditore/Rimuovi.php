@@ -24,7 +24,7 @@ if(isset($_GET["rimuovi"]) && ($_GET["rimuovi"]!=0))
 
     if(mysql_num_rows($querypres))
     {
-        $query = "DELETE FROM auto WHERE id='".$idart."' AND venditore ='".$_COOKIE["utente"]."' AND compratore IS NULL");
+        $query = ("DELETE FROM auto WHERE id='".$idart."' AND venditore ='".$_COOKIE["utente"]."' AND compratore IS NULL");
 
         $result = mysql_query($query);
 
