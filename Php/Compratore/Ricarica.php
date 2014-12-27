@@ -90,7 +90,7 @@ if($_COOKIE['tipo_utente']==3)
                             <form action="Ricarica.php?agg=ok" method="post" id="form-login">
                                 <table id="table-form">
                                     <tr>
-                                        <td>Importo attuale:</td>
+                                        <td>Credito attuale:</td>
 
                                         <td>&nbsp; &nbsp; &nbsp; <?echo"$row->credito";?> &euro;</td>
                                     </tr>
@@ -107,11 +107,11 @@ if($_COOKIE['tipo_utente']==3)
                                     </tr>
                                 </table>
                             </form>
+
+                            <br>
+
+                            <p>Puoi effettuare acquisti dalla sezione <a href="Home.php">HOME</a></p>
                         </td>
-
-                        <br>
-
-                        <p>Puoi effettuare acquisti dalla sezione <a href="Home.php">HOME</a></p>
 
                         <td id="right"></td>
                     </tr>
