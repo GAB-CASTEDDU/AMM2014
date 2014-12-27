@@ -144,7 +144,7 @@ if($_COOKIE['tipo_utente']==2)
                                     <tr>
                                         <td>Preleva importo:</td>
 
-                                        <td><input type="number" name="preleva" min="0" max="<?$row->credito?>" required/></td>
+                                        <td><input type="number" name="preleva" min="0" max="<?"$row->credito"?>" required/></td>
                                     </tr>
 
                                     <tr>
