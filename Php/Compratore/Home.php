@@ -163,6 +163,7 @@ if($_COOKIE['tipo_utente']==3)
                                 }
 
                                 else
+                                {
                                     if(isset($_GET["agg"]) && ($_GET["agg"]=="err"))
                                     {
                                     ?>
