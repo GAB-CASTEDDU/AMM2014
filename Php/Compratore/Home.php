@@ -146,6 +146,18 @@ if($_COOKIE['tipo_utente']==3)
 
                                     <?
                                     }
+
+                                    else
+                                    {
+                                        if(isset($_GET["agg"]) && ($_GET["agg"]=="errpres"))
+                                        {
+                                        ?>
+
+                                        <p><font color="B20000">Errore! Articolo gi&agrave; presente nel carrello.</font></p>
+
+                                        <?
+                                        }
+                                    }
                                 }
 
                                 if(mysql_num_rows($queryvis)==0)

@@ -2,6 +2,8 @@
 
 if(isset($_GET["aggiungi"]) && ($_GET["aggiungi"]!=0))
 {
+    $idart = $_GET["aggiungi"];
+
     $connessione_al_server = mysql_connect("localhost","truduGabriele","beluga874");
 
     if(!$connessione_al_server)
@@ -18,23 +20,34 @@ if(isset($_GET["aggiungi"]) && ($_GET["aggiungi"]!=0))
         die("Errore: selezione del database errata ".mysql_error());
     }
 
-    $query = "INSERT INTO carrello (id,compratore)
-    VALUES (\"".$_GET["aggiungi"]."\",\"".$_COOKIE["utente"]."\")";
+    $querypres = mysql_query("SELECT * FROM carrello WHERE id='".$idart."' AND compratore ='".$_COOKIE["utente"]."'") or die('Query non riuscita'.mysql_error());
 
-    $result = mysql_query($query);
-
-    if(!$result)
+    if(!mysql_num_rows($querypres))
     {
-        die("Errore nella query: ".mysql_error());
+        $query = "INSERT INTO carrello (id,compratore)
+        VALUES (\"".$idart."\",\"".$_COOKIE["utente"]."\")";
 
-        $pagina_login = "Home.php?agg=err";
+        $result = mysql_query($query);
 
-        header("Location:".$pagina_login);
-    }
+        if(!$result)
+        {
+            die("Errore nella query: ".mysql_error());
+
+            $pagina_login = "Home.php?agg=err";
+
+            header("Location:".$pagina_login);
+        }
+
+        else
+        {
+            $pagina_login = "Home.php?agg=ok";
+
+            header("Location:".$pagina_login);
+        }
 
     else
     {
-        $pagina_login = "Home.php?agg=ok";
+        $pagina_login = "Home.php?agg=errpres";
 
         header("Location:".$pagina_login);
     }
