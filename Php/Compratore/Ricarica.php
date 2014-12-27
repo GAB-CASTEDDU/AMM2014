@@ -128,8 +128,7 @@ if($_COOKIE['tipo_utente']==3)
 
                                 <?
                                 }
-
-
+                            }
                             ?>
 
                             <p>Inserisci l'importo da aggiungere al tuo salvadanaio:</p>
