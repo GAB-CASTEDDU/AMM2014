@@ -464,6 +464,11 @@ div#content iframe
 	background-repeat: no-repeat;
 }
 
+#h1-riscuoti
+{
+	background-image: url('../Immagini/riscuoti.png');
+	background-repeat: no-repeat;
+
 
 #form-login
 {
