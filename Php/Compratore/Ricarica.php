@@ -109,6 +109,10 @@ if($_COOKIE['tipo_utente']==3)
                             </form>
                         </td>
 
+                        <br>
+
+                        <p>Puoi effettuare acquisti dalla sezione <a href="Home.php">HOME</a></p>
+
                         <td id="right"></td>
                     </tr>
                 </table>
