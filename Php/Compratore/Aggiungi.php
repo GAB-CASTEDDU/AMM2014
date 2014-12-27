@@ -1,6 +1,6 @@
 <?php
 
-if(isset($_GET["aggiungi"]) && ($_GET["aggiungi"]!=0))
+if(isset($_GET["aggfiungi"]) && ($_GET["aggiungi"]!=0))
 {
     $connessione_al_server = mysql_connect("localhost","truduGabriele","beluga874");
 
