@@ -88,7 +88,7 @@ if($_COOKIE['tipo_utente']==2)
                             {
                                 $impric = $_POST["preleva"];
 
-                                $query = "UPDATE utenti SET credito = '".$row->credito."' + '".$impric."' WHERE email='".$_COOKIE["utente"]."'";
+                                $query = "UPDATE utenti SET credito = '".$row->credito."' - '".$impric."' WHERE email='".$_COOKIE["utente"]."'";
 
                                 $result = mysql_query($query);
 
@@ -131,7 +131,7 @@ if($_COOKIE['tipo_utente']==2)
                             }
                             ?>
 
-                            <p>Inserisci l'importo da aggiungere al tuo salvadanaio:</p>
+                            <p>Inserisci l'importo da prelevare dal tuo salvadanaio:</p>
 
                             <form action="Riscuoti.php?riscuoti=ok" method="post" id="form-login">
                                 <table id="table-form">
@@ -144,7 +144,7 @@ if($_COOKIE['tipo_utente']==2)
                                     <tr>
                                         <td>Preleva importo:</td>
 
-                                        <td><input type="number" name="preleva" min="0"  required/></td>
+                                        <td><input type="number" name="preleva" min="0" max="<?$row->credito?>" required/></td>
                                     </tr>
 
                                     <tr>
