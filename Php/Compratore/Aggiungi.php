@@ -19,7 +19,7 @@ if(isset($_GET["aggiungi"]) && ($_GET["aggiungi"]!=0))
     }
 
     $query = "INSERT INTO carrello (id,compratore)
-    VALUES ('$aggiungi',\"".$_COOKIE["utente"]."\")";
+    VALUES (\"".$_GET["aggiungi"]."\",\"".$_COOKIE["utente"]."\")";
 
     $result = mysql_query($query);
 
