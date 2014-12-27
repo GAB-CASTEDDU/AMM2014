@@ -20,11 +20,11 @@ if(isset($_GET["rimuovi"]) && ($_GET["rimuovi"]!=0))
         die("Errore: selezione del database errata ".mysql_error());
     }
 
-    $querypres = mysql_query("SELECT * FROM carrello WHERE id='".$idart."' AND venditore ='".$_COOKIE["utente"]."' AND compratore IS NULL") or die('Query non riuscita'.mysql_error());
+    $querypres = mysql_query("SELECT * FROM auto WHERE id='".$idart."' AND venditore ='".$_COOKIE["utente"]."' AND compratore IS NULL") or die('Query non riuscita'.mysql_error());
 
     if(mysql_num_rows($querypres))
     {
-        $query = "DELETE FROM auto WHERE id='".$idart."'";
+        $query = "DELETE FROM auto WHERE id='".$idart."' AND venditore ='".$_COOKIE["utente"]."' AND compratore IS NULL";
 
         $result = mysql_query($query);
 
