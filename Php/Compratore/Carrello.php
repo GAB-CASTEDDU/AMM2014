@@ -229,8 +229,8 @@ if($_COOKIE['tipo_utente']==3)
                             <form action="Acquista.php" method="post" id="form-login">
                                 <table id="table-form">
                                     <tr>
-                                        <td>Credito: <?echo"$rowcost->credito";?></td>
-                                        <td>Costo: <?echo"$costo";?><td>
+                                        <td>Credito: <?echo"$rowcost->credito";?> &euro;</td>
+                                        <td>Costo: <?echo"$costo";?> &euro;<td>
                                     </tr>
 
                                     <tr>
