@@ -62,6 +62,104 @@ if($_COOKIE['tipo_utente']==3)
 
                         <td id="center">
                             <h1 id="h1-carrello">Carrello</h1>
+
+                            <?
+                            $connessione_al_server = mysql_connect("localhost","truduGabriele","beluga874");
+
+                            if(!$connessione_al_server)
+                            {
+                                die("Errore: connessione non riuscita".mysql_error());
+                            }
+
+
+
+                            $db_selected = mysql_select_db("amm14_truduGabriele", $connessione_al_server);
+
+                            if(!$db_selected)
+                            {
+                                die("Errore: selezione del database errata ".mysql_error());
+                            }
+
+                            $queryvis = mysql_query("SELECT * FROM carrello WHERE compratore='".$_COOKIE["utente"]."'") or die("query non riuscita".mysql_error());
+
+                            $queryvis2 = mysql_query("SELECT * FROM auto WHERE id='".$_COOKIE["utente"]."'") or die("query non riuscita".mysql_error());
+
+                            ?>
+
+                            <h3>Aggiunti al carrello:</h3>
+
+                            <?
+
+                            if(mysql_num_rows($queryvis)==0)
+                            {
+
+                            ?>
+                            <br><br><p>Nessun veicolo aggiunto al carrello.</p>
+                            <?
+                            }
+
+                            while($row = mysql_fetch_object($queryvis))
+                            {
+                                $row2 = mysql_fetch_object($queryvis2)
+                                ?>
+
+                                <br>
+
+                                <table>
+                                    <tr>
+                                        <td>
+                                            <table id="table-vis">
+                                                <tr>
+                                                    <td><img src="../../Immagini/noimg.png" alt="No image aviable"></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Prezzo: &nbsp;<?echo"$row2->prezzo";?> &euro;</td>
+                                                </tr>
+                                                <tr>
+                                                    <td><a href="Rimuovi.php?rimuovi=<?echo $row2->id?>" id="cestino">Rimuovi dal carrello</a></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+
+                                        <td>
+                                            <table id="table-vis">
+                                                <tr>
+                                                    <td>Marca:</td><td><?echo"$row2->marca";?></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Modello:</td><td><?echo"$row2->modello";?></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Colore:</td><td><?echo"$row2->colore";?></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Anno:</td><td><?echo"$row2->anno";?></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Alimentazione:</td><td><?echo"$row2->alimentazione";?></td>
+                                                </tr>
+                                                <tr>
+                                                    <td>Chilometri:</td><td><?echo"$row2->chilometri";?></td>
+                                                </tr>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                </table>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
                         </td>
 
                         <td id="right"></td>
