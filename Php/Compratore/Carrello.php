@@ -82,11 +82,82 @@ if($_COOKIE['tipo_utente']==3)
 
                             $queryvis = mysql_query("SELECT * FROM carrello INNER JOIN auto ON carrello.id = auto.id") or die("query non riuscita".mysql_error());
 
+
+
+                            if(isset($_GET["rimuovi"]) && ($_GET["rimuovi"]!=0))
+                            {
+                                $idart = $_GET["rimuovi"];
+
+                                $querypres = mysql_query("SELECT * FROM carrello WHERE id='".$idart."' AND compratore ='".$_COOKIE["utente"]."'") or die('Query non riuscita'.mysql_error());
+
+                                if(mysql_num_rows($querypres))
+                                {
+                                    $query = "DELETE FROM carrello WHERE id='".$idart."' AND compratore ='".$_COOKIE["utente"]."'";
+
+                                    $result = mysql_query($query);
+
+                                    if(!$result)
+                                    {
+                                        die("Errore nella query: ".mysql_error());
+
+                                        $pagina_login = "Carrello.php?rim=err";
+
+                                        header("Location:".$pagina_login);
+                                    }
+
+                                    else
+                                    {
+                                        $pagina_login = "Carrello.php?rim=ok";
+
+                                        header("Location:".$pagina_login);
+                                    }
+                                }
+
+                                else
+                                {
+                                    $pagina_login = "Carrello.php?rim=errpres";
+
+                                    header("Location:".$pagina_login);
+                                }
+                            }
                             ?>
 
                             <h3>Aggiunti al carrello:</h3>
 
                             <?
+
+                            if(isset($_GET["rim"]) && ($_GET["rim"]=="ok"))
+                            {
+                            ?>
+
+                            <p><font color="32CD32">Annuncio rimosso dall carrello!</font></p>
+
+                            <?
+                            }
+
+                            else
+                            {
+                                if(isset($_GET["rim"]) && ($_GET["rim"]=="err"))
+                                {
+                                ?>
+
+                                <p><font color="B20000">Errore! Annuncio non rimosso correttamente.</font></p>
+
+                                <?
+                                }
+
+                                else
+                                {
+                                    if(isset($_GET["rim"]) && ($_GET["rim"]=="errpres"))
+                                    {
+                                    ?>
+
+                                    <p><font color="B20000">Errore! Annuncio non presente.</font></p>
+
+                                    <?
+                                    }
+                                }
+                            }
 
                             if(mysql_num_rows($queryvis)==0)
                             {
