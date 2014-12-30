@@ -82,7 +82,7 @@ if($_COOKIE['tipo_utente']==3)
 
                             $queryvis = mysql_query("SELECT * FROM carrello WHERE compratore='".$_COOKIE["utente"]."'") or die("query non riuscita".mysql_error());
 
-                            $queryvis2 = mysql_query("SELECT * FROM auto WHERE id='".$_COOKIE["utente"]."'") or die("query non riuscita".mysql_error());
+                            $queryvis2 = mysql_query("SELECT * FROM auto WHERE id='".$row->id."'") or die("query non riuscita".mysql_error());
 
                             ?>
 
