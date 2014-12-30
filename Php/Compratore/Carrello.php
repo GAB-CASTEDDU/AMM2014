@@ -239,10 +239,9 @@ if($_COOKIE['tipo_utente']==3)
                                             ?>
                                                 <td><font color="B20000">Credito insufficiente</font></td>
                                         </tr>
+                                    </table>
 
-                                        <tr>
-                                            <p>Non puoi proseguire senza effettuare una <a href="Ricarica.php">RICARICA</a></p>
-                                        </tr>
+                                    <p>Non puoi proseguire senza effettuare una <a href="Ricarica.php">RICARICA</a></p>
                                             <?
                                             }
 
@@ -256,10 +255,10 @@ if($_COOKIE['tipo_utente']==3)
                                             <td></td>
                                             <td><input type="submit" value="Conferma" id="tasto-login"/><td>
                                         </tr>
+                                    </table>
                                             <?
                                             }
                                             ?>
-                                    </table>
                                 </form>
                             <?
                             }
