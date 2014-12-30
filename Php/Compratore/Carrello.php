@@ -220,7 +220,7 @@ if($_COOKIE['tipo_utente']==3)
                             <?
                             }
 
-                            $querycost = mysql_query("SELECT * FROM utenti WHERE compratore ='".$_COOKIE["utente"]."'") or die('Query non riuscita'.mysql_error());
+                            $querycost = mysql_query("SELECT * FROM utenti WHERE email ='".$_COOKIE["utente"]."'") or die('Query non riuscita'.mysql_error());
 
                             $rowcost = mysql_fetch_object($querycost)
 
