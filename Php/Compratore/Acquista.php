@@ -22,6 +22,8 @@ if($_COOKIE['tipo_utente']==3)
 
     $queryvis = mysql_query("SELECT * FROM carrello INNER JOIN auto WHERE carrello.id = auto.id AND carrello.compratore ='".$_COOKIE["utente"]."'") or die("query non riuscita".mysql_error());
 
+    $flag = 0;
+
     while($row = mysql_fetch_object($queryvis))
     {
         $querycom = "UPDATE utenti SET credito = credito - '".$row->prezzo."' WHERE email='".$row->compratore."'";
@@ -34,10 +36,41 @@ if($_COOKIE['tipo_utente']==3)
 
 
 
+        $result1 = mysql_query($querycom);
 
+        $result2 = mysql_query($queryven);
+
+        $result3 = mysql_query($queryaut);
+
+        $result4 = mysql_query($querycar);
+
+
+
+        if((!$result1) || (!$result2) || (!$result3) || (!$result4))
+        {
+            die("Errore nella query: ".mysql_error());
+
+            $flag = 1;
+        }
     }
 
 
+
+    if($flag == 1)
+    {
+        die("Errore nella query: ".mysql_error());
+
+        $pagina_login = "Carrello.php?acq=err";
+
+        header("Location:".$pagina_login);
+    }
+
+    else
+    {
+        $pagina_login = "Carrello.php?acq=ok";
+
+        header("Location:".$pagina_login);
+    }
 }
 
 else
