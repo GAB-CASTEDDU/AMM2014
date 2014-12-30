@@ -226,17 +226,19 @@ if($_COOKIE['tipo_utente']==3)
 
                             ?>
 
-                            <table id="table-form">
-                                <tr>
-                                    <td>Credito: <?echo"$rowcost->credito";?></td>
-                                    <td>Costo: <?echo"$costo";?><td>
-                                </tr>
 
-                                <tr>
-                                    <td></td>
-                                    <td><button onclick="Acquista.php" id="tasto-login">Conferma</button><td>
-                                </tr>
-                            </table>
+                                <table id="table-form">
+                                    <tr>
+                                        <td>Credito: <?echo"$rowcost->credito";?></td>
+                                        <td>Costo: <?echo"$costo";?><td>
+                                    </tr>
+
+                                    <tr>
+                                        <td></td>
+                                        <td><input action="Acquista.php" type="submit" value="Conferma" id="tasto-login"/><td>
+                                    </tr>
+                                </table>
+
                         </td>
 
                         <td id="right"></td>
