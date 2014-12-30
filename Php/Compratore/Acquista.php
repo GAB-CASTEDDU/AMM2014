@@ -37,8 +37,6 @@ if($_COOKIE['tipo_utente']==3)
 
         $result1 = mysql_query($querycom);
 
-        $result2 = mysql_query($queryven);
-
         $result3 = mysql_query($queryaut);
 
         $result4 = mysql_query($querycar);
