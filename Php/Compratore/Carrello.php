@@ -126,6 +126,27 @@ if($_COOKIE['tipo_utente']==3)
 
                             <?
 
+                            if(isset($_GET["acq"]) && ($_GET["acq"]=="ok"))
+                            {
+                            ?>
+
+                            <p><font color="32CD32">Acquisti effettuati con successo!</font></p>
+
+                            <?
+                            }
+
+                            else
+                            {
+                                if(isset($_GET["acq"]) && ($_GET["acq"]=="err"))
+                                {
+                                ?>
+
+                                <p><font color="B20000">Errore! Acquisti non effettuati. Riprova.</font></p>
+
+                                <?
+                                }
+                            }
+
                             if(isset($_GET["rim"]) && ($_GET["rim"]=="ok"))
                             {
                             ?>
