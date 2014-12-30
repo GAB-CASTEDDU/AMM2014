@@ -232,7 +232,19 @@ if($_COOKIE['tipo_utente']==3)
                                     <table id="table-form">
                                         <tr>
                                             <td>Credito: <?echo"$rowcost->credito";?> &euro;</td>
-                                            <td>Costo: <?echo"$costo";?> &euro;<td>
+                                            <td>Costo: <?echo"$costo";?> &euro;</td>
+                                            <?
+                                            if(($rowcost->credito) < ($costo))
+                                            {
+                                            ?>
+                                                <td><font color="B20000">Credito insufficiente</font></td>
+                                            <?
+                                            }
+
+                                            else
+                                            {
+                                            ?>
+                                                <td><font color="32CD32">Credito sufficiente</font></td>
                                         </tr>
 
                                         <tr>
