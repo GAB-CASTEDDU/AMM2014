@@ -241,8 +241,7 @@ if($_COOKIE['tipo_utente']==3)
                                         </tr>
 
                                         <tr>
-                                            <td></td>
-                                            <td><br><a href="Ricarica.php">RICARICA</a><td>
+                                            <td><p>Non puoi proseguire senza effettuare una <a href="Ricarica.php">RICARICA</a></p><td>
                                         </tr>
                                             <?
                                             }
