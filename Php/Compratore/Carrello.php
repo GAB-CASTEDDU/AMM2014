@@ -242,7 +242,7 @@ if($_COOKIE['tipo_utente']==3)
 
                                         <tr>
                                             <td></td>
-                                            <td><a href="Ricarica.php">RICARICA/a><td>
+                                            <td><a href="Ricarica.php">RICARICA</a><td>
                                         </tr>
                                             <?
                                             }
