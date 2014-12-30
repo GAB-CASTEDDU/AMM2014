@@ -167,6 +167,8 @@ if($_COOKIE['tipo_utente']==3)
                             <?
                             }
 
+                            $costo = 0;
+
                             while($row = mysql_fetch_object($queryvis))
                             {
                             ?>
@@ -181,7 +183,7 @@ if($_COOKIE['tipo_utente']==3)
                                                     <td><img src="../../Immagini/noimg.png" alt="No image aviable"></td>
                                                 </tr>
                                                 <tr>
-                                                    <td>Prezzo: &nbsp;<?echo"$row->prezzo";?> &euro;</td>
+                                                    <td>Prezzo: &nbsp;<?$costo += $row->prezzo; echo"$row->prezzo";?> &euro;</td>
                                                 </tr>
                                                 <tr>
                                                     <td><a href="Carrello.php?rimuovi=<?echo $row->id?>" id="cestino">Rimuovi dal carrello</a></td>
@@ -217,11 +219,21 @@ if($_COOKIE['tipo_utente']==3)
                                 <br><br><br>
                             <?
                             }
+
+                            $querycost = mysql_query("SELECT * FROM utenti WHERE compratore ='".$_COOKIE["utente"]."'") or die('Query non riuscita'.mysql_error());
+
+                            $rowcost = mysql_fetch_object($querycost)
+
                             ?>
 
                             <form action="Acquista.php" method="post" id="form-login">
 
                             <table>
+                                <tr>
+                                    <td>Credito: <?echo"$rowcost->credito";?></td>
+                                    <td>Costo: <?echo"$costo";?><td>
+                                </tr>
+
                                 <tr>
                                     <td></td>
                                     <td><input type="submit" value="Conferma" id="tasto-login"/><td>
