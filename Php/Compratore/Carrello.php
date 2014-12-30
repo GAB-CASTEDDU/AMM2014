@@ -80,7 +80,7 @@ if($_COOKIE['tipo_utente']==3)
                                 die("Errore: selezione del database errata ".mysql_error());
                             }
 
-                            $queryvis = mysql_query("SELECT * FROM carrello INNER JOIN auto ON carrello.id = auto.id") or die("query non riuscita".mysql_error());
+                            $queryvis = mysql_query("SELECT * FROM carrello INNER JOIN auto ON carrello.id = auto.id  WHERE compratore ='".$_COOKIE["utente"]."'") or die("query non riuscita".mysql_error());
 
 
 
@@ -173,56 +173,53 @@ if($_COOKIE['tipo_utente']==3)
                             {
                                 while($row = mysql_fetch_object($queryvis))
                                 {
-                                    if($row->compratore ==  $_COOKIE["utente"])
-                                    {
-                                    ?>
+                                ?>
 
-                                        <br>
+                                    <br>
 
-                                        <table>
-                                            <tr>
-                                                <td>
-                                                    <table id="table-vis">
-                                                        <tr>
-                                                            <td><img src="../../Immagini/noimg.png" alt="No image aviable"></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Prezzo: &nbsp;<?$costo += $row->prezzo; echo"$row->prezzo";?> &euro;</td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td><a href="Carrello.php?rimuovi=<?echo $row->id?>" id="cestino">Rimuovi dal carrello</a></td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <table id="table-vis">
+                                                    <tr>
+                                                        <td><img src="../../Immagini/noimg.png" alt="No image aviable"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Prezzo: &nbsp;<?$costo += $row->prezzo; echo"$row->prezzo";?> &euro;</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a href="Carrello.php?rimuovi=<?echo $row->id?>" id="cestino">Rimuovi dal carrello</a></td>
+                                                    </tr>
+                                                </table>
+                                            </td>
 
-                                                <td>
-                                                    <table id="table-vis">
-                                                        <tr>
-                                                            <td>Marca:</td><td><?echo"$row->marca";?></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Modello:</td><td><?echo"$row->modello";?></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Colore:</td><td><?echo"$row->colore";?></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Anno:</td><td><?echo"$row->anno";?></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Alimentazione:</td><td><?echo"$row->alimentazione";?></td>
-                                                        </tr>
-                                                        <tr>
-                                                            <td>Chilometri:</td><td><?echo"$row->chilometri";?></td>
-                                                        </tr>
-                                                    </table>
-                                                </td>
-                                            </tr>
-                                        </table>
+                                            <td>
+                                                <table id="table-vis">
+                                                    <tr>
+                                                        <td>Marca:</td><td><?echo"$row->marca";?></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Modello:</td><td><?echo"$row->modello";?></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Colore:</td><td><?echo"$row->colore";?></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Anno:</td><td><?echo"$row->anno";?></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Alimentazione:</td><td><?echo"$row->alimentazione";?></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Chilometri:</td><td><?echo"$row->chilometri";?></td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
 
-                                        <br><br><br>
-                                    <?
-                                    }
+                                    <br><br><br>
+                                <?
                                 }
 
                                 $querycost = mysql_query("SELECT * FROM utenti WHERE email ='".$_COOKIE["utente"]."'") or die('Query non riuscita'.mysql_error());
