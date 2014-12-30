@@ -226,7 +226,7 @@ if($_COOKIE['tipo_utente']==3)
 
                             ?>
 
-
+                            <form action="Acquista.php" method="post" id="form-login">
                                 <table id="table-form">
                                     <tr>
                                         <td>Credito: <?echo"$rowcost->credito";?></td>
@@ -235,10 +235,10 @@ if($_COOKIE['tipo_utente']==3)
 
                                     <tr>
                                         <td></td>
-                                        <td><input onclick="Acquista.php" type="submit" value="Conferma" id="tasto-login"/><td>
+                                        <td><input type="submit" value="Conferma" id="tasto-login"/><td>
                                     </tr>
                                 </table>
-
+                            </form>
                         </td>
 
                         <td id="right"></td>
