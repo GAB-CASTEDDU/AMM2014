@@ -235,7 +235,7 @@ if($_COOKIE['tipo_utente']==3)
 
                                     <tr>
                                         <td></td>
-                                        <td><input action="Acquista.php" type="submit" value="Conferma" id="tasto-login"/><td>
+                                        <td><input onclick="Acquista.php" type="submit" value="Conferma" id="tasto-login"/><td>
                                     </tr>
                                 </table>
 
