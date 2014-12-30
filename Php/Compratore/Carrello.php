@@ -82,6 +82,8 @@ if($_COOKIE['tipo_utente']==3)
 
                             $queryvis = mysql_query("SELECT * FROM carrello WHERE compratore='".$_COOKIE["utente"]."'") or die("query non riuscita".mysql_error());
 
+                            $row = mysql_fetch_object($queryvis);
+
                             $queryvis2 = mysql_query("SELECT * FROM auto WHERE id='".$row->id."'") or die("query non riuscita".mysql_error());
 
                             ?>
@@ -98,9 +100,8 @@ if($_COOKIE['tipo_utente']==3)
                             <?
                             }
 
-                            while($row = mysql_fetch_object($queryvis))
+                            while($row = mysql_fetch_object($queryvis) && $row2 = mysql_fetch_object($queryvis2))
                             {
-                                $row2 = mysql_fetch_object($queryvis2)
                                 ?>
 
                                 <br>
