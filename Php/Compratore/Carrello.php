@@ -146,6 +146,10 @@ if($_COOKIE['tipo_utente']==3)
                                     </tr>
                                 </table>
 
+                            <?
+                            }
+                            ?>
+
 
 
 
