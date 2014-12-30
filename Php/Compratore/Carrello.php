@@ -159,6 +159,8 @@ if($_COOKIE['tipo_utente']==3)
                                 }
                             }
 
+                            $costo = 0;
+
                             if(mysql_num_rows($queryvis)==0)
                             {
 
@@ -167,78 +169,81 @@ if($_COOKIE['tipo_utente']==3)
                             <?
                             }
 
-                            $costo = 0;
-
-                            while($row = mysql_fetch_object($queryvis))
+                            else
                             {
-                            ?>
+                                while($row = mysql_fetch_object($queryvis))
+                                {
+                                ?>
 
-                                <br>
+                                    <br>
 
-                                <table>
-                                    <tr>
-                                        <td>
-                                            <table id="table-vis">
-                                                <tr>
-                                                    <td><img src="../../Immagini/noimg.png" alt="No image aviable"></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Prezzo: &nbsp;<?$costo += $row->prezzo; echo"$row->prezzo";?> &euro;</td>
-                                                </tr>
-                                                <tr>
-                                                    <td><a href="Carrello.php?rimuovi=<?echo $row->id?>" id="cestino">Rimuovi dal carrello</a></td>
-                                                </tr>
-                                            </table>
-                                        </td>
+                                    <table>
+                                        <tr>
+                                            <td>
+                                                <table id="table-vis">
+                                                    <tr>
+                                                        <td><img src="../../Immagini/noimg.png" alt="No image aviable"></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Prezzo: &nbsp;<?$costo += $row->prezzo; echo"$row->prezzo";?> &euro;</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td><a href="Carrello.php?rimuovi=<?echo $row->id?>" id="cestino">Rimuovi dal carrello</a></td>
+                                                    </tr>
+                                                </table>
+                                            </td>
 
-                                        <td>
-                                            <table id="table-vis">
-                                                <tr>
-                                                    <td>Marca:</td><td><?echo"$row->marca";?></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Modello:</td><td><?echo"$row->modello";?></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Colore:</td><td><?echo"$row->colore";?></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Anno:</td><td><?echo"$row->anno";?></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Alimentazione:</td><td><?echo"$row->alimentazione";?></td>
-                                                </tr>
-                                                <tr>
-                                                    <td>Chilometri:</td><td><?echo"$row->chilometri";?></td>
-                                                </tr>
-                                            </table>
-                                        </td>
-                                    </tr>
-                                </table>
+                                            <td>
+                                                <table id="table-vis">
+                                                    <tr>
+                                                        <td>Marca:</td><td><?echo"$row->marca";?></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Modello:</td><td><?echo"$row->modello";?></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Colore:</td><td><?echo"$row->colore";?></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Anno:</td><td><?echo"$row->anno";?></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Alimentazione:</td><td><?echo"$row->alimentazione";?></td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>Chilometri:</td><td><?echo"$row->chilometri";?></td>
+                                                    </tr>
+                                                </table>
+                                            </td>
+                                        </tr>
+                                    </table>
 
-                                <br><br><br>
+                                    <br><br><br>
+                                <?
+                                }
+
+                                $querycost = mysql_query("SELECT * FROM utenti WHERE email ='".$_COOKIE["utente"]."'") or die('Query non riuscita'.mysql_error());
+
+                                $rowcost = mysql_fetch_object($querycost)
+
+                                ?>
+
+                                <form action="Acquista.php" method="post" id="form-login">
+                                    <table id="table-form">
+                                        <tr>
+                                            <td>Credito: <?echo"$rowcost->credito";?> &euro;</td>
+                                            <td>Costo: <?echo"$costo";?> &euro;<td>
+                                        </tr>
+
+                                        <tr>
+                                            <td></td>
+                                            <td><input type="submit" value="Conferma" id="tasto-login"/><td>
+                                        </tr>
+                                    </table>
+                                </form>
                             <?
                             }
-
-                            $querycost = mysql_query("SELECT * FROM utenti WHERE email ='".$_COOKIE["utente"]."'") or die('Query non riuscita'.mysql_error());
-
-                            $rowcost = mysql_fetch_object($querycost)
-
                             ?>
-
-                            <form action="Acquista.php" method="post" id="form-login">
-                                <table id="table-form">
-                                    <tr>
-                                        <td>Credito: <?echo"$rowcost->credito";?> &euro;</td>
-                                        <td>Costo: <?echo"$costo";?> &euro;<td>
-                                    </tr>
-
-                                    <tr>
-                                        <td></td>
-                                        <td><input type="submit" value="Conferma" id="tasto-login"/><td>
-                                    </tr>
-                                </table>
-                            </form>
                         </td>
 
                         <td id="right"></td>
