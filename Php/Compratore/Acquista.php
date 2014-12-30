@@ -26,7 +26,7 @@ if($_COOKIE['tipo_utente']==3)
 
     while($row = mysql_fetch_object($queryvis))
     {
-        $querycom = "UPDATE utenti SET credito = credito - '".$row->prezzo ."' WHERE email='".$row->compratore ."'";
+        $querycom = "UPDATE utenti SET credito = credito + '".$row->prezzo ."' WHERE email='".$row->compratore ."'";
 
         $queryven = "UPDATE utenti SET credito = credito + '".$row->prezzo ."' WHERE email='".$row->venditore ."'";
 
