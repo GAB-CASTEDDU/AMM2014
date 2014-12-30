@@ -80,11 +80,7 @@ if($_COOKIE['tipo_utente']==3)
                                 die("Errore: selezione del database errata ".mysql_error());
                             }
 
-                            $queryvis = mysql_query("SELECT * FROM carrello WHERE compratore='".$_COOKIE["utente"]."'") or die("query non riuscita".mysql_error());
-
-                            $row = null;
-
-                            $queryvis2 = mysql_query("SELECT * FROM auto WHERE id='".$row->id."'") or die("query non riuscita".mysql_error());
+                            $queryvis2 = mysql_query("SELECT * FROM carrello INNER JOIN auto ON carrello.id = auto.id") or die("query non riuscita".mysql_error());
 
                             ?>
 
@@ -100,9 +96,9 @@ if($_COOKIE['tipo_utente']==3)
                             <?
                             }
 
-                            while($row = mysql_fetch_object($queryvis) && $row2 = mysql_fetch_object($queryvis2))
+                            while($row2 = mysql_fetch_object($queryvis2))
                             {
-                                ?>
+                            ?>
 
                                 <br>
 
