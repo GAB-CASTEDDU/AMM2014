@@ -245,6 +245,9 @@ if($_COOKIE['tipo_utente']==3)
                                             {
                                             ?>
                                                 <td><font color="32CD32">Credito sufficiente</font></td>
+                                            <?
+                                            }
+                                            ?>
                                         </tr>
 
                                         <tr>
