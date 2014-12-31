@@ -100,7 +100,7 @@ if($_COOKIE['tipo_utente']==1)
                                 {
                                 ?>
 
-                                <p><font color="B20000">Errore! Annuncio non rimosso correttamente.</font></p>
+                                <p><font color="B20000">Errore! Utente non rimosso correttamente.</font></p>
 
                                 <?
                                 }
@@ -111,7 +111,7 @@ if($_COOKIE['tipo_utente']==1)
                                     {
                                     ?>
 
-                                    <p><font color="B20000">Errore! Annuncio non presente.</font></p>
+                                    <p><font color="B20000">Errore! Utente non presente.</font></p>
 
                                     <?
                                     }
@@ -150,6 +150,94 @@ if($_COOKIE['tipo_utente']==1)
                                         <td>Credito:</td>
 
                                         <td><?echo"$row->credito";?> &euro;</td>
+                                    </tr>
+                                </table>
+
+                                <br><br>
+
+                            <?
+                            }
+                            ?>
+
+
+
+                            <h3>Annunci:</h3>
+
+                            <?
+
+                            if(isset($_GET["rima"]) && ($_GET["rima"]=="ok"))
+                            {
+                            ?>
+
+                            <p><font color="32CD32">Annuncio rimosso dalla lista!</font></p>
+
+                            <?
+                            }
+
+                            else
+                            {
+                                if(isset($_GET["rima"]) && ($_GET["rima"]=="err"))
+                                {
+                                ?>
+
+                                <p><font color="B20000">Errore! Annuncio non rimosso correttamente.</font></p>
+
+                                <?
+                                }
+
+                                else
+                                {
+                                    if(isset($_GET["rima"]) && ($_GET["rima"]=="errpres"))
+                                    {
+                                    ?>
+
+                                    <p><font color="B20000">Errore! Annuncio non presente.</font></p>
+
+                                    <?
+                                    }
+                                }
+                            }
+
+
+
+                            $queryvis2 = mysql_query("SELECT * FROM auto WHERE compratore IS NULL") or die("query non riuscita".mysql_error());
+
+                            if(mysql_num_rows($queryvis2)==0)
+                            {
+
+                            ?>
+                            <br><p>Nessun annuncio presente al momento. Riprova tra poco</p><br><br>
+                            <?
+                            }
+
+                            while($row2 = mysql_fetch_object($queryvis2))
+                            {
+                            ?>
+                                <br>
+
+                                <table id="table-vis">
+                                    <tr>
+                                        <td><b><?echo"$row2->venditore";?></b></td>
+
+                                        <td>Marca:</td>
+
+                                        <td><?echo"$row2->marca";?></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td></td>
+
+                                        <td>Modello:</td>
+
+                                        <td><?echo"$row2->modello";?></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td><a href="Rimuovi.php?rimuovia=<?echo $row->id?>" id="cestino">Rimuovi annuncio</a></td>
+
+                                        <td>Prezzo:</td>
+
+                                        <td><?echo"$row2->prezzo";?> &euro;</td>
                                     </tr>
                                 </table>
 
