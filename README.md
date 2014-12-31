@@ -24,7 +24,7 @@ Utilizzo di HTML e CSS          V
 Utilizzo di PHP e MySQL         V
 Utilizzo del pattern MVC        X
 Tre ruoli                      (Amministratore-Venditore-Compratore)
-Transazione                     COOMING SOON
+Transazione                    (Acquista.php)
 Funzionalita' ajax             (Checkemail.js)
 
 
