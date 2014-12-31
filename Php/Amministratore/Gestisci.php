@@ -145,11 +145,11 @@ if($_COOKIE['tipo_utente']==1)
                                     </tr>
 
                                     <tr>
+                                        <td><a href="Rimuovi.php?rimuoviu=<?echo $row->id?>" id="cestino">Rimuovi utente</a></td>
+
                                         <td>Credito:</td>
 
                                         <td><?echo"$row->credito";?> &euro;</td>
-
-                                        <td><a href="Rimuovi.php?rimuoviu=<?echo $row->id?>" id="cestino">Rimuovi utente</a></td>
                                     </tr>
                                 </table>
 
