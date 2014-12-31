@@ -47,7 +47,7 @@ if($_COOKIE['tipo_utente']==3)
 
                 <div id="menu">
                     <ul>
-                        <li class="current_page"><a href="#" id="home">Home</a></li>
+                        <li><a href="Home.php" id="home">Home</a></li>
                         <li><a href="Profilo.php" id="utenti">Profilo</a></li>
                         <li><a href="Carrello.php" id="carrello">Carrello</a></li>
                         <li><a href="Ricerca.php" id="ricerca">Ricerca</a></li>
