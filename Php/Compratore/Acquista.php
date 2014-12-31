@@ -28,7 +28,7 @@ if($_COOKIE['tipo_utente']==3)
     {
         $querycom = "UPDATE utenti SET credito = credito - '".$row->prezzo ."' WHERE email='".$row->carrello.compratore ."'";
 
-        $queryven = "UPDATE utenti SET credito = credito + '".$row->prezzo ."' WHERE email='".$row->auto.venditore ."'";
+        $queryven = "UPDATE utenti SET credito = credito + '".$row->prezzo ."' WHERE email='".$row->venditore ."'";
 
         $queryaut = "UPDATE auto SET compratore = '".$row->carrello.compratore ."' WHERE '".$row->carrello.compratore ."' ='".$_COOKIE["utente"]."'";
 
