@@ -120,7 +120,7 @@ if($_COOKIE['tipo_utente']==1)
 
 
 
-                            $queryvis = mysql_query("SELECT * FROM utenti WHERE venditore <> '".$_COOKIE["utente"]."'") or die("query non riuscita".mysql_error());
+                            $queryvis = mysql_query("SELECT * FROM utenti WHERE email <> '".$_COOKIE["utente"]."'") or die("query non riuscita".mysql_error());
 
                             if(mysql_num_rows($queryvis)==0)
                             {
