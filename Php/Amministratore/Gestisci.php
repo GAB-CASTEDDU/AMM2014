@@ -225,7 +225,7 @@ if($_COOKIE['tipo_utente']==1)
                                     </tr>
 
                                     <tr>
-                                        <td></td>
+                                        <td><?echo"$row2->prezzo";?> &euro;</td>
 
                                         <td>Modello:</td>
 
@@ -235,9 +235,9 @@ if($_COOKIE['tipo_utente']==1)
                                     <tr>
                                         <td><a href="Rimuovi.php?rimuovia=<?echo $row->id?>" id="cestino">Rimuovi annuncio</a></td>
 
-                                        <td>Prezzo:</td>
+                                        <td>Anno:</td>
 
-                                        <td><?echo"$row2->prezzo";?> &euro;</td>
+                                        <td><?echo"$row2->anno";?></td>
                                     </tr>
                                 </table>
 
