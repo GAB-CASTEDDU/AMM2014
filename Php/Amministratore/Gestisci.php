@@ -85,7 +85,7 @@ if($_COOKIE['tipo_utente']==1)
 
                             <?
 
-                            if(isset($_GET["rimu"]) && ($_GET["rimu"]=="ok"))
+                            if(isset($_GET["rimut"]) && ($_GET["rimut"]=="ok"))
                             {
                             ?>
 
@@ -96,7 +96,7 @@ if($_COOKIE['tipo_utente']==1)
 
                             else
                             {
-                                if(isset($_GET["rimu"]) && ($_GET["rimu"]=="err"))
+                                if(isset($_GET["rimut"]) && ($_GET["rimut"]=="err"))
                                 {
                                 ?>
 
@@ -107,7 +107,7 @@ if($_COOKIE['tipo_utente']==1)
 
                                 else
                                 {
-                                    if(isset($_GET["rimu"]) && ($_GET["rimu"]=="errpres"))
+                                    if(isset($_GET["rimut"]) && ($_GET["rimut"]=="errpres"))
                                     {
                                     ?>
 
