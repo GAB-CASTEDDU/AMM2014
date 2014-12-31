@@ -153,7 +153,7 @@ if($_COOKIE['tipo_utente']==1)
                                     </tr>
                                 </table>
 
-                                <br><br><br>
+                                <br><br>
 
                             <?
                             }
