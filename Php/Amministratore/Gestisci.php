@@ -139,15 +139,15 @@ if($_COOKIE['tipo_utente']==1)
                                     <tr>
                                         <td><b><?echo"$row->email";?></b></td>
 
-                                        <td>Credito;</td>
+                                        <td>Account:</td>
 
-                                        <td><?echo"$row->credito";?></td>
+                                        <td><?echo"$row->tipo";?></td>
                                     </tr>
 
                                     <tr>
-                                        <td>Account;</td>
+                                        <td>Credito:</td>
 
-                                        <td><?echo"$row->tipo";?></td>
+                                        <td><?echo"$row->credito";?> &euro;</td>
 
                                         <td><a href="Rimuovi.php?rimuoviu=<?echo $row->id?>" id="cestino">Rimuovi utente</a></td>
                                     </tr>
