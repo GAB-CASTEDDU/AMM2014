@@ -30,7 +30,7 @@ if($_COOKIE['tipo_utente']==3)
 
         $queryven = "UPDATE utenti SET credito = credito + '".$row->prezzo ."' WHERE email='".$row->venditore ."'";
 
-        $queryaut = "UPDATE auto SET compratore = '".$row->incar."' WHERE '".$row->incar ."' = '".$_COOKIE["utente"]."'";
+        $queryaut = "UPDATE auto SET compratore = '".$row->incar."' WHERE '".$_COOKIE["utente"]."' = '".$row->incar."'";
 
         $querycar = "DELETE FROM carrello WHERE '".$row->carrello.id ."' = '".$row->auto.id ."' AND incar = '".$_COOKIE["utente"]."'";
 
