@@ -26,11 +26,11 @@ if($_COOKIE['tipo_utente']==3)
 
     while($row = mysql_fetch_object($queryvis))
     {
-        $querycom = "UPDATE utenti SET credito = credito - '".$row->prezzo ."' WHERE email='".$_COOKIE["utente"]."'";
+        $querycom = "UPDATE utenti SET credito = credito - '".$row->prezzo ."' WHERE email='".$row->incar."'";
 
         $queryven = "UPDATE utenti SET credito = credito + '".$row->prezzo ."' WHERE email='".$row->venditore ."'";
 
-        $queryaut = "UPDATE auto SET compratore = '".$_COOKIE["utente"]."' WHERE '".$row->incar ."' = '".$_COOKIE["utente"]."'";
+        $queryaut = "UPDATE auto SET compratore = '".$row->incar."' WHERE '".$row->incar ."' = '".$_COOKIE["utente"]."'";
 
         $querycar = "DELETE FROM carrello WHERE '".$row->carrello.id ."' = '".$row->auto.id ."' AND incar = '".$_COOKIE["utente"]."'";
 
