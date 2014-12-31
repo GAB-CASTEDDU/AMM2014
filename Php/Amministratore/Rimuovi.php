@@ -1,6 +1,6 @@
 <?php
 
-if(isset($_GET["rimuoviu"]) && ($_GET["rimuoviu"]!=0))
+if(isset($_GET["rimuoviu"]) && ($_GET["rimuoviu"]!=null))
 {
     $idut = $_GET["rimuoviu"];
 
