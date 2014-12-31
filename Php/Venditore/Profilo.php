@@ -231,7 +231,7 @@ if($_COOKIE['tipo_utente']==2)
 
                             <h3>Tuoi venduti:</h3>
                             <?
-                            $queryvis3 = mysql_query("SELECT * FROM auto WHERE compratore IS NOT NULL AND compratore != 0") or die("query non riuscita".mysql_error());
+                            $queryvis3 = mysql_query("SELECT * FROM auto WHERE compratore IS NOT NULL") or die("query non riuscita".mysql_error());
 
                             if(mysql_num_rows($queryvis3)==0)
                             {
