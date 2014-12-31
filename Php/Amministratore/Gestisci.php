@@ -62,6 +62,103 @@ if($_COOKIE['tipo_utente']==1)
 
                         <td id="center">
                             <h1 id="h1-gestisci">Gestisci</h1>
+
+                            <?
+                            $connessione_al_server = mysql_connect("localhost","truduGabriele","beluga874");
+
+                            if(!$connessione_al_server)
+                            {
+                                die("Errore: connessione non riuscita".mysql_error());
+                            }
+
+
+
+                            $db_selected = mysql_select_db("amm14_truduGabriele", $connessione_al_server);
+
+                            if(!$db_selected)
+                            {
+                                die("Errore: selezione del database errata ".mysql_error());
+                            }
+                            ?>
+
+                            <h3>Utenti:</h3>
+
+                            <?
+
+                            if(isset($_GET["rimu"]) && ($_GET["rimu"]=="ok"))
+                            {
+                            ?>
+
+                            <p><font color="32CD32">Utente rimosso dalla lista!</font></p>
+
+                            <?
+                            }
+
+                            else
+                            {
+                                if(isset($_GET["rimu"]) && ($_GET["rimu"]=="err"))
+                                {
+                                ?>
+
+                                <p><font color="B20000">Errore! Annuncio non rimosso correttamente.</font></p>
+
+                                <?
+                                }
+
+                                else
+                                {
+                                    if(isset($_GET["rimu"]) && ($_GET["rimu"]=="errpres"))
+                                    {
+                                    ?>
+
+                                    <p><font color="B20000">Errore! Annuncio non presente.</font></p>
+
+                                    <?
+                                    }
+                                }
+                            }
+
+
+
+                            $queryvis = mysql_query("SELECT * FROM utenti WHERE venditore <> '".$_COOKIE["utente"]."'") or die("query non riuscita".mysql_error());
+
+                            if(mysql_num_rows($queryvis)==0)
+                            {
+
+                            ?>
+                            <br><p>Nessun utente registrato al momento. Riprova tra poco</p><br><br>
+                            <?
+                            }
+
+                            while($row = mysql_fetch_object($queryvis))
+                            {
+                            ?>
+                                <br>
+
+                                <table id="table-vis">
+                                    <tr>
+                                        <td><b><?echo"$row->email";?></b></td>
+
+                                        <td>Credito;</td>
+
+                                        <td><?echo"$row->credito";?></td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>Account;</td>
+
+                                        <td><?echo"$row->tipo";?></td>
+
+                                        <td><a href="Rimuovi.php?rimuoviu=<?echo $row->id?>" id="cestino">Rimuovi utente</a></td>
+                                    </tr>
+                                </table>
+
+                                <br><br><br>
+
+                            <?
+                            }
+                            ?>
+
                         </td>
 
                         <td id="right"></td>
