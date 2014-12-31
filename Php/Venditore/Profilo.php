@@ -173,7 +173,7 @@ if($_COOKIE['tipo_utente']==2)
                             {
 
                             ?>
-                            <br><br><p>Nessun veicolo in vendita al momento. Riprova tra poco</p>
+                            <br><br><p>Nessun veicolo in vendita al momento. Riprova tra poco</p><br><br>
                             <?
                             }
 
@@ -231,7 +231,7 @@ if($_COOKIE['tipo_utente']==2)
 
                             <h3>Tuoi venduti:</h3>
                             <?
-                            $queryvis3 = mysql_query("SELECT * FROM auto WHERE compratore IS NOT NULL") or die("query non riuscita".mysql_error());
+                            $queryvis3 = mysql_query("SELECT * FROM auto WHERE venditore='".$_COOKIE["utente"]."' AND compratore IS NOT NULL") or die("query non riuscita".mysql_error());
 
                             if(mysql_num_rows($queryvis3)==0)
                             {
