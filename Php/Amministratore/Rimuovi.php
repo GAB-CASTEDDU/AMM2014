@@ -55,9 +55,12 @@ if(isset($_GET["rimuovia"]) && ($_GET["rimuovia"]!=0))
 
 else
 {
-    $pagina_login = "Gestisci.php?rima=err";
+    if(isset($_GET["rimuovia"]))
+    {
+        $pagina_login = "Gestisci.php?rima=err";
 
-    header("Location:".$pagina_login);
+        header("Location:".$pagina_login);
+    }
 }
 
 
@@ -117,8 +120,11 @@ if(isset($_GET["rimuoviu"]) && ($_GET["rimuoviu"]!=null))
 
 else
 {
-    $pagina_login = "Gestisci.php?rimut=err";
+    if(isset($_GET["rimuoviu"]))
+    {
+        $pagina_login = "Gestisci.php?rimut=err";
 
-    header("Location:".$pagina_login);
+        header("Location:".$pagina_login);
+    }
 }
 ?>
