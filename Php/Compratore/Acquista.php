@@ -20,6 +20,9 @@ if($_COOKIE['tipo_utente']==3)
         die("Errore: selezione del database errata ".mysql_error());
     }
 
+    mysql_query("SET AUTOCOMMIT=0");
+    mysql_query("START TRANSACTION");
+
     $queryvis = mysql_query("SELECT * FROM carrello INNER JOIN auto ON carrello.id = auto.id WHERE incar ='".$_COOKIE["utente"]."'") or die("query non riuscita".mysql_error());
 
     $flag = 0;
@@ -46,9 +49,14 @@ if($_COOKIE['tipo_utente']==3)
 
 
 
-        if((!$result1) || (!$result2) || (!$result3) || (!$result4))
+        if(($result1) && ($result2) && ($result3) && ($result4))
         {
-            die("Errore nella query: ".mysql_error());
+            mysql_query("COMMIT");
+        }
+
+        else
+        {
+            mysql_query("ROLLBACK");
 
             $flag = 1;
         }
