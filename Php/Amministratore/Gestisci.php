@@ -145,7 +145,7 @@ if($_COOKIE['tipo_utente']==1)
                                     </tr>
 
                                     <tr>
-                                        <td><a href="Rimuovi.php?rimuoviu=<?echo $row->id?>" id="cestino">Rimuovi utente</a></td>
+                                        <td><a href="Rimuovi.php?rimuoviu=<?echo $row->email?>" id="cestino">Rimuovi utente</a></td>
 
                                         <td>Credito:</td>
 
@@ -233,7 +233,7 @@ if($_COOKIE['tipo_utente']==1)
                                     </tr>
 
                                     <tr>
-                                        <td><a href="Rimuovi.php?rimuovia=<?echo $row->id?>" id="cestino">Rimuovi annuncio</a></td>
+                                        <td><a href="Rimuovi.php?rimuovia=<?echo $row2->id?>" id="cestino">Rimuovi annuncio</a></td>
 
                                         <td>Anno:</td>
 
