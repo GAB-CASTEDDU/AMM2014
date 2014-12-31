@@ -20,11 +20,11 @@ if(isset($_GET["aggiungi"]) && ($_GET["aggiungi"]!=0))
         die("Errore: selezione del database errata ".mysql_error());
     }
 
-    $querypres = mysql_query("SELECT * FROM carrello WHERE id='".$idart."' AND compratore ='".$_COOKIE["utente"]."'") or die('Query non riuscita'.mysql_error());
+    $querypres = mysql_query("SELECT * FROM carrello WHERE id='".$idart."' AND incar ='".$_COOKIE["utente"]."'") or die('Query non riuscita'.mysql_error());
 
     if(!mysql_num_rows($querypres))
     {
-        $query = "INSERT INTO carrello (id,compratore)
+        $query = "INSERT INTO carrello (id,incar)
         VALUES (\"".$idart."\",\"".$_COOKIE["utente"]."\")";
 
         $result = mysql_query($query);
