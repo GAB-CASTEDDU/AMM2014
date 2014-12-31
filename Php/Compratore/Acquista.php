@@ -32,7 +32,7 @@ if($_COOKIE['tipo_utente']==3)
 
         $queryaut = "UPDATE auto SET compratore = '".$row->incar."' WHERE id = '".$row->id ."'";
 
-        $querycar = "DELETE FROM carrello WHERE '".$row->carrello.id ."' = '".$row->auto.id ."' AND incar = '".$_COOKIE["utente"]."'";
+        $querycar = "DELETE FROM carrello WHERE '".$row->carrello.id ."' = '".$row->auto.id ."'";
 
 
 
