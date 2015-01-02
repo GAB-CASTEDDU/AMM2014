@@ -62,6 +62,15 @@ if(!isset($_COOKIE["tipo_utente"]))
                             <h1 id="h1-login">Login</h1>
 
                             <?
+                            if(isset($_GET["reg"]) && ($_GET["reg"]=="ok"))
+                            {
+                            ?>
+
+                            <p><font color="32CD32">Utente registrato correttamente!</font></p>
+
+                            <?
+                            }
+
                             if(isset($_COOKIE["errlogin"]) && ($_COOKIE["errlogin"]==1))
                             {
                             ?>
@@ -76,7 +85,7 @@ if(!isset($_COOKIE["tipo_utente"]))
                             {
                             ?>
 
-                            <p class="error"><font color="B20000">Hai effettuato il logout!</font></p>
+                            <p><font color="B20000">Hai effettuato il logout!</font></p>
 
                             <?
                                 setcookie("logout", null);

@@ -67,6 +67,15 @@ if(!isset($_COOKIE["tipo_utente"]))
                             <h1 id="h1-registrati">Registrati</h1>
 
                             <?
+                            if(isset($_GET["reg"]) && ($_GET["reg"]=="err"))
+                            {
+                            ?>
+
+                            <p><font color="B20000">Errore! Registrazione non riuscita</font></p>
+
+                            <?
+                            }
+
                             if(isset($_GET["campi"]) && ($_GET["campi"]=="ok"))
                             {
                                 $connessione_al_server = mysql_connect("localhost","truduGabriele","beluga874");
@@ -94,14 +103,14 @@ if(!isset($_COOKIE["tipo_utente"]))
                                 {
                                     die("Errore nella query: ".mysql_error());
 
-                                    $pagina_login = "Registrati.php";
+                                    $pagina_login = "Registrati.php?reg=err";
 
                                     header("Location:".$pagina_login);
                                 }
 
                                 else
                                 {
-                                    $pagina_login = "Login.php";
+                                    $pagina_login = "Login.php?reg=ok";
 
                                     header("Location:".$pagina_login);
                                 }
